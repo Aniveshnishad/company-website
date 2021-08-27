@@ -16,4 +16,7 @@ class Blogs(models.Model):
     bolg_title=models.CharField(max_length=1000,blank=True)
     blog_title_tag=models.CharField(max_length=900,blank=True)
     blog_body= RichTextField(blank=True,null=True)
-    date=models.DateField(auto_now_add=True)
+    image=models.ImageField(upload_to='static/blog-images',blank=True)
+    date=models.DateField(auto_now_add=True,blank=True)
+    def __str__(self):
+        return self.bolg_title
