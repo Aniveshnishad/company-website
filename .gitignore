@@ -1,5 +1,6 @@
 .idea
 portfolio/migrations
- company_website/__pycache__
- __pycache__
- portfolio/migrations/__pycache__
+company_website/__pycache__
+__pycache__/
+portfolio/migrations/__pycache__
+db.sqlite3
