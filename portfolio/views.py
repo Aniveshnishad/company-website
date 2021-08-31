@@ -1,8 +1,9 @@
 from django.contrib import messages
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render
 
 # Create your views here.
-from portfolio.models import ContactForm, Blogs
+from portfolio.models import ContactForm, Blogs, Manager, JobPostDetail
 
 
 def index_page(request):
@@ -39,6 +40,27 @@ def our_team(request):
     return render(request, "our_team.html")
 
 
+def careers_page(request):
+    return render(request, "careers.html")
+
+
+def graduate_page(request):
+    obj=JobPostDetail.objects.filter(job_education__icontains="Graduate").order_by('-id')
+    paginator = Paginator(obj,4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, "graduate.html",{"data":page_obj})
+
+
+def experience_page(request):
+    return render(request, "experience.html")
+
+
+def intern_page(request):
+    return render(request, "intern.html")
+
+
+
 def contact_page(request):
     if request.method == "POST":
         name = request.POST['name']
@@ -57,5 +79,21 @@ def contact_page(request):
 # for admin views
 
 def manager(request):
+
+    return render(request, "manager/manager.html")
+
+
+def manager_login(request):
+    if request.method=="POST":
+        manager_name=request.POST['manager_name']
+        manager_password = request.POST['manager_password']
+        try:
+            if Manager.objects.get(manager_name=manager_name,manager_password=manager_password) is not None:
+                request.session['manager_name']=manager_name
+                messages.success(request,"Login Successful")
+                return render(request,"manager/manager-home.html")
+        except:
+            messages.error(request,"Invalid login details")
+        return render(request,"manager/manager.html")
 
     return render(request, "manager/manager.html")

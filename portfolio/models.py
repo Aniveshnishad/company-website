@@ -20,3 +20,27 @@ class Blogs(models.Model):
     date=models.DateField(auto_now_add=True,blank=True)
     def __str__(self):
         return self.bolg_title
+class Manager(models.Model):
+    manager_name=models.CharField(max_length=200,blank=True)
+    manager_password=models.CharField(max_length=200,blank=True)
+    def __str__(self):
+        return self.manager_name
+
+class JobPostDetail(models.Model):
+    choose=(('Graduate','Graduate'),('Internship','Internship'),('Experience/Professional','Experience/Professional'))
+    job_education=models.CharField(max_length=300,choices=choose,blank=True)
+    job_title=models.CharField(max_length=200,blank=True)
+    start_date=models.DateField(default='dd/mm/yy',blank=True)
+    last_date = models.DateField(default='dd/mm/yy',blank=True)
+    country=models.CharField(max_length=200,blank=True)
+    state=models.CharField(max_length=200,blank=True)
+    work_location=models.CharField(max_length=900,blank=True)
+    company_name=models.CharField(max_length=900,blank=True)
+    job_description=models.TextField(max_length=2000,blank=True)
+    roles_responsibility=models.TextField(max_length=2000,blank=True)
+    essential_skill=models.TextField(max_length=2000,blank=True)
+    preffered_skill=models.TextField(max_length=2000,blank=True)
+    additional_skill=models.TextField(max_length=2000,blank=True)
+    image=models.ImageField(blank=True)
+    def __str__(self):
+        return self.job_title

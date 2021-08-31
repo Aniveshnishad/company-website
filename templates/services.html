@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <br><br><br><br>
 <html lang="en-US" class="js
 									 scheme_light										"
       style="--fixed-rows-height:0px;">
@@ -1462,11 +1463,12 @@
                                                                                 }
                                                                             })();
                                                                             </script>
-                                                                            <form id="style-3"
+                                                                            <form id="style-3" action="{% url 'index' %}"
                                                                                   class="mc4wp-form mc4wp-form-461 inited_validation"
                                                                                   method="post" data-id="461"
                                                                                   data-name="Subscribe"
                                                                                   data-inited-validation="1">
+                                                                                {% csrf_token %}
                                                                                 <div class="mc4wp-form-fields"><input
                                                                                         type="email" name="EMAIL"
                                                                                         placeholder="Enter Your Email Address"

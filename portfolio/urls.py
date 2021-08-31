@@ -29,7 +29,12 @@ urlpatterns = [
     path('service',views.service_page,name="service"),
     path('our-team', views.our_team, name="our-team"),
     path('contact',views.contact_page,name="contact"),
+    path('careers',views.careers_page,name="careers"),
+    path('careers/graduate',views.graduate_page,name="graduate"),
+    path('careers/experience',views.experience_page,name="experience"),
+    path('carrers/intern',views.intern_page,name="intern"),
 
     # urls for admin actions
     path('manager',views.manager,name="manager"),
+    path('manager-login',views.manager_login,name="manager-login"),
 ]
