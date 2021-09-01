@@ -33,6 +33,8 @@ urlpatterns = [
     path('careers/graduate',views.graduate_page,name="graduate"),
     path('careers/experience',views.experience_page,name="experience"),
     path('carrers/intern',views.intern_page,name="intern"),
+    path('apply-form/<id>',views.apply_form,name="apply-form"),
+    path('submit-form',views.submit_form,name="submit-form"),
 
     # urls for admin actions
     path('manager',views.manager,name="manager"),

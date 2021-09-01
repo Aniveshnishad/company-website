@@ -44,3 +44,13 @@ class JobPostDetail(models.Model):
     image=models.ImageField(blank=True)
     def __str__(self):
         return self.job_title
+
+class ApplyDetails(models.Model):
+    name=models.CharField(max_length=200,blank=True)
+    name = models.CharField(max_length=200, blank=True)
+    number = models.CharField(max_length=200, blank=True)
+    subject = models.CharField(max_length=200, blank=True)
+    email = models.CharField(max_length=200, blank=True)
+    city = models.CharField(max_length=200, blank=True)
+    cover_leter = models.TextField(max_length=200, blank=True)
+    file_cv=models.FileField(upload_to='static/cover-leters',blank=True)

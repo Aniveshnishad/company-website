@@ -1,37 +1,18 @@
-{% extends 'base.html' %}
+{%  extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-<br><br><br><br><br>
-<body class="page-template-default page page-id-1453 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled woocommerce-js tribe-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_wide is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-6817 header_position_default menu_side_none fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-1453 e--ua-blink e--ua-chrome e--ua-webkit animate_to_inited added_to_cart_inited desktop_layout mobile_device "
-      data-elementor-device-mode="desktop">
-
-    <div class="page_wrap">
-
-
-
-        <div class="page_content_wrap">
-            <div class="content_wrap">
-                <div class="content">
-                    <a id="content_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
-                    <article id="post-1453"
-                             class="post_item_single post_type_page post-1453 page type-page status-publish hentry">
-                        <div class="post_content entry-content">
-                            <div data-elementor-type="wp-page" data-elementor-id="1453" class="elementor elementor-1453"
-                                 data-elementor-settings="[]">
-                                <div class="elementor-inner">
-                                    <div class="elementor-section-wrap">
-                                        <div style="">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8756.20065600444!2d75.88452060469955!3d22.671347880107515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdc2ad268517%3A0x2344d262c1da7f7b!2sCubexO%20Software%20Solutions!5e0!3m2!1sen!2sin!4v1629971778806!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                        </div>
-                                        <section
+    <br><br><br><br><bR>
+    <div class="container">
+    <section
                                                 class="elementor-section elementor-top-section elementor-element elementor-element-21007b6 elementor-section-stretched scheme_light elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
                                                 data-id="21007b6" data-element_type="section"
                                                 data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
-                                                style="width: 1160px; left: -35px;">
+                                                >
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-extended">
                                                 <div class="elementor-row">
-                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cfe325e sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                    <div class="elementor-column elementor-col-100  elementor-top-column elementor-element elementor-element-cfe325e sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
                                                          data-id="cfe325e" data-element_type="column">
                                                         <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class="elementor-widget-wrap">
@@ -72,7 +53,7 @@
                                                                                             <div class="elementor-widget-container">
                                                                                                 <div class="sc_title sc_title_default">
                                                                                                     <h4 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                                        <span class="sc_item_title_text" style="color: #0f8c77">Contact Details</span>
+                                                                                                        <span class="sc_item_title_text" style="color: #0f8c77">{{ data.job_title }}</span>
                                                                                                     </h4></div>
                                                                                             </div>
                                                                                         </div>
@@ -95,10 +76,10 @@
                                                                                                     <div class="sc_icons_item with_more">
                                                                                                         <div class="sc_icons_item_details">
                                                                                                                                     <div class="sc_icons_item_description">
-                                                                                                                <span>2nd Floor MR Business Park<br>
-                                                                                                                                    Beside HDFC Bank Khandwa Road
+                                                                                                                <span>{{ data.work_location }}, {{ data.state }}<br>
+                                                                                                                                   Start Date: {{ data.start_date }}<br> Last Date : {{ data.last_date }}
 
-                                                                                                                                                                </span><span>Indore , Madhya Pradesh</span>
+                                                                                                                                                                </span><span>{{ data.job_description }}</span>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
@@ -183,7 +164,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-6f51ef1 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                            <div class="elementor-column elementor-col-20  elementor-inner-column elementor-element elementor-element-6f51ef1 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
                                                                                  data-id="6f51ef1"
                                                                                  data-element_type="column">
                                                                                 <div class="elementor-column-wrap elementor-element-populated">
@@ -204,8 +185,8 @@
                                                                                                            aria-atomic="true"></p>
                                                                                                         <ul></ul>
                                                                                                     </div>
-                                                                                                    <form action="{% url 'contact' %}"
-                                                                                                          method="post"
+                                                                                                    <form action="{% url 'submit-form' %}"
+                                                                                                          method="post" enctype="multipart/form-data"
                                                                                                           class="wpcf7-form init"
 
                                                                                                           >
@@ -215,12 +196,12 @@
                                                                                                         <div class="form-style-3">
                                                                                                             <div class="columns_wrap">
                                                                                                                 <div class="column-1_2">
-                                                                                                                    <span class="style-line icon-name"><span
+                                                                                                                    <i class="fa fa-user"></i><span
                                                                                                                             class="wpcf7-form-control-wrap your-name">
                                                                                                                         <input
                                                                                                                             type="text"
                                                                                                                             name="name"
-                                                                                                                            size="40"
+                                                                                                                            size="80"
                                                                                                                             placeholder="Name" required="required" >
                                                                                                                         <span
                                                                                                                             class="line" ></span></span></span>
@@ -231,7 +212,7 @@
                                                                                                                             type="email"
                                                                                                                             name="email"
                                                                                                                             value=""
-                                                                                                                            size="40"
+                                                                                                                            size="80"
                                                                                                                             class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email fill_inited"
 
                                                                                                                             aria-invalid="false"
@@ -246,7 +227,7 @@
                                                                                                                             type="tel"
                                                                                                                             name="number"
                                                                                                                             value=""
-                                                                                                                            size="40"
+                                                                                                                            size="80"
                                                                                                                             class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel fill_inited"
                                                                                                                             aria-required="true"
                                                                                                                             aria-invalid="false"
@@ -254,12 +235,12 @@
                                                                                                                             class="line"></span></span></span>
                                                                                                                 </div>
                                                                                                                 <div class="column-1_2">
-                                                                                                                    <span class="style-line icon-subject"><span
+                                                                                                                    <i class="fa fa-book"></i><span
                                                                                                                             class="wpcf7-form-control-wrap subject"><input
                                                                                                                             type="text"
                                                                                                                             name="subject"
                                                                                                                             value=""
-                                                                                                                            size="40"
+                                                                                                                            size="80"
                                                                                                                             class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required fill_inited"
                                                                                                                             aria-required="true"
                                                                                                                             aria-invalid="false"
@@ -267,20 +248,48 @@
                                                                                                                             class="line"></span></span></span>
                                                                                                                 </div>
                                                                                                             </div>
+                                                                                                             <div class="columns_wrap">
+                                                                                                                <div class="column-1_2">
+                                                                                                                    <i class="fas fa-map-marker-alt"></i><span
+                                                                                                                            class="wpcf7-form-control-wrap phone"><input
+                                                                                                                            type="text"
+                                                                                                                            name="city"
+                                                                                                                            value=""
+                                                                                                                            size="40"
+                                                                                                                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel fill_inited"
+                                                                                                                            aria-required="true"
+                                                                                                                            aria-invalid="false"
+                                                                                                                            placeholder="City" required><span
+                                                                                                                            class="line"></span></span></span>
+                                                                                                                </div>
                                                                                                             <div class="columns_wrap margin-bottom">
                                                                                                                 <div class="column-1_1">
-                                                                                                                    <span class="style-line icon-textarea"><span
+                                                                                                                    <i class="fas fa-envelope-open-text"></i><span
                                                                                                                             class="wpcf7-form-control-wrap your-message"><textarea
-                                                                                                                            name="message"
-                                                                                                                            cols="40"
+                                                                                                                            name="cover_leter"
+                                                                                                                            cols="80"
                                                                                                                             rows="10"
                                                                                                                             class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required fill_inited"
                                                                                                                             aria-required="true"
                                                                                                                             aria-invalid="false"
-                                                                                                                            placeholder="How can we help you? Feel free to get in touch!"></textarea><span
+                                                                                                                            placeholder="Cover leter!"></textarea><span
                                                                                                                             class="line"></span></span></span>
                                                                                                                 </div>
-                                                                                                            </div>
+                                                                                                                <div class="columns_wrap">
+                                                                                                                <div class="column-1_2">
+                                                                                                                    <i class="fas fa-file-pdf"></i><span
+                                                                                                                            class="wpcf7-form-control-wrap file-upload" ><input
+                                                                                                                            type="file"
+                                                                                                                            name="file_cv"
+                                                                                                                            value=""
+                                                                                                                            size="80"
+                                                                                                                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel fill_inited"
+                                                                                                                            aria-required="true"
+                                                                                                                            aria-invalid="false"
+                                                                                                                            placeholder="Upload" required><span
+                                                                                                                            class="line"></span></span></span>
+                                                                                                                </div>
+                                                                                                            </div><br><br>
                                                                                                             <p ><span style="color: #0f8c77; "
                                                                                                                     class="wpcf7-submit-style" >
                                                                                                                 <input type="submit"  value="Get In Touch" style="background-color: #0f8c77"></input>
@@ -315,7 +324,5 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
-                                    </div></div></div></div></article></div></div></div></div></body>
-    {% endblock %}
-
+                                        </section></div>
+{% endblock %}
