@@ -29,132 +29,246 @@
             <link rel="stylesheet"
                   href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&#038;display=swap"/>
         </noscript>
+
+
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke;
+  border-radius:20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0f8c77;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:whitesmoke;
+}
+</style>
+
         <style>
 
-            .login-box {
-                margin-top: 75px;
-                height: auto;
 
-                text-align: center;
+.flip-box {
+  background-color: transparent;
+  width: 370px;
+  height:550px ;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
 
-                box-shadow: 1px 6px 24px -5px #0f8c77;
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(360deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color:lightcyan;
+    background-size:220%;
+    background-repeat: no-repeat;
+
+}
+
+@media screen and (max-width:300px){
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color:lightcyan; ;
+    color: white;
+}
+
+.flip-box-back {
+    background-color:#0f8c77;
+    color: white;
+    transform: rotateY(180deg);
+}
             }
+@media screen and (max-width:400px){
+.flip-box {
+    background-color:lightcyan ;
+    color: white;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  width: 400px;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
 
-            .login-key {
-                height: 100px;
-                font-size: 80px;
-                line-height: 100px;
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
 
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color:lightcyan ;
+  color: white;
+}
+
+.flip-box-back {
+  background-color:#0f8c77;
+  color: white;
+  transform: rotateY(180deg);
+}
             }
+@media screen and (max-width:1000px){
+.flip-box {
+  background-color: transparent;
+  width: 50%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
 
-            .login-title {
-                margin-top: 15px;
-                text-align: center;
-                font-size: 30px;
-                letter-spacing: 2px;
-                margin-top: 15px;
-                font-weight: bold;
+@media screen and (max-width:700px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
+@media screen and (max-width:770px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
 
-            }
+@media screen and (max-width:600px) {
+    .flip-box {
+        background-color: transparent;
+        width: 100%;
+        height: 600px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+    }
+}
+@media screen and (max-width:650px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
 
-            .login-form {
-                margin-top: 25px;
-                text-align: left;
-            }
+@media screen and (max-width:550px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
+@media screen and (max-width:500px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
+@media screen and (max-width:450px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
+@media screen and (max-width:350px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
+@media screen and (max-width:300px){
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}}
 
-            input[type=text] {
-                background-color: whitesmoke;;
-                border: none;
-                border-bottom: 2px solid #0f8c77;
-                border-top: 0px;
-                border-radius: 0px;
-                font-weight: bold;
-                outline: 0;
-                margin-bottom: 20px;
-                padding-left: 0px;
-                color: #ECF0F5;
-            }
 
-            input[type=password] {
-                background-color: whitesmoke;
-                border: none;
-                border-bottom: 2px solid #0f8c77;
-                border-top: 0px;
-                border-radius: 0px;
-                font-weight: bold;
-                outline: 0;
-                padding-left: 0px;
-                margin-bottom: 20px;
-                color: #ECF0F5;
-            }
 
-            .form-group {
-                margin-bottom: 40px;
-                outline: 0px;
-            }
 
-            .form-control:focus {
-                border-color: inherit;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-                border-bottom: 2px solid #0f8c77;
-                outline: 0;
-                background-color: #0f8c77;
-                color: #ECF0F5;
-            }
-
-            input:focus {
-                outline: none;
-                box-shadow: 0 0 0;
-            }
-
-            label {
-                margin-bottom: 0px;
-            }
-
-            .form-control-label {
-                font-size: 10px;
-                color: #0f8c77;
-                font-weight: bold;
-                letter-spacing: 1px;
-            }
-
-            .btn-outline-primary {
-                border-color: #0f8c77;
-                color: #0f8c77;
-                border-radius: 0px;
-                font-weight: bold;
-                letter-spacing: 1px;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            }
-
-            .btn-outline-primary:hover {
-                background-color: #0f8c77;
-                right: 0px;
-            }
-
-            .login-btm {
-                float: left;
-            }
-
-            .login-button {
-                padding-right: 0px;
-                text-align: right;
-                margin-bottom: 25px;
-            }
-
-            .login-text {
-                text-align: left;
-                padding-left: 0px;
-                color: #A2A4A4;
-            }
-
-            .loginbttm {
-                padding: 0px;
-            }
-        </style>
+</style>
         <style type="text/css"
                media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
             background: #0f8c77 !important;
@@ -756,6 +870,9 @@ Unique Technologies     ">
 				}
 			//});
 		  };
+
+
+
 
 
 
@@ -1439,178 +1556,95 @@ Unique Technologies     ">
                                                                                                                                 </div>
 
 
-
-
-
-
-
-
-
-
-
-                                                                                                                                <div class="elementor-element elementor-element-18a8315 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_team"
-                                                                                                                                     data-id="18a8315"
-                                                                                                                                     data-element_type="widget"
-                                                                                                                                     data-widget_type="trx_sc_team.default">
-                                                                                                                                    <div class="elementor-widget-container">
-                                                                                                                                        <div class="sc_team sc_team_short">
-                                                                                                                                            <div class="sc_team_columns_wrap sc_item_columns sc_item_posts_container trx_addons_columns_wrap columns_padding_bottom columns_in_single_row">
-                                                                                                                                                {% for data in data %}
-                                                                                                                                                    <script>
-                                                                                    $(document).ready(function(){
-                                                                                    $('.details_post').hide()
-                                                                                    $('#cover_post{{ data.id }}').click(function(){
-
-                                                                                    $('#details_post{{ data.id }}').show().css({ "transition": "transform 0.2s","transform-style" :"preserve-3d","transform": "rotateY(360deg)"})
-
-
-                                                                                    $('#cover_post{{ data.id }}').hide()
-
-                                                                                    });
-                                                                                    $('#details_post{{ data.id }}').click(function(){
-                                                                                    $('#cover_post{{ data.id }}').show().css({ "transition": "transform 0.2s","transform-style" :"preserve-3d","transform": "rotateY(360deg)"})
-                                                                                    $('#details_post{{ data.id }}').hide()
-
-                                                                                    });
-
-                                                                                            });
-
-                                                                                                                                                    </script>
-
-                                                                                                                                                    <div class="trx_addons_column-1_3 cover_post"
-                                                                                                                                                         style="padding:50px;height: 400px;"
-                                                                                                                                                         id="cover_post{{ data.id }}">
-                                                                                                                                                        <div class="sc_events_item sc_item_container post_container with_more">
-                                                                                                                                                            <div class="sc_events_item_content">
-                                                                                                                                                                <div class="sc_events_item_featured"
-                                                                                                                                                                     style="background-image: url({{ data.image }});"></div>
-                                                                                                                                                                <div class="sc_events_item_content_inner">
-                                                                                                                                                                    <div class="sc_events_item_content_inner_top">
-                                                                                                                                                                        <div class="sc_events_item_meta_categories">
-                                                                                                                                                                            <a
-                                                                                                                                                                                    title="View all posts in Design"
-                                                                                                                                                                                    style="color: #0f8c77;text-transform: capitalize;">{{ data.work_location }},{{ data.state }}</a>
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <div class="sc_events_item_content_inner_bottom">
-                                                                                                                                                                        <h4 class="sc_events_item_title">
-                                                                                                                                                                            <span style="text-transform: capitalize">{{ data.job_title }}</span>
-                                                                                                                                                                        </h4>
-                                                                                                                                                                        <div class="sc_events_item_meta">
-                                                                                                        <span class="sc_events_item_meta_item sc_events_item_meta_date">Starting <span
-                                                                                                                class="sc_events_item_date sc_events_item_date_start">{{ data.start_date }}</span> to <span
-                                                                                                                class="sc_events_item_date sc_events_item_date_end">{{ data.last_date }}</span></span>
-                                                                                                                                                                        </div>
-                                                                                                                                                                        <a
-                                                                                                                                                                                class="sc_events_item_more_link">
-                                                                                                                                                                            <span class="link_text"
-                                                                                                                                                                                  style="color: #0f8c77">Read More</span><span
-                                                                                                                                                                                class="link_icon"></span>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <a class="sc_events_item_link"
-                                                                                                                                                                    ></a>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="trx_addons_column-1_3 details_post"
-                                                                                                                                                         style="padding:50px;overflow:scroll;max-height:400px;"
-                                                                                                                                                         id="details_post{{ data.id }}">
-                                                                                                                                                        <div class="sc_events_item sc_item_container post_container with_more">
-                                                                                                                                                            <div class="sc_events_item_content">
-                                                                                                                                                                <div class="sc_events_item_featured"
-                                                                                                                                                                     style="background-image: url({{ data.image }});"></div>
-                                                                                                                                                                <div class="sc_events_item_content_inner">
-
-                                                                                                                                                                    <span style="color: #0f8c77">Job Description : </span>
-                                                                                                                                                                    <span style="color: black">{{ data.job_description }}</span><br><br>
-                                                                                                                                                                    <span style="color: #0f8c77">Roles Responsibility : </span>
-                                                                                                                                                                    <span style="color: black">{{ data.roles_responsibility }}</span><br><br>
-                                                                                                                                                                    <span style="color: #0f8c77">Essential Skill : </span>
-                                                                                                                                                                    <span style="color: black">{{ data.essential_skill }}</span><br><br>
-                                                                                                                                                                    <span style="color: #0f8c77">Preffered Skill : </span>
-                                                                                                                                                                    <span style="color: black">{{ data.preffered_skill }}</span><br><br>
-                                                                                                                                                                    <span style="color: #0f8c77">Additional Skill : </span>
-                                                                                                                                                                    <span style="color: black">{{ data.additional_skill }}</span><br><br>
-
-
-
-                                                                                                                                                                    <a class="sc_events_item_link btn btn-outline-primary" style="color:black ;"
-                                                                                                                                                                     href="{% url 'apply-form' id=data.id %}">Apply Now</a>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>
-
-
-                                                                                                                                                {% endfor %}
-
-
-                                                                                                                                            </div>
-                                                                                                                                            <div class="col-lg-12">
-                                                                                                                                                <div class="pagination-main text-center">
-                                                                                                                                                    <ul class="pagination">
-                                                                                                                                                        {% if data.has_previous %}
-                                                                                                                                                            <li>
-                                                                                                                                                                <a href="?page={{ data.previous_page_number }}"
-                                                                                                                                                                   style="color: #0f8c77"><i
-                                                                                                                                                                        class="fa fa-angle-double-left"
-                                                                                                                                                                        aria-hidden="true"></i></a>
-                                                                                                                                                            </li>
-                                                                                                                                                        {% endif %}
-                                                                                                                                                        <li class="active">
-                                                                                                                                                            <a
-                                                                                                                                                                    href="#"
-                                                                                                                                                                    style="background-color: #0f8c77">{{ data.number }}</a>
-                                                                                                                                                        </li>
-
-                                                                                                                                                        {% if data.has_next %}
-                                                                                                                                                            <li>
-                                                                                                                                                                <a href="?page={{ data.next_page_number }}"
-                                                                                                                                                                   style="color: #0f8c77"><i
-                                                                                                                                                                        class="fa fa-angle-double-right"
-                                                                                                                                                                        aria-hidden="true"></i></a>
-                                                                                                                                                            </li>
-                                                                                                                                                        {% endif %}
-                                                                                                                                                    </ul>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                                <div class="elementor-element elementor-element-ef1f3fc animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                                                                                                                     data-id="ef1f3fc"
-                                                                                                                                     data-element_type="widget"
-                                                                                                                                     data-widget_type="spacer.default">
-                                                                                                                                    <div class="elementor-widget-container">
-                                                                                                                                        <div class="elementor-spacer">
-                                                                                                                                            <div class="elementor-spacer-inner"></div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                                <div class="elementor-element elementor-element-262b4ca sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                                                                                                                     data-id="262b4ca"
-                                                                                                                                     data-element_type="widget"
-                                                                                                                                     data-widget_type="spacer.default">
-                                                                                                                                    <div class="elementor-widget-container">
-                                                                                                                                        <div class="elementor-spacer">
-                                                                                                                                            <div class="elementor-spacer-inner"></div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                                                                        </section>
+                                                                                              </section>
+
+
+{% for data in data %}
+    <div class="flip-box container" style="float:left;padding-bottom:20px;">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+
+<div style="color:white;padding: 20px;background-color:#0f8c77 ;width:100%;height:auto;text-transform: uppercase">
+    <span  >{{ data.job_title }}</span>
+</div>
+        <div class="row " style="padding-top: 40px;text-align:left;">
+
+            <div class="col-lg-4"><b style="color:black">Location: </b></div>
+            <div class="col-lg-7" style="margin-bottom:25px;text-transform: capitalize;text-align:left;color:black;">
+               {{ data.work_location }}, {{ data.state }}
+            </div>
+
+            <div class="col-lg-4"><b style="color:black">Role: </b></div>
+            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
+              {{ data.job_title }}
+            </div>
+                        <div class="col-12"></div>
+
+            <div class="col-lg-4"><b style="color:black">Start Date: </b></div>
+            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
+             {{ data.start_date }}
+            </div>
+            <div class="col-lg-4"><b style="color:black">Last Date: </b></div>
+            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
+              {{ data.last_date }}
+            </div>
+            <div class="col-lg-4"><b style="color:black">Post For: </b></div>
+            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
+              {{ data.job_education }}
+            </div>
+        </div>
+        <div style="width:100%;height:50px;background-color: #0f8c77;position: absolute;bottom:0px;padding-left: 200px;padding-top:10px;">
+                <a href="apply-form/{{ data.id }}" class="btn" style="color:black;background-color:whitesmoke;">Apply Here</a>
+        </div>
 
 
 
 
-                                                                                                                                                                                                           </div>
+ </div>
+
+  </div>
+</div>
+{% endfor %}
+ <div class="col-lg-12">
+    <div class="pagination-main text-center">
+        <ul class="pagination">
+            {% if data.has_previous %}
+                <li>
+                    <a href="?page={{ data.previous_page_number }}"
+                       style="color: #0f8c77"><i
+                            class="fa fa-angle-double-left"
+                            aria-hidden="true"></i></a>
+                </li>
+            {% endif %}
+            <li class="active"><a
+                    href="#"
+                    style="background-color: #0f8c77">{{ data.number }}</a>
+            </li>
+
+            {% if data.has_next %}
+                <li>
+                    <a href="?page={{ data.next_page_number }}"
+                       style="color: #0f8c77"><i
+                            class="fa fa-angle-double-right"
+                            aria-hidden="true"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -1633,10 +1667,16 @@ Unique Technologies     ">
 
 
 
+
+
+
                                                                         </script>
 
                                                                         <script type="text/javascript">
 var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
+
+
+
 
 
 
@@ -1657,6 +1697,9 @@ var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
 
 
 
+
+
+
                                                                         </script>
                                                                         <script type="text/javascript">
 		(function () {
@@ -1664,6 +1707,9 @@ var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 			document.body.className = c;
 		})();
+
+
+
 
 
 
@@ -2106,6 +2152,9 @@ var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
 {#    });#}
 
 {#    });#}
+
+
+
 
 
 

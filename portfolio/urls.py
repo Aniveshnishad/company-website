@@ -20,23 +20,22 @@ from portfolio import views
 
 urlpatterns = [
     # urls for web templates
-    path('',views.index_page,name="index"),
-    path('home',views.index_page,name="home"),
-    path('blog',views.blog_page,name="blog"),
-    path('blog-full/<id>',views.full_blog,name="full-blog"),
-    path('test',views.test_page,name="test"),
-    path('about-us',views.about_page,name="about"),
-    path('service',views.service_page,name="service"),
+    path('', views.index_page, name="index"),
+    path('home', views.index_page, name="home"),
+    path('blog', views.blog_page, name="blog"),
+    path('blog-full/<id>', views.full_blog, name="full-blog"),
+    path('test', views.test_page, name="test"),
+    path('about-us', views.about_page, name="about"),
+    path('service', views.service_page, name="service"),
     path('our-team', views.our_team, name="our-team"),
-    path('contact',views.contact_page,name="contact"),
-    path('careers',views.careers_page,name="careers"),
-    path('careers/graduate',views.graduate_page,name="graduate"),
-    path('careers/experience',views.experience_page,name="experience"),
-    path('carrers/intern',views.intern_page,name="intern"),
-    path('apply-form/<id>',views.apply_form,name="apply-form"),
-    path('submit-form',views.submit_form,name="submit-form"),
+    path('contact', views.contact_page, name="contact"),
+    path('careers', views.careers_page, name="careers"),
+    path('careers/graduate', views.graduate_page, name="graduate"),
+    path('careers/experience', views.experience_page, name="experience"),
+    path('carrers/intern', views.intern_page, name="intern"),
+    path('careers/apply-form/<id>', views.apply_form, name="apply-form"),
+    path('submit-form', views.submit_form, name="submit-form"),
 
     # urls for admin actions
-    path('manager',views.manager,name="manager"),
-    path('manager-login',views.manager_login,name="manager-login"),
+
 ]

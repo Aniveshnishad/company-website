@@ -20,11 +20,7 @@ class Blogs(models.Model):
     date=models.DateField(auto_now_add=True,blank=True)
     def __str__(self):
         return self.bolg_title
-class Manager(models.Model):
-    manager_name=models.CharField(max_length=200,blank=True)
-    manager_password=models.CharField(max_length=200,blank=True)
-    def __str__(self):
-        return self.manager_name
+
 
 class JobPostDetail(models.Model):
     choose=(('Graduate','Graduate'),('Internship','Internship'),('Experience/Professional','Experience/Professional'))
@@ -46,7 +42,7 @@ class JobPostDetail(models.Model):
         return self.job_title
 
 class ApplyDetails(models.Model):
-    name=models.CharField(max_length=200,blank=True)
+
     name = models.CharField(max_length=200, blank=True)
     number = models.CharField(max_length=200, blank=True)
     subject = models.CharField(max_length=200, blank=True)

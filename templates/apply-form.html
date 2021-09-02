@@ -80,6 +80,9 @@
                                                                                                                                    Start Date: {{ data.start_date }}<br> Last Date : {{ data.last_date }}
 
                                                                                                                                                                 </span><span>{{ data.job_description }}</span>
+                                                                                                                                        <span>{{ data.additional_skill }}</span>
+                                                                                                                                          <span>{{ data.roles_responsibility }}</span>
+
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
@@ -239,12 +242,12 @@
                                                                                                                             class="wpcf7-form-control-wrap subject"><input
                                                                                                                             type="text"
                                                                                                                             name="subject"
-                                                                                                                            value=""
+                                                                                                                            value="{{ data.job_title }}"
                                                                                                                             size="80"
                                                                                                                             class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required fill_inited"
                                                                                                                             aria-required="true"
                                                                                                                             aria-invalid="false"
-                                                                                                                            placeholder="Subject" required><span
+                                                                                                                            placeholder="Subject" readonly><span
                                                                                                                             class="line"></span></span></span>
                                                                                                                 </div>
                                                                                                             </div>
