@@ -9,6 +9,7 @@ class ContactForm(models.Model):
     number=models.CharField(max_length=11,blank=True)
     subject=models.CharField(max_length=200,blank=True)
     message=models.CharField(max_length=900,blank=True)
+    reply=models.TextField(max_length=2000,blank=True)
     def __str__(self):
         return self.email
 
@@ -50,3 +51,6 @@ class ApplyDetails(models.Model):
     city = models.CharField(max_length=200, blank=True)
     cover_leter = models.TextField(max_length=200, blank=True)
     file_cv=models.FileField(upload_to='static/cover-leters',blank=True)
+    reply=models.TextField(max_length=2000,blank=True)
+    def __str__(self):
+        return self.email

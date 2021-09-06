@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'Admin.apps.AdminConfig',
     'ckeditor',
+    'ckeditor_uploader',
+
 
 ]
 
@@ -146,6 +148,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_UPLOAD_PATH = 'blogs/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media/'
+
 
 MESSAGE_TAGS ={
     messages.DEBUG:'alert-info',

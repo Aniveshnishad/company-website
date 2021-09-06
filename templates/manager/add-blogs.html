@@ -1,0 +1,118 @@
+{% extends 'manager/base.html' %}
+{% block content %}
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+
+    <style>
+        .main-div {
+            padding-top: 130px;
+            overflow: auto;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            width: 100%;
+            min-width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+ <div class="container">
+        <a href="{% url 'add-blog-form' %}" class="btn" style="background-color: #0f8c77;margin-top:100px;position:absolute;" >Add Blog</a>
+    </div>
+
+    <div class="container main-div">
+        <table class="styled-table container-fluid">
+            <thead>
+            <tr>
+                <th>Blog Title</th>
+                 <th>Blog </th>
+                <th>Blog Tag</th>
+                <th>Delete</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for data in data %}
+            <tr>
+                <td style="text-transform: capitalize;" align="center">{{ data.bolg_title }}</td>
+                <td style="text-transform: capitalize;" align="center">{{ data.blog_body|safe }}</td>
+                <td style="text-transform: capitalize;" align="center">{{ data.blog_title_tag }}</td>
+            <td style="text-transform: capitalize;" align="center"><a href="delete-blog/{{ data.id }}" class="btn btn-danger" >Delete</a></td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 2000)
+
+
+
+
+
+
+
+
+    </script>
+{% endblock %}

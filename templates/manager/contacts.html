@@ -1,0 +1,204 @@
+{% extends 'manager/base.html' %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <style>
+            .main-div {
+                padding-top: 130px;
+                overflow: auto;
+            }
+
+            .styled-table {
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                width: 100%;
+                min-width: 100%;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+            }
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #009879;
+            }
+
+            .styled-table tbody tr.active-row {
+                font-weight: bold;
+                color: #009879;
+            }
+        </style>
+        <title>CubexO Manager</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body class="body">
+    <div class="container main-div">
+        <table class="styled-table container-fluid">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Subject</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% if data %}
+                {% for data in data %}
+
+
+                    {% if forloop.counter|divisibleby:2 %}
+
+
+
+                        <tr>
+                            <td style="text-transform: capitalize;text-align: center">
+                                <button data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                        style="text-decoration: none;color: black">{{ data.name }}</button>
+                            </td>
+                            <td style="text-transform: capitalize;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: black">{{ data.email }}</a>
+                            </td>
+                            <td style="text-transform: capitalize;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: black">{{ data.number }}</a>
+                            </td>
+                            <td style="text-transform: capitalize;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: black">{{ data.subject }}</a>
+                            </td>
+
+
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: #0f8c77">{{ data.name }}</a>
+                            </td>
+                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: #0f8c77">{{ data.email }}</a>
+                            </td>
+                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: #0f8c77">{{ data.number }}</a>
+                            </td>
+                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
+                                   style="text-decoration: none;color: #0f8c77">{{ data.subject }}</a>
+                            </td>
+
+                        </tr>
+                    {% endif %}
+                    <div class="modal fade" id="myModal{{ data.id }}" role="dialog">
+
+                        <div class="modal-dialog modal-lg" style="z-index:2">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="color:#0f8c77"> Reply</h4>
+
+                                </div>
+                                <div class="modal-body">
+
+
+                                    <form action="{% url 'reply-contact-form' id=data.id %}" method="post"
+                                          enctype="multipart/form-data">
+                                        {% csrf_token %}
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                                   aria-describedby="emailHelp"
+                                                   name="email" value="{{ data.email }}" readonly>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Message</label>
+                                            <textarea class="form-control wpcf7-form-control-wrap"
+                                                      id="exampleInputEmail1"
+                                                      aria-describedby="emailHelp"
+                                                      name="message" placeholder="{{ data.message }}"
+                                                      readonly></textarea>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Reply</label>
+                                            <textarea class="form-control wpcf7-form-control-wrap"
+                                                      id="exampleInputEmail1"
+                                                      aria-describedby="emailHelp"
+                                                      name="reply">{{ data.reply }}</textarea>
+
+                                        </div>
+
+                                        <button type="submit" class="btn" style="background: #0f8c77;color: black">
+                                            Submit
+                                        </button>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            {% else %}
+                <center>
+                    <div class="container">No data found!</div>
+                </center>
+            {% endif %}
+            <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+
+    </body>
+    </html>
+    <script>
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 2000)
+
+
+
+
+
+
+    </script>
+{% endblock %}

@@ -1936,7 +1936,7 @@
         <a class="qwery_skip_link skip_to_content_link" href="#content_skip_link_anchor" tabindex="1">Skip to
             content</a>
         <a class="qwery_skip_link skip_to_footer_link" href="#footer_skip_link_anchor" tabindex="1">Skip to footer</a>
-        <header class="top_panel top_panel_custom top_panel_custom_6817 top_panel_custom_header-simple-fullwidth				 without_bg_image">
+        <header class="top_panel top_panel_custom top_panel_custom_6817 top_panel_custom_header-simple-fullwidth				 without_bg_image" style="z-index: 2">
             <div data-elementor-type="cpt_layouts" data-elementor-id="6817" class="elementor elementor-6817"
                  data-elementor-settings="[]">
                 <div class="elementor-inner">
@@ -1973,36 +1973,36 @@
                                                                 class="sc_layouts_menu_nav">
                                                                 <li id="menu-item-9173"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-5002 current_page_item menu-item-9173">
-                                                                    <a href="{% url 'home' %}"><span>Home</span></a>
+                                                                    <a href="{% url 'manager-home' %}"><span>Home</span></a>
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'about' %}"><span>About Us</span></a>
-
-                                                                </li>
-
-                                                                <li id="menu-item-5573"
-                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'our-team' %}"><span>Our Team</span></a>
+                                                                    <a href="{% url 'manager-contacts' %}"><span>Contacts/Query</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'service' %}"><span>Services</span></a>
+                                                                    <a href="{% url 'manager-add-blogs' %}"><span>Add Blogs</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'blog' %}"><span>Blogs</span></a>
+                                                                    <a href="{% url 'manager-candidates' %}"><span>Candidates</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'contact' %}"><span>Contact Us</span></a>
+                                                                    <a href="{% url 'manager-add-job' %}"><span>Add Job</span></a>
+
+                                                                </li>
+
+                                                                <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'manager-profile' %}"><span>Profile</span></a>
 
                                                                 </li>
 
@@ -2295,17 +2295,17 @@
                              itemtype="https://schema.org/SiteNavigationElement">
                             <ul id="menu_mobile_810746209">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'home' %}" aria-current="page"><span>Home</span></a></li>
+                                    <a href="{% url 'manager-home' %}" aria-current="page"><span>Home</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'about' %}" aria-current="page"><span>About Us</span></a></li>
+                                    <a href="{% url 'manager-contacts' %}" aria-current="page"><span>Contacts</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'our-team' %}" aria-current="page"><span>Our Team</span></a></li>
+                                    <a href="{% url 'manager-add-blogs' %}" aria-current="page"><span>Add Blogs</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'service' %}" aria-current="page"><span>Services</span></a></li>
+                                    <a href="{% url 'manager-candidates' %}" aria-current="page"><span>Candidates</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'blog' %}" aria-current="page"><span>Blogs</span></a></li>
+                                    <a href="{% url 'manager-add-job' %}" aria-current="page"><span>Add job</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'contact' %}" aria-current="page"><span>Contact Us</span></a></li>
+                                    <a href="{% url 'manager-profile' %}" aria-current="page"><span>Profile</span></a></li>
 
                             </ul>
                         </nav>
@@ -2570,27 +2570,27 @@
                                                                 <ul class="custom_links_list">
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'index' %}"><span
+                                                                            href=""><span
                                                                             class="custom_links_list_item_title">Portfolio</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'service' %}"><span
+                                                                            href=""><span
                                                                             class="custom_links_list_item_title">Services</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'about' %}"><span
+                                                                            href="><span
                                                                             class="custom_links_list_item_title">About Us</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'contact' %}"><span
+                                                                            href=""><span
                                                                             class="custom_links_list_item_title">Appointment</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'contact' %}"><span
+                                                                            href="{"><span
                                                                             class="custom_links_list_item_title">Contacts</span></a>
                                                                     </li>
                                                                 </ul>

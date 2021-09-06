@@ -1,9 +1,9 @@
 {% if messages %}
 {% for message in messages %}
-    <center>
-<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77" id="msg" role="alert" \>
-    {{ message }}
 
-</div></center>
+<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77;float: right;margin-top:150px;" id="msg" role="alert" \>
+    <span style="color:black;">CubexO software Solution</span> <br>{{ message }}
+
+</div>
     {% endfor %}
 {% endif %}
