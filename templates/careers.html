@@ -105,9 +105,9 @@ Unique Technologies     ">
         <style id="elementor-frontend-inline-css" type="text/css">
             @font-face {
                 font-family: eicons;
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
-                font-weight: 400;
+               src: url("{% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot' %}");
+            src: url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot#iefix'%}) format("embedded-opentype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff' %}) format("woff2"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff'%}) format("woff"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf'%}) format("truetype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg'%}) format("svg");
+            font-weight: 400;
                 font-style: normal
             }
 
@@ -990,15 +990,13 @@ Unique Technologies     ">
         }
 
         .qwery_inline_1091233164 {
-            background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/04/post-57-copyright-840x560.jpg);
-        }
+             }
 
         .qwery_inline_1534192422 {
-            background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/04/post-43-copyright-840x980.jpg);
-        }
+            }
 
         .qwery_inline_971222634 {
-            background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/04/post-59-copyright-840x560.jpg);
+
         }
 
         .trx_addons_inline_1892950297 img.logo_image {
@@ -1052,6 +1050,7 @@ Unique Technologies     ">
 
                                             <section
                                                     class="elementor-section elementor-top-section elementor-element elementor-element-592ee0a elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                    style="background-image: url(https://images.pexels.com/photos/4069291/pexels-photo-4069291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
                                                     data-id="592ee0a" data-element_type="section"
                                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-background-overlay"></div>
@@ -1104,15 +1103,17 @@ Unique Technologies     ">
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                                <div class="elementor-widget-container container">
-                                                                                                    <div class="sc_title scheme_dark sc_title_default">
-                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default" >CubexO Career</span>
-                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
+
+                                                                                                <div class="elementor-widget-container ">
+                                                                                                    <div class="sc_title scheme_dark sc_title_default container">
+                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default " style="margin-left:10%;" >CubexO Career</span>
+                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag" style="margin-left:10%;">
                                                                                                             <span class="sc_item_title_text">We are not just a <span style="color: #0f8c77">technology company </span>full of people,
                                                                                                                 we’re a <span style="color: #0f8c77">people company</span> full of technology. It is people like you who make us what we are<span style="color: #0f8c77"> today</span>.
                                                                                                                 </span>
                                                                                                         </h1></div>
                                                                                                 </div>
+
                                                                                             </div>
                                                                                             <div class="elementor-element elementor-element-6cdd842 sc_height_huge sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
                                                                                                  data-id="6cdd842"
@@ -1166,6 +1167,7 @@ Unique Technologies     ">
                                                     </div>
                                                 </div>
                                             </section>
+
 
 
 <div class="page_content_wrap">
@@ -1247,7 +1249,7 @@ Unique Technologies     ">
                                                                                                                 <div data-post-id="754"
                                                                                                                      class="sc_services_item sc_item_container post_container tilt_action with_content with_image with_icon post-754 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-third" id="hover_effect">
                                                                                                                     <div class="sc_services_item_content"
-                                                                                                                         style="background-image:url({% static 'images/graduate3.jpg' %}); ">
+                                                                                                                         style="background-image:url(https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); ">
                                                                                                                         <div class="sc_services_item_content_inner">
                                                                                                                             <a href="{% url 'graduate' %}"
                                                                                                                                id="sc_services_1594438250_icon-molecular_1"
@@ -1258,7 +1260,7 @@ Unique Technologies     ">
                                                                                                                                 <a href="{% url 'graduate' %}">Graduates</a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
-                                                                                                                                <p style="color: #0f8c77">
+                                                                                                                                <p style="color:">
                                                                                                                                     Opportunities
                                                                                                                                     for
                                                                                                                                     Graduates</p>
@@ -1273,7 +1275,7 @@ Unique Technologies     ">
                                                                                                                 <div data-post-id="752"
                                                                                                                      class="sc_services_item sc_item_container post_container tilt_action with_content with_image with_icon post-752 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-third" id="hover_effect">
                                                                                                                     <div class="sc_services_item_content "
-                                                                                                                         style="background-image: url({% static 'images/intern.jpg' %});">
+                                                                                                                         style="background-image: url(https://images.pexels.com/photos/7711126/pexels-photo-7711126.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
                                                                                                                         <div class="sc_services_item_content_inner">
                                                                                                                             <a href="{% url 'intern' %}"
                                                                                                                                id="sc_services_561664083_icon-deadline_3"
@@ -1286,7 +1288,7 @@ Unique Technologies     ">
                                                                                                                                     Interns</a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
-                                                                                                                                <p style="color: #0f8c77">
+                                                                                                                                <p style="">
                                                                                                                                     Opportunity
                                                                                                                                     for
                                                                                                                                     Students/Internship
@@ -1313,7 +1315,7 @@ Unique Technologies     ">
                                                                                                                                 <a href="{% url 'experience' %}"><span>Experience Professional</span></a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
-                                                                                                                                <p style="color: #0f8c77">
+                                                                                                                                <p style="">
                                                                                                                                     Opportunities
                                                                                                                                     for
                                                                                                                                     Experience

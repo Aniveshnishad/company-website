@@ -3,15 +3,13 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 
 # Create your views here.
-from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails
+from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Event
 
-
-def index_page(request):
-    return render(request, "index.html")
 
 
 def index_page(request):
-    return render(request, "index.html")
+    obj =Blogs.objects.all().order_by('-id')
+    return render(request, "index.html",{"data":obj})
 
 
 def blog_page(request):
@@ -23,9 +21,6 @@ def full_blog(request, id):
     obj = Blogs.objects.get(id=id)
     return render(request, "full_blog.html", {"obj": obj})
 
-
-def test_page(request):
-    return render(request, "test.html")
 
 
 def about_page(request):
@@ -46,7 +41,7 @@ def careers_page(request):
 
 def graduate_page(request):
     obj = JobPostDetail.objects.filter(job_education__icontains="Graduate").order_by('-id')
-    paginator = Paginator(obj, 3)
+    paginator = Paginator(obj, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "graduate.html", {"data": page_obj})
@@ -54,7 +49,7 @@ def graduate_page(request):
 
 def experience_page(request):
     obj = JobPostDetail.objects.filter(job_education__icontains="Experience").order_by('-id')
-    paginator = Paginator(obj, 3)
+    paginator = Paginator(obj, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "experience.html", {"data": page_obj})
@@ -62,7 +57,7 @@ def experience_page(request):
 
 def intern_page(request):
     obj = JobPostDetail.objects.filter(job_education__icontains="Intern").order_by('-id')
-    paginator = Paginator(obj, 3)
+    paginator = Paginator(obj, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "intern.html", {"data": page_obj})
@@ -108,3 +103,11 @@ def submit_form(request):
     else:
         messages.error(request, "Somthing went Wrong!")
         return render(request, "index.html")
+
+def events_page(request):
+    obj=Event.objects.all()
+    return render(request,"events.html",{"obj":obj})
+def full_event(request, id):
+    obj = Event.objects.get(id=id)
+    return render(request, "full-event.html", {"obj": obj})
+

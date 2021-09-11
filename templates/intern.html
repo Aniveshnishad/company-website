@@ -23,11 +23,29 @@
         </noscript>
         <style>
 
+.card:hover{
+    perspective: 1000px;
+
+}
+.card-body{
+  position: relative;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-body {
+  transform: rotateY(360deg);
+}
+
+
+</style>
+        <style>
+
 
 .flip-box {
   background-color: transparent;
   width: 370px;
-  height:550px ;
+  height:400px ;
+    overflow: hidden;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
 }
@@ -1267,7 +1285,9 @@ Unique Technologies     ">
 
                                             <section
                                                     class="elementor-section elementor-top-section elementor-element elementor-element-592ee0a elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                                    data-id="592ee0a" data-element_type="section"
+                                                    style="background-image: url(https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
+
+data-id="592ee0a" data-element_type="section"
                                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-background-overlay"></div>
                                                 <div class="elementor-container elementor-column-gap-extended">
@@ -1321,9 +1341,9 @@ Unique Technologies     ">
                                                                                             </div>
                                                                                                 <div class="elementor-widget-container container">
                                                                                                     <div class="sc_title scheme_dark sc_title_default">
-                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default" >CubexO Career</span>
-                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                                            <span class="sc_item_title_text">Opportunity for Internship/Students<br>We are here for You<br>Start internship now</bs></span>
+                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default" style="margin-left: 10%">CubexO Career</span>
+                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag" style="margin-left: 10%;">
+                                                                                                            <span class="sc_item_title_text"><span>Opportunity for Internship/Students</span><br>We are here for You<br>Start internship now</span></span>
                                                                                                         </h1></div>
                                                                                                 </div>
                                                                                             </div>
@@ -1488,53 +1508,15 @@ Unique Technologies     ">
                                         </section>
 
 {% for data in data %}
-    <div class="flip-box container" style="float:left;padding-bottom:20px;">
-  <div class="flip-box-inner">
-    <div class="flip-box-front">
-
-
-<div style="color:white;padding: 20px;background-color:#0f8c77 ;width:100%;height:auto;text-transform: uppercase">
-    <span  >{{ data.job_title }}</span>
-</div>
-        <div class="row " style="padding-top: 40px;text-align:left;">
-
-            <div class="col-lg-4"><b style="color:black">Location: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-transform: capitalize;text-align:left;color:black;">
-               {{ data.work_location }}, {{ data.state }}
-            </div>
-
-            <div class="col-lg-4"><b style="color:black">Role: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.job_title }}
-            </div>
-                        <div class="col-12"></div>
-
-            <div class="col-lg-4"><b style="color:black">Start Date: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-             {{ data.start_date }}
-            </div>
-            <div class="col-lg-4"><b style="color:black">Last Date: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.last_date }}
-            </div>
-            <div class="col-lg-4"><b style="color:black">Post For: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.job_education }}
-            </div>
-        </div>
-        <div style="width:100%;height:50px;background-color: #0f8c77;position: absolute;bottom:0px;padding-left: 200px;padding-top:10px;">
-                <a href="apply-form/{{ data.id }}" class="btn" style="color:black;background-color:whitesmoke;">Apply Here</a>
-        </div>
-
-
-
-
- </div>
-
+<div class="card text-end" style="width: 18rem;float: left;margin-left: 20px;">
+  <div class="card-body">
+    <h5 class="card-title" style="text-transform: capitalize;">{{ data.job_title }}</h5>
+    <p class="card-text"><div  style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div></p>
+    <a href="apply-form/{{ data.id }}"><button type="button"  style="background-color: #0f8c77;width:120px;height:40px;color:white">Apply Here</button> </a>
   </div>
 </div>
 {% endfor %}
- <div class="col-lg-12">
+ <br><br><bR><br><div class="col-lg-12">
     <div class="pagination-main text-center">
         <ul class="pagination">
             {% if data.has_previous %}
@@ -1580,7 +1562,7 @@ Unique Technologies     ">
             </div>
 
         </div>
-    </div>
+    </div><br><br>
 
 
     <script>

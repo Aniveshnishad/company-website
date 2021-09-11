@@ -1,213 +1,480 @@
 {% extends 'manager/base.html' %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>CubexO Manager</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</head>
-
-
-
-        <style>
-            .main-div {
-                padding-top: 130px;
-                overflow: auto;
-            }
-
-            .styled-table {
-                border-collapse: collapse;
-                margin: 25px 0;
-                font-size: 0.9em;
-                font-family: sans-serif;
-                width: 100%;
-                min-width: 100%;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-            }
-
-            .styled-table thead tr {
-                background-color: #009879;
-                color: #ffffff;
-                text-align: left;
-            }
-
-            .styled-table th,
-            .styled-table td {
-                padding: 12px 15px;
-            }
-
-            .styled-table tbody tr {
-                border-bottom: 1px solid #dddddd;
-            }
-
-            .styled-table tbody tr:nth-of-type(even) {
-                background-color: #f3f3f3;
-            }
-
-            .styled-table tbody tr:last-of-type {
-                border-bottom: 2px solid #009879;
-            }
-
-            .styled-table tbody tr.active-row {
-                font-weight: bold;
-                color: #009879;
-            }
-        </style>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
         <title>CubexO Manager</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+              crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+    </head>
+
+
+    <style>
+        #reply-btn {
+            background-color: #0f8c77;
+            font-size: 20px;
+            color: whitesmoke;
+            height: 50px;
+            width: 100px
+        }
+
+        #reply-btn:hover {
+            background-color: #0f8c66;
+            color: whitesmoke;
+            height: 50px;
+            width: 100px
+        }
+
+        #exampleInputEmail1 {
+            border: none;
+
+            box-shadow: none;
+        }
+
+        #exampleInputEmail1:hover {
+            border: none;
+            border-top: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+        #InputEmail1 {
+
+
+            box-shadow: none;
+        }
+
+        #InputEmail1:hover {
+            border: none;
+            border-top: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+        #ReplyInputEmail1 {
+
+
+            box-shadow: none;
+        }
+
+        #ReplyInputEmail1:hover {
+
+            border: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+
+        .main-div {
+            padding-top: 30px;
+            overflow: auto;
+        }
+
+        .main-div1 {
+            padding-top: 130px;
+            overflow: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            background: rgba(71, 147, 227, 1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 30px 0;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 0px 0px 70px;
+            box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+        }
+
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 15px;
+        }
+
+        .fl-table thead th {
+            color: #ffffff;
+            background: #4FC3A1;
+        }
+
+
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrapper:before {
+                content: "Scroll horizontally >";
+                display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table thead {
+                float: left;
+            }
+
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(odd) {
+                background: #F8F8F8;
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .text {
+            display: block;
+            width: 110px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+
+        @media (max-width: 767px) {
+            .text {
+                display: block;
+                width: 100px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+
+        #input-search{
+           border:1px solid #0f8c77;
+            width: 370px;
+            padding-left: 10px;
+
+
+
+        }
+         #input-search:focus{
+            border:none;
+        }
+
+
+        .searchTerm:focus {
+            color: #0f8c77;
+        }
+
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 500px;
+
+            float: right;
+
+
+        }
+
+    </style>
+    <title>CubexO Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <body class="body">
+    <div class="container main-div1">
+        <div class="wrap">
+            <div class="search">
+                <form action="{% url 'manager-candidates' %}" method="get" enctype="multipart/form-data">
+                    {% csrf_token %}
+                <input type="text" class="searchTerm" id="input-search" placeholder="Search by name, email or number" name="search">
+                <button type="submit" class="searchButton" style="background-color: #0f8c77;float: right;">
+                    <i class="fa fa-search"></i>
+                </button>
+                </form>
+            </div>
+        </div><br><br><br><br>
+
+        <h2 style="color: #0f8c77"><i class="fas fa-user"></i> Applications
+
+        </h2>
+    </div>
+    {% if data %}
     <div class="container main-div">
-        <table class="styled-table container-fluid">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Number</th>
-                <th>City</th>
-                <th>Resume</th>
 
-            </tr>
-            </thead>
-            <tbody>
-            {% if data %}
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th><i class="fas fa-user"></i> Name</th>
+                    <th><i class="fas fa-envelope"></i> Email</th>
+                    <th><i class="fas fa-phone"></i> Number</th>
+                    <th><i class="fas fa-map-marker"></i> City</th>
+                    <th><i class="fas fa-book"></i> Subject</th>
+                    <th><i class="fas fa-file-image"></i> Cover Later</th>
+                    <th><i class="fas fa-file-pdf-o"></i> Resume</th>
+                    <th> Reply</th>
+                    <th> Status</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
                 {% for data in data %}
+                    <tr>
+                        <td><span class="text">{{ data.name }}</span></td>
+                        <td><span class="text">{{ data.email }}</span></td>
+                        <td><span class="text">{{ data.number }}</span></td>
+                        <td><span class="text">{{ data.city }}</span></td>
+                        <td><span class="text">{{ data.subject }}</span></td>
+                        <td><span class="text">{{ data.cover_leter }}</span></td>
+                        <td><span class="text"><a href="{{ data.file_cv }}" download>Download</a></span></td>
+                        <td>
+                            <span class="text"><a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}">
+                                <i class="fas fa-reply"></i>
+
+                            </a></span>
+                        </td>
+                        {% if data.reply %}
+                            <td><span class="text"><i class="far fa-check-circle" style="color: green"></i></span></td>
+                        {% else %}
+                            <td><span class="text"><i class="far fa-times-circle" style="color: red"></i></span></td>
+                        {% endif %}
 
 
-                    {% if forloop.counter|divisibleby:2 %}
+                    </tr>
 
-
-
-                        <tr>
-                            <td style="text-transform: capitalize;text-align: center">
-                                <button data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                        style="text-decoration: none;color: black">{{ data.name }}</button>
-                            </td>
-                            <td style="text-transform: capitalize;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: black">{{ data.email }}</a>
-                            </td>
-                            <td style="text-transform: capitalize;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: black">{{ data.number }}</a>
-                            </td>
-                            <td style="text-transform: capitalize;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: black">{{ data.city }}</a>
-                            </td>
-                         <td style="text-transform: capitalize;text-align: center">
-                                <a href="{{ data.file_cv }}" data-toggle="modal"
-                                   style="text-decoration: none;color: black" download>Download</a>
-                            </td>
-
-
-                        </tr>
-                    {% else %}
-                        <tr>
-                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: #0f8c77">{{ data.name }}</a>
-                            </td>
-                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: #0f8c77">{{ data.email }}</a>
-                            </td>
-                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: #0f8c77">{{ data.number }}</a>
-                            </td>
-                            <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
-                                <a href="#" data-toggle="modal" data-target="#myModal{{ data.id }}"
-                                   style="text-decoration: none;color: #0f8c77">{{ data.city }}</a>
-                            </td>
-                         <td style="text-transform: capitalize;color: #0f8c77;text-align: center">
-                                <a href="{{ data.file_cv }}" data-toggle="modal"
-                                   style="text-decoration: none;color: #0f8c77" download>Download</a>
-                            </td>
-
-                        </tr>
-                    {% endif %}
                     <div class="modal fade" id="myModal{{ data.id }}" role="dialog">
 
                         <div class="modal-dialog modal-lg" style="z-index:2">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title" style="color:#0f8c77"> Reply</h4>
+                                    <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-reply-all"></i>
+                                        Reply Candidates</h3>
 
                                 </div>
-                                <div class="modal-body">
 
 
+                                <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
                                     <form action="{% url 'reply-candidate-form' id=data.id %}" method="post"
                                           enctype="multipart/form-data">
                                         {% csrf_token %}
 
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email</label>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="inputEmail4" style="color:black"><i
+                                                        class="fas fa-envelope-open"></i>
+                                                    Email</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                       name="email" value="{{ data.email }}" readonly>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="inputPassword4" style="color:black"><i
+                                                        class="fas fa-book"></i>
+                                                    Subject</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                       name="subject" value="{{ data.subject }}" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <label for="exampleInputEmail1" style="color:black"><i
+                                                    class="fas fa-envelope"></i>
+                                                Cover Later</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                   aria-describedby="emailHelp"
-                                                   name="email" value="{{ data.email }}" readonly>
+                                                   name="message" aria-describedby="emailHelp"
+                                                   value="{{ data.cover_leter }}"
+                                                   readonly>
 
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Cover Later</label>
-                                            <textarea class="form-control wpcf7-form-control-wrap"
-                                                      id="exampleInputEmail1"
-                                                      aria-describedby="emailHelp"
-                                                      name="message" placeholder="{{ data.cover_leter }}"
-                                                      readonly></textarea>
+                                        <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Email Subject</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="email_subject" aria-describedby="emailHelp"
+                                               value="{{ data.email_subject }}"
+                                               required>
+
+                                    </div>
+                                        <div class="form-group col-md-12">
+                                            <label for="exampleInputEmail1" style="color:black"><i
+                                                    class="fas fa-reply"></i>
+                                                Reply</label>
+                                            <textarea type="text" class="form-control" id="ReplyInputEmail1"
+                                                      name="reply" aria-describedby="emailHelp" value="{{ data.reply }}"
+                                            >{{ data.reply }}</textarea>
 
                                         </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Reply</label>
-                                            <textarea class="form-control wpcf7-form-control-wrap"
-                                                      id="exampleInputEmail1"
-                                                      aria-describedby="emailHelp"
-                                                      name="reply">{{ data.reply }}</textarea>
-
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn" id="reply-btn">Reply</button>
+                                            <button type="button" class="btn" id="reply-btn" data-dismiss="modal">Close
+                                            </button>
                                         </div>
-
-                                        <button type="submit" class="btn" style="background: #0f8c77;color: black">
-                                            Submit
-                                        </button>
                                     </form>
 
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+
+
                             </div>
+
                         </div>
                     </div>
 
+
                 {% endfor %}
-            {% else %}
-                <center>
-                    <div class="container">No data found!</div>
-                </center>
-            {% endif %}
-            <!-- and so on... -->
-            </tbody>
-        </table>
+
+
+
+                <!-- and so on... -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Button trigger modal -->
+        <!-- Modal -->
     </div>
-    <!-- Button trigger modal -->
+    <div class="col-lg-12">
+        <div class="pagination-main text-center">
+            <ul class="pagination">
+                {% if data.has_previous %}
+                    <li>
+                        <a href="?page={{ data.previous_page_number }}"
+                           style="color: #0f8c77"><i
+                                class="fa fa-angle-double-left"
+                                aria-hidden="true"></i></a>
+                    </li>
+                {% endif %}
+                <li class="active"><a
+                        href="#"
+                        style="background-color: #0f8c77">{{ data.number }}</a>
+                </li>
 
+                {% if data.has_next %}
+                    <li>
+                        <a href="?page={{ data.next_page_number }}"
+                           style="color: #0f8c77"><i
+                                class="fa fa-angle-double-right"
+                                aria-hidden="true"></i></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+        {% else %}
+        <div class="container" align="center" style="font-size: 20px;">No Data Found</div>
+    {% endif %}
 
-    <!-- Modal -->
-
+    <div style="height: 300px;"></div>
     </body>
     </html>
     <script>
@@ -216,6 +483,8 @@
            $('#msg').remove();
        }
    }, 2000)
+
+
 
 
 

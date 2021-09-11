@@ -36,6 +36,8 @@ mimetypes.add_type("text/css", ".css", True)
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,8 +50,10 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 
 
-]
 
+
+]
+X_FRAME_OPTIONS='SAMEORIGIN'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -149,9 +153,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CKEDITOR_UPLOAD_PATH = 'blogs/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'media/'
+
+CKEDITOR_UPLOAD_PATH = 'blogs/'
+
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
 
 
 MESSAGE_TAGS ={
@@ -161,3 +168,12 @@ MESSAGE_TAGS ={
     messages.WARNING:'alert-warring',
     messages.ERROR:'alert-danger',
 }
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER="anivesh.nishad07@gmail.com"
+EMAIL_HOST_PASSWORD="9589957396@"
+EMAIL_USE_SSL=False
+

@@ -12,7 +12,7 @@
                 src: url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0'%});
                 src: url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix'%}) format("embedded-opentype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0'%}) format("woff2"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0'%}) format("woff"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0'%}) format("truetype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon'%}) format("svg");
                 font-weight: 400;
-                font-style: normal
+                font-style: normal;
             }
 
             .elementor-kit-15 {
@@ -53,7 +53,7 @@
             }
 
             .elementor-3825 .elementor-element.elementor-element-dd91ef1:not(.elementor-motion-effects-element-type-background), .elementor-3825 .elementor-element.elementor-element-dd91ef1 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                background-image: url("https://qwery.ancorathemes.com/wp-content/uploads/2020/05/bg-1-countdown-copyright.jpg");
+                background-image: url("{% static 'wp-content/uploads/2020/05/bg-1-countdown-copyright.jpg'%}");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -787,6 +787,11 @@
                media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
             background: #2f39d3 !important;
         }
+         .menu_main_nav_area>ul, .sc_layouts_menu_nav, .sc_layouts_menu_dir_vertical .sc_layouts_menu_nav {
+             font-family: Roboto;
+    font-size: 17px;
+    line-height: 1.5em;
+}
 
         body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
             border-color: #2f39d3 !important;
@@ -820,15 +825,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="dns-prefetch" href="//use.typekit.net">
         <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
-        <link rel="alternate" type="application/rss+xml" title="Qwery » Feed"
-              href="https://qwery.ancorathemes.com/feed/">
-        <link rel="alternate" type="application/rss+xml" title="Qwery » Comments Feed"
-              href="https://qwery.ancorathemes.com/comments/feed/">
-        <link rel="alternate" type="text/calendar" title="Qwery » iCal Feed"
-              href="https://qwery.ancorathemes.com/events/?ical=1">
-        <meta property="og:type" content="article">
-        <meta property="og:url" content="https://qwery.ancorathemes.com/about-creative/">
-        <meta property="og:title" content="About – Creative">
+        
         <meta property="og:description" content="corporate serviceWe develop &amp; create digital future.
 		We appreciate your trust greatly! Our clients choose us and our products because they know we're the best.
 			Experience8080+
@@ -868,61 +865,61 @@
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="trx_addons-icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css"
+              href="{% static 'wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css"
+              href="{% static 'wp-content/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_icons_animation-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/font-icons/css/animation.css"
+              href="{% static 'wp-content/plugins/trx_demo/css/font-icons/css/animation.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-font-europa-css"
-              href="https://use.typekit.net/qmj1tmx.css" type="text/css" media="all">
+              href="https://use.typekit.net/qmj1tmx.css' %}" type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-font-google_fonts-css"
               href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;subset=latin,latin-ext&amp;display=swap"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-fontello-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/font-icons/css/fontello.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/font-icons/css/fontello.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wp-block-library-css"
-              href="https://qwery.ancorathemes.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2"
+              href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}?ver=5.7.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wc-blocks-vendors-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=5.5.1"
+              href="{% static 'wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css' %}?ver=5.5.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wc-blocks-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=5.5.1"
+              href="{% static 'wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css' %}?ver=5.5.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="advanced-popups-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/public/css/advanced-popups-public.css?ver=1.1.2"
+              href="{% static 'wp-content/plugins/advanced-popups/public/css/advanced-popups-public.css' %}?ver=1.1.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="ihotspot-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/devvn-image-hotspot/frontend/css/ihotspot.min.css?ver=1.2.1"
+              href="{% static 'wp-content/plugins/devvn-image-hotspot/frontend/css/ihotspot.min.css' %}?ver=1.2.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="latepoint-main-front-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/latepoint/public/stylesheets/main_front.css?ver=3.1.2"
+              href="{% static 'wp-content/plugins/latepoint/public/stylesheets/main_front.css' %}?ver=3.1.2"
               type="text/css" media="all">
         <style id="rs-plugin-settings-inline-css" type="text/css">
             #rs-demo-id {
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="magnific-popup-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/magnific/magnific-popup.min.css"
+              href="{% static 'wp-content/plugins/trx_addons/js/magnific/magnific-popup.min.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_panels-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/trx_demo_panels.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_demo/css/trx_demo_panels.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="twenty20-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/twenty20/assets/css/twenty20.css?ver=1.5.7"
+              href="{% static 'wp-content/plugins/twenty20/assets/css/twenty20.css' %}?ver=1.5.7"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-layout-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css' %}?ver=5.6.0"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-smallscreen-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css' %}?ver=5.6.0"
               type="text/css" media="only screen and (max-width: 768px)">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-general-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce.css' %}?ver=5.6.0"
               type="text/css" media="all">
         <style id="woocommerce-inline-inline-css" type="text/css">
             .woocommerce form .form-row .required {
@@ -931,29 +928,29 @@
         </style>
         <link property="stylesheet" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
               id="tinvwl-webfont-font-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff2?ver=xu2uyi"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff2?ver=xu2uyi'%}"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="tinvwl-webfont-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css?ver=1.28.2"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css' %}?ver=1.28.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="tinvwl-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/css/public.min.css?ver=1.28.2"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/css/public.min.css' %}?ver=1.28.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' %}?ver=5.12.0"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-frontend-legacy-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-frontend-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/css/frontend.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <style id="elementor-frontend-inline-css" type="text/css">
             @font-face {
                 font-family: eicons;
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
-                font-weight: 400;
+                src: url("{% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot' %}");
+            src: url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot#iefix'%}) format("embedded-opentype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff' %}) format("woff2"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff'%}) format("woff"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf'%}) format("truetype"), url({% static 'wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg'%}) format("svg");
+            font-weight: 400;
                 font-style: normal
             }
 
@@ -1382,57 +1379,57 @@
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="trx_addons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__styles.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_addons/css/__styles.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="swiper-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/swiper/swiper.min.css"
+              href="{% static 'wp-content/plugins/trx_addons/js/swiper/swiper.min.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-widget_custom_links-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/widgets/custom_links/custom_links.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/widgets/custom_links/custom_links.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css' %}"
               type="text/css" media="(max-width:767px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_portfolio-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_portfolio-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/content/content.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/content/content.responsive.css' %}"
               type="text/css" media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/icons/icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-animations-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/trx_addons.animations.css"
+              href="{% static 'wp-content/plugins/trx_addons/css/trx_addons.animations.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.css"
+              href="{% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_services-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/services/services.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/services/services.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_blogger-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/blogger/blogger.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/blogger/blogger.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_skills-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/skills/skills.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/skills/skills.css' %}"
               type="text/css" media="all">
-        <link property="stylesheet" rel="stylesheet" id="wpgdprc.css-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/wp-gdpr-compliance/dist/css/front.min.css?ver=1629812885"
+        <link property="stylesheet" rel="stylesheet" id="wpgdprc.css' %}-css"
+              href="{% static 'wp-content/plugins/wp-gdpr-compliance/dist/css/front.min.css' %}?ver=1629812885"
               type="text/css" media="all">
-        <style id="wpgdprc.css-inline-css" type="text/css">
+        <style id="wpgdprc.css' %}-inline-css" type="text/css">
 
             div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before {
                 content: 'Yes';
@@ -1444,74 +1441,74 @@
 
         </style>
         <link property="stylesheet" rel="stylesheet" id="qwery-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/style.css" type="text/css" media="all">
+              href="{% static 'wp-content/themes/qwery/style.css' %}" type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="mediaelement-css"
-              href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16"
+              href="{% static 'wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' %}?ver=4.2.16"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wp-mediaelement-css"
-              href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.7.2"
+              href="{% static 'wp-includes/js/mediaelement/wp-mediaelement.min.css' %}?ver=5.7.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-skin-default-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/style.css" type="text/css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/style.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-plugins-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__plugins.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__plugins.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-custom-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__custom.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__custom.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="e-animations-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/animations/animations.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce-responsive.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce-responsive.css' %}"
               type="text/css" media="(max-width:1679px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__responsive.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_addons/css/__responsive.css' %}" type="text/css"
               media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_services-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/services/services.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/services/services.responsive.css' %}"
               type="text/css" media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_blogger-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/blogger/blogger.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/blogger/blogger.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_skills-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/skills/skills.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/skills/skills.responsive.css' %}"
               type="text/css" media="(max-width:1023px)">
         <link property="stylesheet" rel="stylesheet" id="qwery-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__responsive.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__responsive.css' %}"
               type="text/css" media="(max-width:1679px)">
         <script type="text/javascript"
-                src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1"
+                src="{% static 'wp-includes/js/jquery/jquery.min.js?ver=3.5.1'%}"
                 id="jquery-core-js"></script>
         <script type="text/javascript"
-                src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"
+                src="{% static 'wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'%}"
                 id="jquery-migrate-js"></script>
-        <link rel="https://api.w.org/" href="https://qwery.ancorathemes.com/wp-json/">
-        <link rel="alternate" type="application/json" href="https://qwery.ancorathemes.com/wp-json/wp/v2/pages/3786">
-        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://qwery.ancorathemes.com/xmlrpc.php?rsd">
+        <link rel="https://api.w.org/" href="{% static 'wp-json/'%}">
+        <link rel="alternate" type="application/json" href="{% static 'wp-json/wp/v2/pages/3786'%}">
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{% static 'xmlrpc.php?rsd'%}">
         <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-              href="https://qwery.ancorathemes.com/wp-includes/wlwmanifest.xml">
+              href="{% static 'wp-includes/wlwmanifest.xml'%}">
         <meta name="generator" content="WordPress 5.7.2">
         <meta name="generator" content="WooCommerce 5.6.0">
-        <link rel="canonical" href="https://qwery.ancorathemes.com/about-creative/">
-        <link rel="shortlink" href="https://qwery.ancorathemes.com/?p=3786">
+        <link rel="canonical" href="{% static 'about-creative/'%}">
+        <link rel="shortlink" href="{% static '?p=3786'%}">
         <link rel="alternate" type="application/json+oembed"
-              href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fabout-creative%2F">
+              href="{% static 'wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fabout-creative%2F'%}">
         <link rel="alternate" type="text/xml+oembed"
-              href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fabout-creative%2F&amp;format=xml">
+              href="{% static 'wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fabout-creative%2F&amp;format=xml'%}">
         <link rel="preload"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff"
+              href="{% static 'wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff'%}"
               as="font" type="font/woff" crossorigin="">
         <meta name="tec-api-version" content="v1">
         <meta name="tec-api-origin" content="https://qwery.ancorathemes.com">
-        <link rel="https://theeventscalendar.com/" href="https://qwery.ancorathemes.com/wp-json/tribe/events/v1/">
+        <link rel="https://theeventscalendar.com/" href="{% static 'wp-json/tribe/events/v1/'%}">
         <noscript>
             <style>.woocommerce-product-gallery {
                 opacity: 1 !important;
@@ -1519,14 +1516,14 @@
         </noscript>
         <meta name="generator"
               content="Powered by Slider Revolution 6.4.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
-        <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-120x120.png"
+        <link rel="icon" href="{% static 'wp-content/uploads/2020/08/cropped-favicon-120x120.png'%}"
               sizes="32x32">
-        <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png"
+        <link rel="icon" href="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}"
               sizes="192x192">
         <link rel="apple-touch-icon"
-              href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+              href="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}">
         <meta name="msapplication-TileImage"
-              content="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+              content="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}">
         <script type="text/javascript">function setREVStartSize(e) {
             //window.requestAnimationFrame(function() {
             window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
@@ -1870,21 +1867,8 @@
             }
 
 
-            .qwery_inline_690936795 {
-                background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/05/port11-copyright-840x840.jpg);
-            }
 
-            .qwery_inline_1063730319 {
-                background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/05/port26-copyright-840x602.jpg);
-            }
 
-            .qwery_inline_1176302233 {
-                background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/05/port39-copyright-2-840x647.jpg);
-            }
-
-            .qwery_inline_1626092265 {
-                background-image: url(https://qwery.ancorathemes.com/wp-content/uploads/2020/05/port28-copyright-840x818.jpg);
-            }
 
         </style>
     </head>
@@ -2103,7 +2087,7 @@
                                                                                                  data-widget_type="image.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-image">
-                                                                                                        <img src="{% static 'images/hire14.png' %}"
+                                                                                                        <img src="{% static 'images/hire14.png'%}"
                                                                                                              title="post-26-copyright"
                                                                                                              alt="post-26-copyright">
                                                                                                     </div>
@@ -2123,7 +2107,7 @@
                                                                                                  data-widget_type="image.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-image">
-                                                                                                        <img src="{% static 'images/hire13.png' %}"
+                                                                                                        <img src="{% static 'images/hire13.png'%}"
                                                                                                              }
                                                                                                              title="post-74-copyright"
                                                                                                              alt="post-74-copyright">
@@ -2203,11 +2187,11 @@
                                                                                                     <div class="elementor-image">
                                                                                                         <img width="630"
                                                                                                              height="616"
-                                                                                                             src="{% static 'images/back2.jpg' %}"
+                                                                                                             src="{% static 'images/back2.jpg'%}"
                                                                                                              class="attachment-full size-full"
                                                                                                              alt=""
                                                                                                              loading="lazy"
-                                                                                                             srcset="{% static 'images/back1.jpg' %} 630w, {% static 'images/back2.jpg' %} 300w,{% static 'images/back2.jpg' %}  370w,{% static 'images/back2.jpg' %}  410w,{% static 'images/back2.jpg' %}  600w"
+                                                                                                             srcset="{% static 'images/back1.jpg'%}' %} 630w, {% static 'images/back2.jpg'%} 300w,{% static 'images/back2.jpg'%}  370w,{% static 'images/back2.jpg'%}  410w,{% static 'images/back2.jpg' %}  600w"
                                                                                                              sizes="(max-width: 630px) 100vw, 630px">
                                                                                                     </div>
                                                                                                 </div>

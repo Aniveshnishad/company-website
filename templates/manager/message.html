@@ -2,10 +2,11 @@
 
 {% for message in messages %}
 
-<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77;float: right;margin-top:150px;" id="msg" role="alert" \>
+<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77;margin-top:100px;float:right;width:50%" id="msg" role="alert"  \>
     <span style="color:black;">CubexO software Solution</span> <br>{{ message }}
 
 </div>
-</script>
+
+
 {% endfor %}
 {% endif %}

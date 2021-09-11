@@ -8,6 +8,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <title>CubexO Software Solution LLP</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -28,10 +30,36 @@
     <noscript>
         <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&#038;display=swap"/>
     </noscript>
+    <style>
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+    height: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke;
+  border-radius:20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#0f8c77;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1f21;
+}
+</style>
     <style type="text/css"
            media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
         background: #2f39d3 !important;
     }
+
 
     body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
         border-color: #2f39d3 !important;
@@ -1973,36 +2001,46 @@
                                                                 class="sc_layouts_menu_nav">
                                                                 <li id="menu-item-9173"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-5002 current_page_item menu-item-9173">
-                                                                    <a href="{% url 'manager-home' %}"><span>Home</span></a>
+                                                                    <a href="{% url 'manager-home' %}"><span><i class="fas fa-home"></i> Home</span></a>
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'manager-contacts' %}"><span>Contacts/Query</span></a>
-
-                                                                </li>
-
-                                                                <li id="menu-item-5573"
-                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'manager-add-blogs' %}"><span>Add Blogs</span></a>
+                                                                    <a href="{% url 'manager-contacts' %}"><span><i class="fas fa-phone"></i> Contacts</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'manager-candidates' %}"><span>Candidates</span></a>
+                                                                    <a href="{% url 'manager-add-blogs' %}"><span><i class="fab fa-blogger"></i> Blogs</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'manager-add-job' %}"><span>Add Job</span></a>
+                                                                    <a href="{% url 'manager-candidates' %}"><span><i class="fas fa-file"></i> Applications</span></a>
 
                                                                 </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'manager-profile' %}"><span>Profile</span></a>
+                                                                    <a href="{% url 'manager-add-job' %}"><span><i class="fas fa-laptop-code"></i> Job</span></a>
+
+                                                                </li>
+                                                                <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'manager-add-event' %}"><span><i class="far fa-calendar-check"></i> Event</span></a>
+
+                                                                </li>
+
+                                                                <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'manager-profile' %}"><span><i class="fas fa-male"></i> Profile</span></a>
+
+                                                                </li>
+                                                                 <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'manager-logout' %}"><span><i class="fas fa-sign-out-alt"></i> Logout</span></a>
 
                                                                 </li>
 
@@ -2049,7 +2087,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="sc_layouts_search">
                                                             <div class="search_modern">
-                                                                <span class="search_submit"></span>
+                                                                <span class=""></span>
                                                                 <div class="search_wrap">
                                                                     <div class="search_header_wrap"><img
                                                                             class="logo_image" style="width:180px;"
@@ -2068,7 +2106,7 @@
                                                                                    placeholder="Type words and hit enter"
                                                                                    value="" name="s">
                                                                             <button type="submit"
-                                                                                    class="search_submit"></button>
+                                                                                    class=""></button>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -2226,7 +2264,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="sc_layouts_search">
                                                                 <div class="search_modern">
-                                                                    <span class="search_submit"></span>
+                                                                    <span class=""></span>
                                                                     <div class="search_wrap">
                                                                         <div class="search_header_wrap"><img
                                                                                 class="logo_image" style="width:180px;"
@@ -2246,7 +2284,7 @@
                                                                                        placeholder="Type words and hit enter"
                                                                                        value="" name="s">
                                                                                 <button type="submit"
-                                                                                        class="search_submit"></button>
+                                                                                        class=""></button>
                                                                             </form>
                                                                         </div>
                                                                     </div>
@@ -2295,17 +2333,21 @@
                              itemtype="https://schema.org/SiteNavigationElement">
                             <ul id="menu_mobile_810746209">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-home' %}" aria-current="page"><span>Home</span></a></li>
+                                    <a href="{% url 'manager-home' %}" aria-current="page"><span><i class="fas fa-home"></i> Home</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-contacts' %}" aria-current="page"><span>Contacts</span></a></li>
+                                    <a href="{% url 'manager-contacts' %}" aria-current="page"><span><i class="fas fa-phone"></i> Contacts</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-add-blogs' %}" aria-current="page"><span>Add Blogs</span></a></li>
+                                    <a href="{% url 'manager-add-blogs' %}" aria-current="page"><span><i class="fab fa-blogger"></i> Blogs</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-candidates' %}" aria-current="page"><span>Candidates</span></a></li>
+                                    <a href="{% url 'manager-candidates' %}" aria-current="page"><span><i class="fas fa-file"></i> Applications</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-add-job' %}" aria-current="page"><span>Add job</span></a></li>
+                                    <a href="{% url 'manager-add-job' %}" aria-current="page"><span><i class="fas fa-laptop-code"></i> Job</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'manager-profile' %}" aria-current="page"><span>Profile</span></a></li>
+                                    <a href="{% url 'manager-add-event' %}" aria-current="page"><span><i class="far fa-calendar-check"></i> Event</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
+                                    <a href="{% url 'manager-profile' %}" aria-current="page"><span><i class="fas fa-male"></i> Profile</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
+                                    <a href="{% url 'manager-logout' %}" aria-current="page"><span><i class="fas fa-sign-out-alt"></i> Logout</span></a></li>
 
                             </ul>
                         </nav>
@@ -2334,12 +2376,12 @@
                                 <div class="textwidget custom-html-widget">
                                     <div class="extra_item">
                                         <h6>Have a Project?</h6>
-                                        <a href=""><span class="__cf_email__"
+                                        <a href="#"><span class="__cf_email__"
                                                          data-cfemail="036a6d656c43746661706a77662d606c6e">inbox@cubexo.io</span></a>
                                     </div>
                                     <div class="extra_item">
                                         <h6>Want to Work With Me?</h6>
-                                        <a href="contact-us">Send Brief</a>
+                                        <a href="#">Send Brief</a>
                                     </div>
 
                                 </div>
@@ -2356,10 +2398,13 @@
 
         {% block content %}
 
+
+
         {% endblock %}
 
         <a id="footer_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
-        <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main												">
+
+        <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main">
             <div data-elementor-type="cpt_layouts" data-elementor-id="8919" class="elementor elementor-8919"
                  data-elementor-settings="[]">
                 <div class="elementor-inner">
@@ -2731,6 +2776,7 @@
                 </div>
             </div>
         </footer>
+
     </div>
 </div>
 <div class="sc_layouts_panel_hide_content"></div>
@@ -2772,34 +2818,42 @@
                                                         <ul id="sc_layouts_menu_848557526" class="sc_layouts_menu_nav">
                                                             <li id="menu-item-9150"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-5002 current_page_item menu-item-9150">
-                                                                <a href="{% url 'home' %}"
-                                                                   aria-current="page"><span>Home</span></a>
+                                                                <a href="{% url 'manager-home' %}"
+                                                                   aria-current="page"><span><i class="fas fa-home"></i> Home</span></a>
                                                             </li>
 
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'about' %}"><span>About Us</span></a>
+                                                                <a href="{% url 'manager-contacts' %}"><span><i class="fas fa-phone"></i> Contacts</span></a>
                                                             </li>
 
 
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'our-team' %}"><span>Our Team</span></a>
+                                                                <a href="{% url 'manager-add-blogs' %}"><span><i class="fab fa-blogger"></i> Blogs</span></a>
                                                             </li>
+
 
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'service' %}"><span>Services</span></a>
-                                                            </li>
-
-                                                            <li id="menu-item-9163"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'blog' %}"><span>Blogs</span></a>
+                                                                <a href="{% url 'manager-candidates' %}"><span><i class="fas fa-file"></i> Applications</span></a>
                                                             </li>
 
                                                             <li id="menu-item-9164"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'contact' %}"><span>Contact Us</span></a>
+                                                                <a href="{% url 'manager-add-job' %}"><span><i class="fas fa-laptop-code"></i> Job</span></a>
+                                                            </li>
+                                                              <li id="menu-item-9164"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
+                                                                <a href="{% url 'manager-add-event' %}"><span><i class="fas fa-laptop-code"></i> Events</span></a>
+                                                            </li>
+                                                            <li id="menu-item-9164"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
+                                                                <a href="{% url 'manager-profile' %}"><span><i class="fas fa-male"></i> Profile</span></a>
+                                                            </li>
+                                                            <li id="menu-item-9164"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
+                                                                <a href="{% url 'manager-logout' %}"><span><i class="fas fa-sign-out-alt"></i> Logout</span></a>
                                                             </li>
                                                         </ul>
                                                     </nav>

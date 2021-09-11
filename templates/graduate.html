@@ -58,214 +58,18 @@
 
         <style>
 
+.card:hover{
+    perspective: 1000px;
 
-.flip-box {
-  background-color: transparent;
-  width: 370px;
-  height:550px ;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
 }
-
-.flip-box-inner {
+.card-body{
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
   transition: transform 0.2s;
   transform-style: preserve-3d;
 }
-
-.flip-box:hover .flip-box-inner {
+.card:hover .card-body {
   transform: rotateY(360deg);
 }
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-    background-color:lightcyan;
-    background-size:220%;
-    background-repeat: no-repeat;
-
-}
-
-@media screen and (max-width:300px){
-.flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 500px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-}
-
-.flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-box-front {
-    background-color:lightcyan; ;
-    color: white;
-}
-
-.flip-box-back {
-    background-color:#0f8c77;
-    color: white;
-    transform: rotateY(180deg);
-}
-            }
-@media screen and (max-width:400px){
-.flip-box {
-    background-color:lightcyan ;
-    color: white;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  width: 400px;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}
-
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color:lightcyan ;
-  color: white;
-}
-
-.flip-box-back {
-  background-color:#0f8c77;
-  color: white;
-  transform: rotateY(180deg);
-}
-            }
-@media screen and (max-width:1000px){
-.flip-box {
-  background-color: transparent;
-  width: 50%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-
-@media screen and (max-width:700px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-@media screen and (max-width:770px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-
-@media screen and (max-width:600px) {
-    .flip-box {
-        background-color: transparent;
-        width: 100%;
-        height: 600px;
-        border: 1px solid #f1f1f1;
-        perspective: 1000px;
-    }
-}
-@media screen and (max-width:650px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-
-@media screen and (max-width:550px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-@media screen and (max-width:500px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-@media screen and (max-width:450px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-@media screen and (max-width:350px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-@media screen and (max-width:300px){
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}}
-
-
 
 
 </style>
@@ -1327,7 +1131,8 @@ Unique Technologies     ">
 
                                             <section
                                                     class="elementor-section elementor-top-section elementor-element elementor-element-592ee0a elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                                    data-id="592ee0a" data-element_type="section"
+                                                     style="background-image: url(https://images.pexels.com/photos/7944135/pexels-photo-7944135.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);"
+                                                                            data-id="592ee0a" data-element_type="section"
                                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-background-overlay"></div>
                                                 <div class="elementor-container elementor-column-gap-extended">
@@ -1356,7 +1161,7 @@ Unique Technologies     ">
                                                                     </div>
                                                                     <section
                                                                             class="elementor-section elementor-inner-section elementor-element elementor-element-b455cd3 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                                                            data-id="b455cd3"
+                                                                           data-id="b455cd3"
                                                                             data-element_type="section">
                                                                         <div class="elementor-container elementor-column-gap-no">
                                                                             <div class="elementor-row">
@@ -1381,9 +1186,9 @@ Unique Technologies     ">
                                                                                                 </div>
                                                                                                 <div class="elementor-widget-container container">
                                                                                                     <div class="sc_title scheme_dark sc_title_default">
-                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default">CubexO Career</span>
-                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                                            <span class="sc_item_title_text">Oppertunity for Graduates <br><span>Make careers with us</span><br>We are here for You.</span>
+                                                                                                        <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default" style="margin-left: 10%;">CubexO Career</span>
+                                                                                                        <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag" style="margin-left: 10%;">
+                                                                                                            <span class="sc_item_title_text"><span style="color: #0f8c77" >Oppertunity for Graduates </span><br><span>Make careers with us</span><br>We are here for You.</span>
                                                                                                         </h1></div>
                                                                                                 </div>
                                                                                             </div>
@@ -1565,53 +1370,16 @@ Unique Technologies     ">
 
 
 {% for data in data %}
-    <div class="flip-box container" style="float:left;padding-bottom:20px;">
-  <div class="flip-box-inner">
-    <div class="flip-box-front">
-
-
-<div style="color:white;padding: 20px;background-color:#0f8c77 ;width:100%;height:auto;text-transform: uppercase">
-    <span  >{{ data.job_title }}</span>
-</div>
-        <div class="row " style="padding-top: 40px;text-align:left;">
-
-            <div class="col-lg-4"><b style="color:black">Location: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-transform: capitalize;text-align:left;color:black;">
-               {{ data.work_location }}, {{ data.state }}
-            </div>
-
-            <div class="col-lg-4"><b style="color:black">Role: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.job_title }}
-            </div>
-                        <div class="col-12"></div>
-
-            <div class="col-lg-4"><b style="color:black">Start Date: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-             {{ data.start_date }}
-            </div>
-            <div class="col-lg-4"><b style="color:black">Last Date: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.last_date }}
-            </div>
-            <div class="col-lg-4"><b style="color:black">Post For: </b></div>
-            <div class="col-lg-7" style="margin-bottom:25px;text-align:left;color:black;">
-              {{ data.job_education }}
-            </div>
-        </div>
-        <div style="width:100%;height:50px;background-color: #0f8c77;position: absolute;bottom:0px;padding-left: 200px;padding-top:10px;">
-                <a href="apply-form/{{ data.id }}" class="btn" style="color:black;background-color:whitesmoke;">Apply Here</a>
-        </div>
-
-
-
-
- </div>
-
+<div class="card text-end" style="width: 18rem;float: left;margin-left: 20px;">
+  <div class="card-body">
+    <h5 class="card-title" style="text-transform: capitalize;">{{ data.job_title }}</h5>
+    <p class="card-text"><div  style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div></p>
+    <a href="apply-form/{{ data.id }}"><button type="button"  style="background-color: #0f8c77;width:120px;height:40px;color:white">Apply Here</button> </a>
   </div>
 </div>
 {% endfor %}
- <div class="col-lg-12">
+<br><br><bR><br>
+ <div class="col-lg-12"><br><br>
     <div class="pagination-main text-center">
         <ul class="pagination">
             {% if data.has_previous %}
@@ -1637,7 +1405,7 @@ Unique Technologies     ">
             {% endif %}
         </ul>
     </div>
-</div>
+</div><br><br>
 
 
 
@@ -1651,7 +1419,7 @@ Unique Technologies     ">
                                                                                     </article>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div><br><br>
 
 
                                                                         <script>
@@ -2163,7 +1931,6 @@ var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
     </body>
     </html>
 {% endblock %}
-
 
 
 

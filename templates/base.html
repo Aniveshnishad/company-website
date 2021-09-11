@@ -56,6 +56,10 @@
            media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
         background: #2f39d3 !important;
     }
+    .menu_main_nav_area>ul, .sc_layouts_menu_nav, .sc_layouts_menu_dir_vertical .sc_layouts_menu_nav {
+    font-size: 17px;
+    line-height: 1.5em;
+}
 
     body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
         border-color: #2f39d3 !important;
@@ -452,6 +456,7 @@
             max-width: initial;
             top: 22%;
         }
+
 
         body:not(.rtl) .elementor-5002 .elementor-element.elementor-element-7fff757 {
             left: -85%;
@@ -1474,8 +1479,8 @@
     </noscript>
     <meta name="generator"
           content="Powered by Slider Revolution 6.4.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
-    <link rel="icon" href="{% static 'wp-content/uploads/2020/05/logo-white.png' %}" sizes="32x32"/>
-    <link rel="icon" href="{% static 'wp-content/uploads/2020/05/logo-white.png' %}" sizes="192x192"/>
+    <link rel="icon" href="{% static 'wp-content/uploads/2020/05/logo.png' %}" sizes="32x32"/>
+    <link rel="icon" href="{% static 'wp-content/uploads/2020/05/logo.png' %}" sizes="192x192"/>
     <link rel="apple-touch-icon" href="{% static 'wp-content/uploads/2020/08/logo.png' %}"/>
     <meta name="msapplication-TileImage" content="{% static 'wp-content/uploads/2020/08/logo.png' %}"/>
     <script type="text/javascript">function setREVStartSize(e) {
@@ -1952,7 +1957,9 @@
 
     .trx_addons_inline_1001579509 img.logo_image {
         max-height: 50px;
-    }</style>
+    }
+
+    </style>
 </head>
 <body class="home page-template-default page page-id-5002 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled ua_chrome frontpage woocommerce-no-js tribe-no-js tinvwl-theme-style skin_default scheme_light blog_mode_front body_style_fullscreen  is_stream blog_style_excerpt sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-6817 header_position_over menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-5002">
 <div class="body_wrap">
@@ -2031,6 +2038,11 @@
                                                                 </li>
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'events' %}"><span>Events</span></a>
+
+                                                                </li>
+                                                                <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
                                                                     <a href="{% url 'careers' %}"><span>Careers</span></a>
 
                                                                 </li>
@@ -2078,7 +2090,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="sc_layouts_search">
                                                             <div class="search_modern">
-                                                                <span class="search_submit"></span>
+                                                                <span class=""></span>
                                                                 <div class="search_wrap">
                                                                     <div class="search_header_wrap"><img
                                                                             class="logo_image" style="width:180px;"
@@ -2097,7 +2109,7 @@
                                                                                    placeholder="Type words and hit enter"
                                                                                    value="" name="s">
                                                                             <button type="submit"
-                                                                                    class="search_submit"></button>
+                                                                                    class="></button>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -2255,7 +2267,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="sc_layouts_search">
                                                                 <div class="search_modern">
-                                                                    <span class="search_submit"></span>
+                                                                    <span class=""></span>
                                                                     <div class="search_wrap">
                                                                         <div class="search_header_wrap"><img
                                                                                 class="logo_image" style="width:180px;"
@@ -2275,7 +2287,7 @@
                                                                                        placeholder="Type words and hit enter"
                                                                                        value="" name="s">
                                                                                 <button type="submit"
-                                                                                        class="search_submit"></button>
+                                                                                        class=""></button>
                                                                             </form>
                                                                         </div>
                                                                     </div>
@@ -2335,6 +2347,9 @@
                                     <a href="{% url 'blog' %}" aria-current="page"><span>Blogs</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'contact' %}" aria-current="page"><span>Contact Us</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
+                                    <a href="{% url 'events' %}" aria-current="page"><span>Events</span></a></li>
+
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'careers' %}" aria-current="page"><span>Careers</span></a></li>
                             </ul>
@@ -2623,6 +2638,11 @@
                                                                             href="{% url 'contact' %}"><span
                                                                             class="custom_links_list_item_title">Contacts</span></a>
                                                                     </li>
+                                                                    <li class="custom_links_list_item"><a
+                                                                            class="custom_links_list_item_link"
+                                                                            href="{% url 'events' %}"><span
+                                                                            class="custom_links_list_item_title">Events</span></a>
+                                                                    </li>
                                                                 </ul>
                                                             </aside>
                                                         </div>
@@ -2831,6 +2851,10 @@
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
                                                                 <a href="{% url 'contact' %}"><span>Contact Us</span></a>
                                                             </li>
+                                                             <li id="menu-item-9164"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
+                                                                <a href="{% url 'contact' %}"><span>Events</span></a>
+                                                            </li>
                                                              <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
                                                                 <a href="{% url 'careers' %}"><span>Careers</span></a>
@@ -2934,19 +2958,7 @@
      data-open-animation="popupOpenFade" data-exit-animation="popupExitFade" data-light-close="false"
      data-overlay="false" data-mobile-disable="false" data-body-scroll-disable="false" data-overlay-close="false"
      data-esc-close="false" data-f4-close="false" data-id="9109" style="width:335px;">
-    <div class="adp-popup-wrap">
-        <div class="adp-popup-container">
-            <div class="adp-popup-outer" style="max-width:100%;">
-                <div class="adp-popup-text">
-                    Our site uses cookies. Learn more about our use of cookies: cookie policy
-                </div>
-                <button class="adp-button adp-popup-button adp-popup-accept">
-                    Accept
-                </button>
-                <button type="button" class="adp-popup-close"></button>
-            </div>
-        </div>
-    </div>
+
 </div>
 <script>
     (function (body) {

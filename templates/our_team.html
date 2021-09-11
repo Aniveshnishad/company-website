@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <br><br><br><br>
     <html lang="en-US" class="js
@@ -64,15 +65,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="dns-prefetch" href="//use.typekit.net">
         <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
-        <link rel="alternate" type="application/rss+xml" title="Qwery » Feed"
-              href="https://qwery.ancorathemes.com/feed/">
-        <link rel="alternate" type="application/rss+xml" title="Qwery » Comments Feed"
-              href="https://qwery.ancorathemes.com/comments/feed/">
-        <link rel="alternate" type="text/calendar" title="Qwery » iCal Feed"
-              href="https://qwery.ancorathemes.com/events/?ical=1">
-        <meta property="og:type" content="article">
-        <meta property="og:url" content="https://qwery.ancorathemes.com/our-team/">
-        <meta property="og:title" content="Our Team">
+
         <meta property="og:description" content="our teamWe develop &amp; create digital future.
 
 			Amy Walker
@@ -107,64 +100,64 @@
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="trx_addons-icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css"
+              href="{% static 'wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css"
+              href="{% static 'wp-content/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_icons_animation-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/font-icons/css/animation.css"
+              href="{% static 'wp-content/plugins/trx_demo/css/font-icons/css/animation.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-font-europa-css"
-              href="https://use.typekit.net/qmj1tmx.css" type="text/css" media="all">
+              href="https://use.typekit.net/qmj1tmx.css' %}" type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-font-google_fonts-css"
               href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;subset=latin,latin-ext&amp;display=swap"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-fontello-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/font-icons/css/fontello.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/font-icons/css/fontello.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="sb_instagram_styles-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=2.9.1"
+              href="{% static 'wp-content/plugins/instagram-feed/css/sbi-styles.min.css' %}?ver=2.9.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wp-block-library-css"
-              href="https://qwery.ancorathemes.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2"
+              href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}?ver=5.7.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wc-blocks-vendors-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=5.5.1"
+              href="{% static 'wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css' %}?ver=5.5.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wc-blocks-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=5.5.1"
+              href="{% static 'wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css' %}?ver=5.5.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="advanced-popups-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/public/css/advanced-popups-public.css?ver=1.1.2"
+              href="{% static 'wp-content/plugins/advanced-popups/public/css/advanced-popups-public.css' %}?ver=1.1.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="ihotspot-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/devvn-image-hotspot/frontend/css/ihotspot.min.css?ver=1.2.1"
+              href="{% static 'wp-content/plugins/devvn-image-hotspot/frontend/css/ihotspot.min.css' %}?ver=1.2.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="latepoint-main-front-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/latepoint/public/stylesheets/main_front.css?ver=3.1.2"
+              href="{% static 'wp-content/plugins/latepoint/public/stylesheets/main_front.css' %}?ver=3.1.2"
               type="text/css" media="all">
         <style id="rs-plugin-settings-inline-css" type="text/css">
             #rs-demo-id {
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="magnific-popup-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/magnific/magnific-popup.min.css"
+              href="{% static 'wp-content/plugins/trx_addons/js/magnific/magnific-popup.min.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_demo_panels-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/css/trx_demo_panels.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_demo/css/trx_demo_panels.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="twenty20-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/twenty20/assets/css/twenty20.css?ver=1.5.7"
+              href="{% static 'wp-content/plugins/twenty20/assets/css/twenty20.css' %}?ver=1.5.7"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-layout-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css' %}?ver=5.6.0"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-smallscreen-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css' %}?ver=5.6.0"
               type="text/css" media="only screen and (max-width: 768px)">
         <link property="stylesheet" rel="stylesheet" id="woocommerce-general-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.6.0"
+              href="{% static 'wp-content/plugins/woocommerce/assets/css/woocommerce.css' %}?ver=5.6.0"
               type="text/css" media="all">
         <style id="woocommerce-inline-inline-css" type="text/css">
             .woocommerce form .form-row .required {
@@ -173,31 +166,24 @@
         </style>
         <link property="stylesheet" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
               id="tinvwl-webfont-font-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff2?ver=xu2uyi"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff2?ver=xu2uyi'%}"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="tinvwl-webfont-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css?ver=1.28.2"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css' %}?ver=1.28.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="tinvwl-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/css/public.min.css?ver=1.28.2"
+              href="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/css/public.min.css' %}?ver=1.28.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' %}?ver=5.12.0"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-frontend-legacy-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-frontend-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/css/frontend.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <style id="elementor-frontend-inline-css" type="text/css">
-            @font-face {
-                font-family: eicons;
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
-                src: url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
-                font-weight: 400;
-                font-style: normal
-            }
 
             .elementor-kit-15 {
                 --e-global-typography-primary-font-family: "Roboto";
@@ -281,39 +267,39 @@
             }
         </style>
         <link property="stylesheet" rel="stylesheet" id="trx_addons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__styles.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_addons/css/__styles.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css' %}"
               type="text/css" media="(max-width:767px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/content/content.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/content/content.responsive.css' %}"
               type="text/css" media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/icons/icons.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-animations-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/trx_addons.animations.css"
+              href="{% static 'wp-content/plugins/trx_addons/css/trx_addons.animations.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.css"
+              href="{% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_team-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/team/team.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/team/team.css' %}"
               type="text/css" media="all">
-        <link property="stylesheet" rel="stylesheet" id="wpgdprc.css-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/wp-gdpr-compliance/dist/css/front.min.css?ver=1629812885"
+        <link property="stylesheet" rel="stylesheet" id="wpgdprc.css' %}-css"
+              href="{% static 'wp-content/plugins/wp-gdpr-compliance/dist/css/front.min.css' %}?ver=1629812885"
               type="text/css" media="all">
-        <style id="wpgdprc.css-inline-css" type="text/css">
+        <style id="wpgdprc.css' %}-inline-css" type="text/css">
 
             div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before {
                 content: 'Yes';
@@ -325,77 +311,77 @@
 
         </style>
         <link property="stylesheet" rel="stylesheet" id="qwery-style-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/style.css" type="text/css" media="all">
+              href="{% static 'wp-content/themes/qwery/style.css' %}" type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="mediaelement-css"
-              href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16"
+              href="{% static 'wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' %}?ver=4.2.16"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="wp-mediaelement-css"
-              href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.7.2"
+              href="{% static 'wp-includes/js/mediaelement/wp-mediaelement.min.css' %}?ver=5.7.2"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-skin-default-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/style.css" type="text/css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/style.css' %}" type="text/css"
               media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-plugins-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__plugins.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__plugins.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-custom-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__custom.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__custom.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="e-animations-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.3.1"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/animations/animations.min.css' %}?ver=3.3.1"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-icons-shared-0-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css' %}?ver=5.15.3"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="elementor-icons-fa-brands-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3"
+              href="{% static 'wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css' %}?ver=5.15.3"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-mailchimp-for-wp-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/mailchimp-for-wp/mailchimp-for-wp.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/plugins/mailchimp-for-wp/mailchimp-for-wp.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce.css' %}"
               type="text/css" media="all">
         <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce-responsive.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce-responsive.css' %}"
               type="text/css" media="(max-width:1679px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__responsive.css" type="text/css"
+              href="{% static 'wp-content/plugins/trx_addons/css/__responsive.css' %}" type="text/css"
               media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css' %}"
               type="text/css" media="(max-width:1279px)">
         <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_team-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/team/team.responsive.css"
+              href="{% static 'wp-content/plugins/trx_addons/components/cpt/team/team.responsive.css' %}"
               type="text/css" media="(max-width:1439px)">
         <link property="stylesheet" rel="stylesheet" id="qwery-responsive-css"
-              href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__responsive.css"
+              href="{% static 'wp-content/themes/qwery/skins/default/css/__responsive.css' %}"
               type="text/css" media="(max-width:1679px)">
         <script type="text/javascript"
-                src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1"
+                src="{% static 'wp-includes/js/jquery/jquery.min.js?ver=3.5.1'%}"
                 id="jquery-core-js"></script>
         <script type="text/javascript"
-                src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"
+                src="{% static 'wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'%}"
                 id="jquery-migrate-js"></script>
-        <link rel="https://api.w.org/" href="https://qwery.ancorathemes.com/wp-json/">
-        <link rel="alternate" type="application/json" href="https://qwery.ancorathemes.com/wp-json/wp/v2/pages/4047">
-        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://qwery.ancorathemes.com/xmlrpc.php?rsd">
+        <link rel="https://api.w.org/" href="{% static 'wp-json/'%}">
+        <link rel="alternate" type="application/json" href="{% static 'wp-json/wp/v2/pages/4047'%}">
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{% static 'xmlrpc.php?rsd'%}">
         <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-              href="https://qwery.ancorathemes.com/wp-includes/wlwmanifest.xml">
+              href="{% static 'wp-includes/wlwmanifest.xml'%}">
         <meta name="generator" content="WordPress 5.7.2">
         <meta name="generator" content="WooCommerce 5.6.0">
-        <link rel="canonical" href="https://qwery.ancorathemes.com/our-team/">
-        <link rel="shortlink" href="https://qwery.ancorathemes.com/?p=4047">
+        <link rel="canonical" href="{% static 'our-team/'%}">
+        <link rel="shortlink" href="{% static '?p=4047'%}">
         <link rel="alternate" type="application/json+oembed"
-              href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Four-team%2F">
+              href="{% static 'wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Four-team%2F'%}">
         <link rel="alternate" type="text/xml+oembed"
-              href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Four-team%2F&amp;format=xml">
+              href="{% static 'wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Four-team%2F&amp;format=xml'%}">
         <link rel="preload"
-              href="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff"
+              href="{% static 'wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff'%}"
               as="font" type="font/woff" crossorigin="">
         <meta name="tec-api-version" content="v1">
         <meta name="tec-api-origin" content="https://qwery.ancorathemes.com">
-        <link rel="https://theeventscalendar.com/" href="https://qwery.ancorathemes.com/wp-json/tribe/events/v1/">
+        <link rel="https://theeventscalendar.com/" href="{% static 'wp-json/tribe/events/v1/'%}">
         <noscript>
             <style>.woocommerce-product-gallery {
                 opacity: 1 !important;
@@ -403,14 +389,14 @@
         </noscript>
         <meta name="generator"
               content="Powered by Slider Revolution 6.4.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
-        <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-120x120.png"
+        <link rel="icon" href="{% static 'wp-content/uploads/2020/08/cropped-favicon-120x120.png'%}"
               sizes="32x32">
-        <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png"
+        <link rel="icon" href="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}"
               sizes="192x192">
         <link rel="apple-touch-icon"
-              href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+              href="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}">
         <meta name="msapplication-TileImage"
-              content="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+              content="{% static 'wp-content/uploads/2020/08/cropped-favicon-300x300.png'%}">
         <script type="text/javascript">function setREVStartSize(e) {
             //window.requestAnimationFrame(function() {
             window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
@@ -770,12 +756,12 @@
 
        </style>
         <style type="text/css">undefined</style>
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/team/natalie-jones/">
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/privacy-policy/">
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/">
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/pricing/">
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/services-agency/">
-        <link rel="prefetch" href="https://qwery.ancorathemes.com/team/john-lewis/">
+        <link rel="prefetch" href="{% static 'team/natalie-jones/'%}">
+        <link rel="prefetch" href="{% static 'privacy-policy/'%}">
+
+        <link rel="prefetch" href="{% static 'pricing/'%}">
+        <link rel="prefetch" href="{% static 'services-agency/'%}">
+        <link rel="prefetch" href="{% static 'team/john-lewis/'%}">
     </head>
     <body class="page-template-default page page-id-4047 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled woocommerce-js tribe-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_wide is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-6817 header_position_default menu_side_none fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-4047 e--ua-blink e--ua-chrome e--ua-webkit animate_to_inited added_to_cart_inited mobile_device trx_addons_scroll_to_top_show desktop_layout"
           data-elementor-device-mode="tablet">
@@ -857,7 +843,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-2-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-2-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -890,13 +876,13 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/amy-walker/"></a>
+                                                                                                   href="{% static 'team/amy-walker/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/amy-walker/">Amy
+                                                                                                        <a href="{% static 'team/amy-walker/'%}">Amy
                                                                                                             Walker</a>
                                                                                                     </h4>
                                                                                                     <div class="sc_team_item_subtitle">
@@ -912,7 +898,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-1-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-1-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -945,13 +931,13 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/david-green/"></a>
+                                                                                                   href="{% static 'team/david-green/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/david-green/">David
+                                                                                                        <a href="{% static 'team/david-green/'%}">David
                                                                                                             Green</a>
                                                                                                     </h4>
                                                                                                     <div class="sc_team_item_subtitle">
@@ -967,7 +953,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-6-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-6-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -1000,18 +986,18 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/natalie-jones/"></a>
+                                                                                                   href="{% static 'team/natalie-jones/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/natalie-jones/">Natalie
+                                                                                                        <a href="{% static 'team/natalie-jones/'%}">Natalie
                                                                                                             Jones</a>
                                                                                                     </h4>
                                                                                                     <div class="sc_team_item_subtitle">
                                                                                                         Web Designer
-                                                                                                    </div>
+                                                                                                   </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -1041,7 +1027,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-5-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-5-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -1074,13 +1060,13 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/nick-carter/"></a>
+                                                                                                   href="{% static 'team/nick-carter/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/nick-carter/">Nick
+                                                                                                        <a href="{% static 'team/nick-carter/'%}">Nick
                                                                                                             Carter</a>
                                                                                                     </h4>
                                                                                                     <div class="sc_team_item_subtitle">
@@ -1096,7 +1082,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-4-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-4-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -1129,13 +1115,13 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/jason-lee/"></a>
+                                                                                                   href="{% static 'team/jason-lee/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/jason-lee/">Jason
+                                                                                                        <a href="{% static 'team/jason-lee/'%}">Jason
                                                                                                             Lee</a></h4>
                                                                                                     <div class="sc_team_item_subtitle">
                                                                                                         Art Director
@@ -1150,7 +1136,7 @@
                                                                                             <div class="post_featured sc_team_item_thumb trx_addons_hover trx_addons_hover_style_info_anim">
                                                                                                 <img width="570"
                                                                                                      height="696"
-                                                                                                     src="https://qwery.ancorathemes.com/wp-content/uploads/2020/04/team-3-copyright-570x696.jpg"
+                                                                                                     src="{% static 'wp-content/uploads/2020/04/team-3-copyright-570x696.jpg'%}"
                                                                                                      class="attachment-qwery-thumb-rectangle size-qwery-thumb-rectangle wp-post-image"
                                                                                                      alt=""
                                                                                                      loading="lazy">
@@ -1183,13 +1169,13 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <a class="post_link sc_team_item_link"
-                                                                                                   href="https://qwery.ancorathemes.com/team/john-lewis/"></a>
+                                                                                                   href="{% static 'team/john-lewis/'%}"></a>
                                                                                                 <div class="trx_addons_hover_mask"></div>
                                                                                             </div>
                                                                                             <div class="sc_team_item_info">
                                                                                                 <div class="sc_team_item_header">
                                                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                                                        <a href="https://qwery.ancorathemes.com/team/john-lewis/">John
+                                                                                                        <a href="{% static 'team/john-lewis/'%}">John
                                                                                                             Lewis</a>
                                                                                                     </h4>
                                                                                                     <div class="sc_team_item_subtitle">
@@ -1408,143 +1394,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="sc_layouts_item elementor-element elementor-element-3b3a761 animation_type_block sc_fly_static elementor-widget elementor-widget-shortcode"
-                                                         data-id="3b3a761" data-element_type="widget"
-                                                         data-widget_type="shortcode.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="elementor-shortcode">
-                                                                <div id="sb_instagram"
-                                                                     class="sbi sbi_col_6 sbi_width_resp feedOne sbi_disable_mobile sbi_medium"
-                                                                     style="width: 100%;"
-                                                                     data-feedid="sbi_17841434116771942#6"
-                                                                     data-res="auto" data-cols="6" data-num="6"
-                                                                     data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;cols&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;showfollow&quot;:&quot;true&quot;,&quot;class&quot;:&quot;feedOne&quot;}"
-                                                                     data-postid="4047" data-sbi-index="1">
-                                                                    <div id="sbi_images">
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_17932346635375220"
-                                                                             data-date="1588774348">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2W0dEpxLU/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95759530_2603379339931464_6916931826172723317_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95759530_2603379339931464_6916931826172723317_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=E01djP5ElG8AX-jgEI5&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=93ed83eb312a81fa37be907050f5a4ad&amp;oe=6129EA48&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95759530_2603379339931464_6916931826172723317_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=E01djP5ElG8AX-jgEI5&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=93ed83eb312a81fa37be907050f5a4ad&amp;oe=6129EA48&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95759530_2603379339931464_6916931826172723317_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=E01djP5ElG8AX-jgEI5&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=93ed83eb312a81fa37be907050f5a4ad&amp;oe=6129EA48&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95759530_2603379339931464_6916931826172723317_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=E01djP5ElG8AX-jgEI5&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=93ed83eb312a81fa37be907050f5a4ad&amp;oe=6129EA48&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95759530_2603379339931464_6916931826172723317_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-                                                                                    <span class="sbi-screenreader">Instagram post 17932346635375220</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95759530_2603379339931464_6916931826172723317_nlow.jpg"
-                                                                                         alt="Instagram post 17932346635375220"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_17843699540151872"
-                                                                             data-date="1588774339">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2WzYEpJ2n/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95820219_263209764866924_2175340965782724451_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95820219_263209764866924_2175340965782724451_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=B70IKWxPJ_cAX-aLCpY&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=b5fdb8d8f263e295428b836073d23c4b&amp;oe=612AAE8D&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95820219_263209764866924_2175340965782724451_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=B70IKWxPJ_cAX-aLCpY&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=b5fdb8d8f263e295428b836073d23c4b&amp;oe=612AAE8D&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95820219_263209764866924_2175340965782724451_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=B70IKWxPJ_cAX-aLCpY&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=b5fdb8d8f263e295428b836073d23c4b&amp;oe=612AAE8D&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95820219_263209764866924_2175340965782724451_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=B70IKWxPJ_cAX-aLCpY&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=b5fdb8d8f263e295428b836073d23c4b&amp;oe=612AAE8D&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95820219_263209764866924_2175340965782724451_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; opacity: 1;">
-                                                                                    <span class="sbi-screenreader">Instagram post 17843699540151872</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95820219_263209764866924_2175340965782724451_nlow.jpg"
-                                                                                         alt="Instagram post 17843699540151872"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_18104667124137147"
-                                                                             data-date="1588774325">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2Wxozpw9K/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95615990_118774213151318_1408579064695613393_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95615990_118774213151318_1408579064695613393_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ekfEZ-bCjnsAX-VCJju&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=15305cd09a76cfa0d3c459c9d74fde3c&amp;oe=612AA899&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95615990_118774213151318_1408579064695613393_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ekfEZ-bCjnsAX-VCJju&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=15305cd09a76cfa0d3c459c9d74fde3c&amp;oe=612AA899&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95615990_118774213151318_1408579064695613393_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ekfEZ-bCjnsAX-VCJju&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=15305cd09a76cfa0d3c459c9d74fde3c&amp;oe=612AA899&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95615990_118774213151318_1408579064695613393_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ekfEZ-bCjnsAX-VCJju&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=15305cd09a76cfa0d3c459c9d74fde3c&amp;oe=612AA899&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95615990_118774213151318_1408579064695613393_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; opacity: 1;">
-                                                                                    <span class="sbi-screenreader">Instagram post 18104667124137147</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95615990_118774213151318_1408579064695613393_nlow.jpg"
-                                                                                         alt="Instagram post 18104667124137147"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_17886903280558396"
-                                                                             data-date="1588774305">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2WvOgpCGy/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95653633_156373412529880_8524739024151364748_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95653633_156373412529880_8524739024151364748_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=iostAWKISLkAX_QNLV7&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=9946e903c85d6faa8bc5350c4cf1bdcb&amp;oe=612B4E24&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95653633_156373412529880_8524739024151364748_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=iostAWKISLkAX_QNLV7&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=9946e903c85d6faa8bc5350c4cf1bdcb&amp;oe=612B4E24&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95653633_156373412529880_8524739024151364748_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=iostAWKISLkAX_QNLV7&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=9946e903c85d6faa8bc5350c4cf1bdcb&amp;oe=612B4E24&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frt3-2.cdninstagram.com\/v\/t51.2885-15\/95653633_156373412529880_8524739024151364748_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=iostAWKISLkAX_QNLV7&amp;_nc_ht=scontent-frt3-2.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=9946e903c85d6faa8bc5350c4cf1bdcb&amp;oe=612B4E24&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95653633_156373412529880_8524739024151364748_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; opacity: 1;">
-                                                                                    <span class="sbi-screenreader">Instagram post 17886903280558396</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95653633_156373412529880_8524739024151364748_nlow.jpg"
-                                                                                         alt="Instagram post 17886903280558396"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_17883689323575197"
-                                                                             data-date="1588774288">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2WtI3JcPj/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/96138189_129289862064937_8485565153084082808_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frx5-1.cdninstagram.com\/v\/t51.2885-15\/96138189_129289862064937_8485565153084082808_n.jpg?_nc_cat=111&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=u2it9MvZdKYAX8fyH2i&amp;_nc_ht=scontent-frx5-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=0e9c5b121bce5398c5f2936a1d9e8965&amp;oe=6129F567&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frx5-1.cdninstagram.com\/v\/t51.2885-15\/96138189_129289862064937_8485565153084082808_n.jpg?_nc_cat=111&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=u2it9MvZdKYAX8fyH2i&amp;_nc_ht=scontent-frx5-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=0e9c5b121bce5398c5f2936a1d9e8965&amp;oe=6129F567&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frx5-1.cdninstagram.com\/v\/t51.2885-15\/96138189_129289862064937_8485565153084082808_n.jpg?_nc_cat=111&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=u2it9MvZdKYAX8fyH2i&amp;_nc_ht=scontent-frx5-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=0e9c5b121bce5398c5f2936a1d9e8965&amp;oe=6129F567&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frx5-1.cdninstagram.com\/v\/t51.2885-15\/96138189_129289862064937_8485565153084082808_n.jpg?_nc_cat=111&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=u2it9MvZdKYAX8fyH2i&amp;_nc_ht=scontent-frx5-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=0e9c5b121bce5398c5f2936a1d9e8965&amp;oe=6129F567&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/96138189_129289862064937_8485565153084082808_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; opacity: 1;">
-                                                                                    <span class="sbi-screenreader">Instagram post 17883689323575197</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/96138189_129289862064937_8485565153084082808_nlow.jpg"
-                                                                                         alt="Instagram post 17883689323575197"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="sbi_item sbi_type_image"
-                                                                             id="sbi_17879475802608716"
-                                                                             data-date="1588774267">
-                                                                            <div class="sbi_photo_wrap">
-                                                                                <a class="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready"
-                                                                                   href="https://www.instagram.com/p/B_2WqlnptST/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener nofollow"
-                                                                                   data-full-res="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95790694_2988630664527063_5948733431787609683_nfull.jpg"
-                                                                                   data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95790694_2988630664527063_5948733431787609683_n.jpg?_nc_cat=108&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=NmJ-yYHxiMoAX_PCJKB&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;oh=4542064db872e864760ac473c68a2568&amp;oe=6129FF15&quot;,&quot;150&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95790694_2988630664527063_5948733431787609683_n.jpg?_nc_cat=108&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=NmJ-yYHxiMoAX_PCJKB&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;oh=4542064db872e864760ac473c68a2568&amp;oe=6129FF15&quot;,&quot;320&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95790694_2988630664527063_5948733431787609683_n.jpg?_nc_cat=108&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=NmJ-yYHxiMoAX_PCJKB&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;oh=4542064db872e864760ac473c68a2568&amp;oe=6129FF15&quot;,&quot;640&quot;:&quot;https:\/\/scontent-frt3-1.cdninstagram.com\/v\/t51.2885-15\/95790694_2988630664527063_5948733431787609683_n.jpg?_nc_cat=108&amp;ccb=1-5&amp;_nc_sid=8ae9d6&amp;_nc_ohc=NmJ-yYHxiMoAX_PCJKB&amp;_nc_ht=scontent-frt3-1.cdninstagram.com&amp;oh=4542064db872e864760ac473c68a2568&amp;oe=6129FF15&quot;}"
-                                                                                   style="height: 150.766px; background-image: url(&quot;https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95790694_2988630664527063_5948733431787609683_nlow.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; opacity: 1;">
-                                                                                    <span class="sbi-screenreader">Instagram post 17879475802608716</span>
-                                                                                    <img src="https://qwery.ancorathemes.com/wp-content/uploads/sb-instagram-feed-images/95790694_2988630664527063_5948733431787609683_nlow.jpg"
-                                                                                         alt="Instagram post 17879475802608716"
-                                                                                         style="display: none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div id="sbi_load">
-<span class="sbi_follow_btn">
-<a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow"><svg
-        class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" data-fa-processed="" aria-label="Instagram"
-        data-prefix="fab" data-icon="instagram" role="img" viewBox="0 0 448 512">
-<path fill="currentColor"
-      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-</svg>Instagram</a>
-</span>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                     <div class="sc_layouts_item elementor-element elementor-element-ba36bc4 sc_height_small animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
                                                          data-id="ba36bc4" data-element_type="widget"
                                                          data-widget_type="spacer.default">
@@ -1592,187 +1441,7 @@
         </div>
     </div>
     <div class="sc_layouts_panel_hide_content inited"></div>
-    <div id="popup-1"
-         class="sc_layouts sc_layouts_panel sc_layouts_4445 sc_layouts_panel_left sc_layouts_effect_slide trx_addons_inline_430040872 inited"
-         data-delay="0" data-panel-position="left" data-panel-effect="slide"
-         data-panel-class="trx_addons_inline_430040872">
-        <div class="sc_layouts_panel_inner">
-            <div data-elementor-type="cpt_layouts" data-elementor-id="4445" class="elementor elementor-4445"
-                 data-elementor-settings="[]">
-                <div class="elementor-inner">
-                    <div class="elementor-section-wrap">
-                        <section
-                                class="elementor-section elementor-top-section elementor-element elementor-element-d5f1b47 elementor-section-height-full elementor-section-items-stretch elementor-section-content-space-between elementor-section-boxed elementor-section-height-default sc_fly_static"
-                                data-id="d5f1b47" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-extended">
-                                <div class="elementor-row">
-                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3370075 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                         data-id="3370075" data-element_type="column">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-306e3f6 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo"
-                                                     data-id="306e3f6" data-element_type="widget"
-                                                     data-widget_type="trx_sc_layouts_logo.default">
-                                                    <div class="elementor-widget-container">
-                                                        <a href="https://qwery.ancorathemes.com/"
-                                                           class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_2018439228"><img
-                                                                class="logo_image"
-                                                                src="//qwery.ancorathemes.com/wp-content/uploads/2020/05/logo.png"
-                                                                srcset="//qwery.ancorathemes.com/wp-content/uploads/2020/05/logo2x.png 2x"
-                                                                alt="Qwery" width="99" height="22"></a></div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-0907f8d animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu"
-                                                     data-id="0907f8d" data-element_type="widget"
-                                                     data-widget_type="trx_sc_layouts_menu.default">
-                                                    <div class="elementor-widget-container">
-                                                        <nav class="sc_layouts_menu sc_layouts_menu_default sc_layouts_menu_dir_vertical sc_layouts_submenu_dropdown menu_hover_fade"
-                                                             data-animation-in="fadeInLeft"
-                                                             data-animation-out="fadeOut">
-                                                            <ul id="sc_layouts_menu_2031277245"
-                                                                class="sc_layouts_menu_nav inited_cache">
-                                                                <li id="menu-item-9150"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9150">
-                                                                    <a href="https://qwery.ancorathemes.com/"><span>Home</span></a>
-                                                                </li>
-                                                                <li id="menu-item-5198"
-                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5198">
-                                                                    <a href="#"><span>Features</span><span
-                                                                            class="open_child_menu"></span></a>
-                                                                    <ul class="sub-menu">
-                                                                        <li id="menu-item-9151"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9151">
-                                                                            <a href="https://qwery.ancorathemes.com/booking-calendar/"><span>Booking Calendar</span></a>
-                                                                        </li>
-                                                                        <li id="menu-item-5203"
-                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5203">
-                                                                            <a href="#"><span>Blog</span><span
-                                                                                    class="open_child_menu"></span></a>
-                                                                            <ul class="sub-menu">
-                                                                                <li id="menu-item-9152"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9152">
-                                                                                    <a href="https://qwery.ancorathemes.com/blog-simple/"><span>Blog Simple</span></a>
-                                                                                </li>
-                                                                                <li id="menu-item-5206"
-                                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5206">
-                                                                                    <a href="#"><span>Blog Layouts</span><span
-                                                                                            class="open_child_menu"></span></a>
-                                                                                    <ul class="sub-menu">
-                                                                                        <li id="menu-item-9153"
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9153">
-                                                                                            <a href="https://qwery.ancorathemes.com/blog-layout-1/"><span>Blog Layout 1</span></a>
-                                                                                        </li>
-                                                                                        <li id="menu-item-9154"
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9154">
-                                                                                            <a href="https://qwery.ancorathemes.com/blog-layout-2/"><span>Blog Layout 2</span></a>
-                                                                                        </li>
-                                                                                        <li id="menu-item-9155"
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9155">
-                                                                                            <a href="https://qwery.ancorathemes.com/blog-layout-3/"><span>Blog Layout 3</span></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li>
-                                                                                <li id="menu-item-9156"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9156">
-                                                                                    <a href="https://qwery.ancorathemes.com/blog-minimal/"><span>Blog Minimal</span></a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                        <li id="menu-item-9157"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9157">
-                                                                            <a href="https://qwery.ancorathemes.com/faq/"><span>FAQ</span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li id="menu-item-5199"
-                                                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5199">
-                                                                    <a href="#"><span>Pages</span><span
-                                                                            class="open_child_menu"></span></a>
-                                                                    <ul class="sub-menu">
-                                                                        <li id="menu-item-9158"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4047 current_page_item menu-item-9158">
-                                                                            <a href="https://qwery.ancorathemes.com/our-team/"
-                                                                               aria-current="page"><span>Our Team</span></a>
-                                                                        </li>
-                                                                        <li id="menu-item-5209"
-                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5209">
-                                                                            <a href="#"><span>About Us</span><span
-                                                                                    class="open_child_menu"></span></a>
-                                                                            <ul class="sub-menu">
-                                                                                <li id="menu-item-9159"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9159">
-                                                                                    <a href="https://qwery.ancorathemes.com/about-creative/"><span>About – Creative</span></a>
-                                                                                </li>
-                                                                                <li id="menu-item-9160"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9160">
-                                                                                    <a href="https://qwery.ancorathemes.com/about-modern/"><span>About – Modern</span></a>
-                                                                                </li>
-                                                                                <li id="menu-item-9161"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9161">
-                                                                                    <a href="https://qwery.ancorathemes.com/about-personal/"><span>About – Personal</span></a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                        <li id="menu-item-9162"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9162">
-                                                                            <a href="https://qwery.ancorathemes.com/awards/"><span>Awards</span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li id="menu-item-9163"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                    <a href="https://qwery.ancorathemes.com/shop/"><span>Store</span></a>
-                                                                </li>
-                                                                <li id="menu-item-9164"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                    <a href="https://qwery.ancorathemes.com/contacts-business/"><span>Contact Us</span></a>
-                                                                </li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-6da7636 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_socials"
-                                                     data-id="6da7636" data-element_type="widget"
-                                                     data-widget_type="trx_sc_socials.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="sc_socials sc_socials_default sc_align_left">
-                                                            <div class="socials_wrap sc_item_content"><a target="_blank"
-                                                                                                         href="https://www.facebook.com/cubexoLLP/"
-                                                                                                         class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
-                                                                    class="social_icon social_icon_facebook-1" style=""><span
-                                                                    class="icon-facebook-1"></span></span></a><a
-                                                                    target="_blank"
-                                                                    href="https://twitter.com/cubexoc"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
-                                                                    class="social_icon social_icon_twitter-new"
-                                                                    style=""><span
-                                                                    class="icon-twitter-new"></span></span></a><a
-                                                                    target="_blank"
-                                                                    href="https://in.linkedin.com/company/cubexo-software-solutions"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
-                                                                    class="social_icon social_icon_dribble-new"
-                                                                    style=""><span
-                                                                    class="icon-linkedin-new"></span></span></a><a
-                                                                    target="_blank"
-                                                                    href="https://www.instagram.com/ancora_themes/"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
-                                                                    class="social_icon social_icon_instagram"
-                                                                    style=""><span class="icon-instagram"></span></span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="sc_layouts_panel_close trx_addons_button_close"><span
-                    class="sc_layouts_panel_close_icon trx_addons_button_close_icon"></span></a></div>
-    </div>
+   
 
     <script>
         (function (body) {
@@ -1795,7 +1464,7 @@
         }
     })();</script>
     <script type="text/javascript">
-        var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
+        var sbiajaxurl = "{% static 'wp-admin/admin-ajax.php'%}";
     </script>
     <div class="trx_addons_mouse_helper trx_addons_mouse_helper_permanent"
          style="transform: translate(215.997px, 145.001px);"></div>
@@ -1839,10 +1508,10 @@
             document.body.className = c;
         })();
     </script>
-    <script type="text/javascript" src="https://qwery.ancorathemes.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1"
+    <script type="text/javascript" src="{% static 'wp-includes/js/jquery/ui/core.min.js?ver=1.12.1'%}"
             id="jquery-ui-core-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.12.1"
+            src="{% static 'wp-includes/js/jquery/ui/datepicker.min.js?ver=1.12.1'%}"
             id="jquery-ui-datepicker-js"></script>
     <script type="text/javascript" id="jquery-ui-datepicker-js-after">
         jQuery(document).ready(function (jQuery) {
@@ -1863,28 +1532,28 @@
         });
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/public/js/advanced-popups-public.js?ver=1.1.2"
+            src="{% static 'wp-content/plugins/advanced-popups/public/js/advanced-popups-public.js?ver=1.1.2'%}"
             id="advanced-popups-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4"
+            src="{% static 'wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4'%}"
             id="wp-polyfill-js"></script>
     <script type="text/javascript" id="wp-polyfill-js-after">
-        ('fetch' in window) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>');
-        (document.contains) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>');
-        (window.DOMRect) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>');
-        (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>');
-        (window.FormData && window.FormData.prototype.keys) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>');
-        (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>');
-        ('objectFit' in document.documentElement.style) || document.write('<script src="https://qwery.ancorathemes.com/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>');
+        ('fetch' in window) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0' %}"></scr' + 'ipt>');
+        (document.contains) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0'%}"></scr' + 'ipt>');
+        (window.DOMRect) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0'%}"></scr' + 'ipt>');
+        (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4'%}"></scr' + 'ipt>');
+        (window.FormData && window.FormData.prototype.keys) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12'%}"></scr' + 'ipt>');
+        (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2'%}"></scr' + 'ipt>');
+        ('objectFit' in document.documentElement.style) || document.write('<script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4' %}"></scr' + 'ipt>');
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/devvn-image-hotspot/frontend/js/jquery.ihotspot.min.js?ver=1.2.1"
+            src="{% static 'wp-content/plugins/devvn-image-hotspot/frontend/js/jquery.ihotspot.min.js?ver=1.2.1'%}"
             id="ihotspot-js-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/latepoint/public/javascripts/vendor/sprintf.min.js?ver=3.1.2"
+            src="{% static 'wp-content/plugins/latepoint/public/javascripts/vendor/sprintf.min.js?ver=3.1.2'%}"
             id="sprintf-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/latepoint/public/javascripts/vendor/jquery.inputmask.bundle.min.js?ver=3.1.2"
+            src="{% static 'wp-content/plugins/latepoint/public/javascripts/vendor/jquery.inputmask.bundle.min.js?ver=3.1.2'%}"
             id="jquery-mask-js"></script>
     <script type="text/javascript" id="latepoint-main-front-js-extra">
         /* <![CDATA[ */
@@ -1916,10 +1585,10 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/latepoint/public/javascripts/main_front.js?ver=3.1.2"
+            src="{% static 'wp-content/plugins/latepoint/public/javascripts/main_front.js?ver=3.1.2'%}"
             id="latepoint-main-front-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js"
+            src="{% static 'wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js'%}"
             id="magnific-popup-js"></script>
     <script type="text/javascript" id="trx_demo_panels-js-extra">
         /* <![CDATA[ */
@@ -1934,16 +1603,16 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/js/trx_demo_panels.js"
+            src="{% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js'%}"
             id="trx_demo_panels-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/twenty20/assets/js/jquery.twenty20.js?ver=1.5.7"
+            src="{% static 'wp-content/plugins/twenty20/assets/js/jquery.twenty20.js?ver=1.5.7'%}"
             id="twenty20-style-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/twenty20/assets/js/jquery.event.move.js?ver=1.5.7"
+            src="{% static 'wp-content/plugins/twenty20/assets/js/jquery.event.move.js?ver=1.5.7'%}"
             id="twenty20-eventmove-style-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.6.0"
+            src="{% static 'wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.6.0'%}"
             id="jquery-blockui-js"></script>
     <script type="text/javascript" id="wc-add-to-cart-js-extra">
         /* <![CDATA[ */
@@ -1958,10 +1627,10 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.6.0"
+            src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.6.0'%}"
             id="wc-add-to-cart-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.6.0"
+            src="{% static 'wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.6.0'%}"
             id="js-cookie-js"></script>
     <script type="text/javascript" id="woocommerce-js-extra">
         /* <![CDATA[ */
@@ -1969,7 +1638,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.6.0"
+            src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.6.0'%}"
             id="woocommerce-js"></script>
     <script type="text/javascript" id="wc-cart-fragments-js-extra">
         /* <![CDATA[ */
@@ -1983,7 +1652,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.6.0"
+            src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.6.0'%}"
             id="wc-cart-fragments-js"></script>
     <script type="text/javascript" id="rocket-browser-checker-js-after">
         "use strict";
@@ -2193,7 +1862,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/ti-woocommerce-wishlist/assets/js/public.min.js?ver=1.28.2"
+            src="{% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/js/public.min.js?ver=1.28.2'%}"
             id="tinvwl-js"></script>
     <script type="text/javascript" id="trx_addons-js-extra">
         /* <![CDATA[ */
@@ -2295,22 +1964,22 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/__scripts.js"
+            src="{% static 'wp-content/plugins/trx_addons/js/__scripts.js'%}"
             id="trx_addons-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.js"
+            src="{% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.js'%}"
             id="trx_addons-mouse-helper-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js"
+            src="{% static 'wp-content/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js'%}"
             id="superfish-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/js/tweenmax/tweenmax.min.js"
+            src="{% static 'wp-content/plugins/trx_addons/js/tweenmax/tweenmax.min.js'%}"
             id="tweenmax-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/mailchimp-for-wp/mailchimp-for-wp.js"
+            src="{% static 'wp-content/plugins/trx_addons/components/api/mailchimp-for-wp/mailchimp-for-wp.js'%}"
             id="trx_addons-mailchimp-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.js"
+            src="{% static 'wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.js'%}"
             id="trx_addons-woocommerce-js"></script>
     <script type="text/javascript" id="wpgdprc.js-js-extra">
         /* <![CDATA[ */
@@ -2324,7 +1993,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/wp-gdpr-compliance/dist/js/front.min.js?ver=1629812885"
+            src="{% static 'wp-content/plugins/wp-gdpr-compliance/dist/js/front.min.js?ver=1629812885'%}"
             id="wpgdprc.js-js"></script>
     <script type="text/javascript" id="qwery-init-js-extra">
         /* <![CDATA[ */
@@ -2359,7 +2028,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/themes/qwery/js/__scripts.js" id="qwery-init-js"></script>
+            src="{% static 'wp-content/themes/qwery/js/__scripts.js" id="qwery-init-js'%}"></script>
     <script type="text/javascript" id="mediaelement-core-js-before">
         var mejsL10n = {
             "language": "en", "strings": {
@@ -2439,10 +2108,10 @@
         };
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16"
+            src="{% static 'wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16'%}"
             id="mediaelement-core-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.7.2"
+            src="{% static 'wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.7.2'%}"
             id="mediaelement-migrate-js"></script>
     <script type="text/javascript" id="mediaelement-js-extra">
         /* <![CDATA[ */
@@ -2454,13 +2123,13 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.7.2"
+            src="{% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.7.2'%}"
             id="wp-mediaelement-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/skin.js"
+            src="{% static 'wp-content/themes/qwery/skins/default/skin.js'%}"
             id="qwery-skin-default-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-includes/js/wp-embed.min.js?ver=5.7.2" id="wp-embed-js"></script>
+            src="{% static 'wp-includes/js/wp-embed.min.js?ver=5.7.2" id="wp-embed-js'%}"></script>
     <script type="text/javascript" id="sb_instagram_scripts-js-extra">
         /* <![CDATA[ */
         var sb_instagram_js_options = {
@@ -2471,28 +2140,28 @@
         /* ]]> */
     </script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=2.9.1"
+            src="{% static 'wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=2.9.1'%}"
             id="sb_instagram_scripts-js"></script>
     <script type="text/javascript" defer=""
-            src="https://qwery.ancorathemes.com/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.8.6"
+            src="{% static 'wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.8.6'%}"
             id="mc4wp-forms-api-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.3.1"
+            src="{% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.3.1'%}"
             id="elementor-webpack-runtime-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.3.1"
+            src="{% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.3.1'%}"
             id="elementor-frontend-modules-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+            src="{% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'%}"
             id="elementor-waypoints-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6"
+            src="{% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'%}"
             id="swiper-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.3.1"
+            src="{% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.3.1'%}"
             id="share-link-js"></script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1"
+            src="{% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1'%}"
             id="elementor-dialog-js"></script>
     <script type="text/javascript" id="elementor-frontend-js-before">
         var elementorFrontendConfig = {
@@ -2584,14 +2253,14 @@
         };
     </script>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.3.1"
+            src="{% static 'wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.3.1'%}"
             id="elementor-frontend-js"></script>
     <span id="elementor-device-mode" class="elementor-screen-only"></span>
     <script type="text/javascript"
-            src="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.3.1"
+            src="{% static 'wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.3.1'%}"
             id="preloaded-modules-js"></script>
     <script type="text/javascript" defer="defer"
-            src="https://qwery.ancorathemes.com/wp-content/themes/qwery/plugins/woocommerce/woocommerce.js"
+            src="{% static 'wp-content/themes/qwery/plugins/woocommerce/woocommerce.js'%}"
             id="qwery-woocommerce-js"></script>
 
     <style type="text/css">.trx_demo_panels,
@@ -2847,7 +2516,7 @@
                              data-filter-value="business,services" data-search-value="default">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/default/skin.jpg);">
                                     <a href="//qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//qwery.ancorathemes.com/"
@@ -2857,7 +2526,7 @@
                              data-search-value="accountant">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/accountant/skin.jpg);">
                                     <a href="//accountant.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//accountant.qwery.ancorathemes.com"
@@ -2867,7 +2536,7 @@
                              data-search-value="agriculture">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/agriculture/skin.jpg);">
                                     <a href="//agriculture.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -2878,7 +2547,7 @@
                              data-filter-value="business,services,online store,creative" data-search-value="architect">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/architect/skin.jpg);">
                                     <a href="//architect.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//architect.qwery.ancorathemes.com"
@@ -2888,7 +2557,7 @@
                              data-search-value="barbershop">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/barbershop/skin.jpg);">
                                     <a href="//barbershop.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -2899,7 +2568,7 @@
                              data-search-value="bike repair">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/bike-repair/skin.jpg);">
                                     <a href="//bike-repair.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -2910,7 +2579,7 @@
                              data-search-value="catering">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/catering/skin.jpg);">
                                     <a href="//catering.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//catering.qwery.ancorathemes.com"
@@ -2920,7 +2589,7 @@
                              data-search-value="charity">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/charity/skin.jpg);">
                                     <a href="//charity.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//charity.qwery.ancorathemes.com/"
@@ -2930,7 +2599,7 @@
                              data-search-value="church">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/church/skin.jpg);">
                                     <a href="//church.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//church.qwery.ancorathemes.com/"
@@ -2940,7 +2609,7 @@
                              data-search-value="corporate">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/corporate/skin.jpg);">
                                     <a href="//corporate.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//corporate.qwery.ancorathemes.com/"
@@ -2950,7 +2619,7 @@
                              data-search-value="craftsman">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/craftsman/skin.jpg);">
                                     <a href="//craftsman.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//craftsman.qwery.ancorathemes.com"
@@ -2960,7 +2629,7 @@
                              data-search-value="creative agency">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/creative-agency/skin.jpg);">
                                     <a href="//creative-agency.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -2971,7 +2640,7 @@
                              data-search-value="cryptocurrency">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/cryptocurrency/skin.jpg);">
                                     <a href="//cryptocurrency.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -2982,7 +2651,7 @@
                              data-search-value="dentist">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/dentist/skin.jpg);">
                                     <a href="//dentist.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//dentist.qwery.ancorathemes.com"
@@ -2992,7 +2661,7 @@
                              data-search-value="dermatology">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/dermatology/skin.jpg);">
                                     <a href="//dermatology.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3003,7 +2672,7 @@
                              data-search-value="designer">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/designer/skin.jpg);">
                                     <a href="//designer.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//designer.qwery.ancorathemes.com"
@@ -3013,7 +2682,7 @@
                              data-search-value="dietitian">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/dietitian/skin.jpg);">
                                     <a href="//dietitian.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//dietitian.qwery.ancorathemes.com"
@@ -3023,7 +2692,7 @@
                              data-search-value="education">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/education/skin.jpg);">
                                     <a href="//education.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//education.qwery.ancorathemes.com/"
@@ -3033,7 +2702,7 @@
                              data-search-value="elder care">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/elder-care/skin.jpg);">
                                     <a href="//elder-care.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3044,7 +2713,7 @@
                              data-search-value="elearning">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/elearning/skin.jpg);">
                                     <a href="//elearning.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//elearning.qwery.ancorathemes.com/"
@@ -3054,7 +2723,7 @@
                              data-search-value="engineering">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/engineering/skin.jpg);">
                                     <a href="//engineering.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3065,7 +2734,7 @@
                              data-search-value="fashion">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/fashion/skin.jpg);">
                                     <a href="//fashion.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//fashion.qwery.ancorathemes.com"
@@ -3075,7 +2744,7 @@
                              data-search-value="fitness">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/fitness/skin.jpg);">
                                     <a href="//fitness.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//fitness.qwery.ancorathemes.com"
@@ -3085,7 +2754,7 @@
                              data-search-value="flooring">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/flooring/skin.jpg);">
                                     <a href="//flooring.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//flooring.qwery.ancorathemes.com/"
@@ -3095,7 +2764,7 @@
                              data-search-value="florist">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;}"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/florist/skin.jpg);">
                                     <a href="//florist.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//florist.qwery.ancorathemes.com/"
@@ -3105,7 +2774,7 @@
                              data-search-value="glasses">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/glasses/skin.jpg);">
                                     <a href="//glasses.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//glasses.qwery.ancorathemes.com"
@@ -3116,7 +2785,7 @@
                              data-search-value="hairdresser">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/hairdresser/skin.jpg);">
                                     <a href="//hairdresser.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3127,7 +2796,7 @@
                              data-search-value="hotel">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/hotel/skin.jpg);">
                                     <a href="//hotel.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//hotel.qwery.ancorathemes.com"
@@ -3137,7 +2806,7 @@
                              data-search-value="lawyer">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/lawyer/skin.jpg);">
                                     <a href="//lawyer.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//lawyer.qwery.ancorathemes.com/"
@@ -3147,7 +2816,7 @@
                              data-search-value="lifecoach">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/lifecoach/skin.jpg);">
                                     <a href="//lifecoach.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//lifecoach.qwery.ancorathemes.com/"
@@ -3157,7 +2826,7 @@
                              data-search-value="logistics">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/logistics/skin.jpg);">
                                     <a href="//logistics.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//logistics.qwery.ancorathemes.com"
@@ -3167,7 +2836,7 @@
                              data-search-value="luxury">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/luxury/skin.jpg);">
                                     <a href="//luxury.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//luxury.qwery.ancorathemes.com/"
@@ -3177,7 +2846,7 @@
                              data-search-value="massage">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/massage/skin.jpg);">
                                     <a href="//massage.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//massage.qwery.ancorathemes.com/"
@@ -3187,7 +2856,7 @@
                              data-search-value="mechanic">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/mechanic/skin.jpg);">
                                     <a href="//mechanic.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//mechanic.qwery.ancorathemes.com"
@@ -3197,7 +2866,7 @@
                              data-search-value="medical">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/medical/skin.jpg);">
                                     <a href="//medical.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//medical.qwery.ancorathemes.com/"
@@ -3207,7 +2876,7 @@
                              data-search-value="military">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/military/skin.jpg);">
                                     <a href="//military.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//military.qwery.ancorathemes.com/"
@@ -3217,7 +2886,7 @@
                              data-search-value="music">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/music/skin.jpg);">
                                     <a href="//music.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//music.qwery.ancorathemes.com"
@@ -3227,7 +2896,7 @@
                              data-search-value="nails">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/nails/skin.jpg);">
                                     <a href="//nails.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//nails.qwery.ancorathemes.com/"
@@ -3237,7 +2906,7 @@
                              data-search-value="personal">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/personal/skin.jpg);">
                                     <a href="//personal.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//personal.qwery.ancorathemes.com"
@@ -3247,7 +2916,7 @@
                              data-search-value="personal stylist">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/personal-stylist/skin.jpg);">
                                     <a href="//personal-stylist.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3258,7 +2927,7 @@
                              data-search-value="pest control">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/pest-control/skin.jpg);">
                                     <a href="//pest-control.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3269,7 +2938,7 @@
                              data-search-value="pet grooming">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/pet-grooming/skin.jpg);">
                                     <a href="//pet-grooming.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3280,7 +2949,7 @@
                              data-search-value="pet supplies">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/pet-supplies/skin.jpg);">
                                     <a href="//pet-supplies.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3291,7 +2960,7 @@
                              data-search-value="phone repair">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/phone-repair/skin.jpg);">
                                     <a href="//phone-repair.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3302,7 +2971,7 @@
                              data-search-value="photographer">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/photographer/skin.jpg);">
                                     <a href="//photographer.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3313,7 +2982,7 @@
                              data-search-value="plastic surgeon">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/plastic-surgeon/skin.jpg);">
                                     <a href="//plastic-surgeon.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3324,7 +2993,7 @@
                              data-search-value="portfolio fullscreen">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/portfolio-fullscreen/skin.jpg);">
                                     <a href="//portfolio-fullscreen.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3335,7 +3004,7 @@
                              data-search-value="portfolio stacked">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/portfolio-stacked/skin.jpg);">
                                     <a href="//portfolio-stacked.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3346,7 +3015,7 @@
                              data-search-value="psychologist">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/psychologist/skin.jpg);">
                                     <a href="//psychologist.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3357,7 +3026,7 @@
                              data-search-value="restaurant">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/restaurant/skin.jpg);">
                                     <a href="//restaurant.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//restaurant.qwery.ancorathemes.com"
@@ -3367,7 +3036,7 @@
                              data-search-value="roofing">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/roofing/skin.jpg);">
                                     <a href="//roofing.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//roofing.qwery.ancorathemes.com"
@@ -3377,7 +3046,7 @@
                              data-search-value="seo">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/seo/skin.jpg);">
                                     <a href="//seo.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//seo.qwery.ancorathemes.com"
@@ -3387,7 +3056,7 @@
                              data-search-value="speaker">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/speaker/skin.jpg);">
                                     <a href="//speaker.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//speaker.qwery.ancorathemes.com"
@@ -3397,7 +3066,7 @@
                              data-filter-value="business,services,online store,creative" data-search-value="tailor">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/tailor/skin.jpg);">
                                     <a href="//tailor.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//tailor.qwery.ancorathemes.com"
@@ -3407,7 +3076,7 @@
                              data-search-value="travel">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/travel/skin.jpg);">
                                     <a href="//travel.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//travel.qwery.ancorathemes.com"
@@ -3417,7 +3086,7 @@
                              data-search-value="winery">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/winery/skin.jpg);">
                                     <a href="//winery.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//winery.qwery.ancorathemes.com"
@@ -3427,7 +3096,7 @@
                              data-search-value="woodworking">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/woodworking/skin.jpg);">
                                     <a href="//woodworking.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a
@@ -3438,7 +3107,7 @@
                              data-search-value="yachts">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/yachts/skin.jpg);">
                                     <a href="//yachts.qwery.ancorathemes.com/" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//yachts.qwery.ancorathemes.com/"
@@ -3448,7 +3117,7 @@
                              data-search-value="yoga">
                             <div class="trx_demo_panel_list_item_image_wrap">
                                 <div class="trx_demo_panel_list_item_image trx_demo_panel_list_item_image_ratio_16_9"
-                                     style="background-image: url(https://qwery.ancorathemes.com/wp-content/plugins/trx_demo/images/no-thumb.gif);background-position:center;background-repeat:no-repeat;background-size:cover;"
+                                     style="background-image: url({% static 'wp-content/plugins/trx_demo/images/no-thumb.gif'%});background-position:center;background-repeat:no-repeat;background-size:cover;"
                                      data-style="background-image: url(//upgrade.themerex.net/skins/qwery/yoga/skin.jpg);">
                                     <a href="//yoga.qwery.ancorathemes.com" target="_blank"></a></div>
                                 <h6 class="trx_demo_panel_list_item_title"><a href="//yoga.qwery.ancorathemes.com"
