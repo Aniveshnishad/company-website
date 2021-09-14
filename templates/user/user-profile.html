@@ -1,0 +1,414 @@
+{% extends 'user/profile_base.html' %}
+{% block content %}
+    <html>
+    <head>
+        <title></title>
+
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+<style>
+  #reply-btn {
+            background-color: #0f8c77;
+            font-size: 20px;
+            color: whitesmoke;
+            height: 50px;
+            width: 100px
+        }
+
+        #reply-btn:hover {
+            background-color: #0f8c66;
+            color: whitesmoke;
+            height: 50px;
+            width: 100px
+        }
+
+        #exampleInputEmail1 {
+            border: none;
+
+            box-shadow: none;
+        }
+
+        #exampleInputEmail1:hover {
+            border: none;
+            border-top: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+        #InputEmail1 {
+
+
+            box-shadow: none;
+        }
+
+        #InputEmail1:hover {
+            border: none;
+            border-top: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+        #ReplyInputEmail1 {
+
+
+            box-shadow: none;
+        }
+
+        #ReplyInputEmail1:hover {
+
+            border: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+
+        .main-div {
+            padding-top: 30px;
+            overflow: auto;
+        }
+
+        .main-div1 {
+            padding-top: 130px;
+            overflow: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            background: rgba(71, 147, 227, 1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 30px 0;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 0px 0px 70px;
+            box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+        }
+
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 15px;
+        }
+
+        .fl-table thead th {
+            color: #ffffff;
+            background: #4FC3A1;
+        }
+
+
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrapper:before {
+                content: "Scroll horizontally >";
+                display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table thead {
+                float: left;
+            }
+
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(odd) {
+                background: #F8F8F8;
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .text {
+            display: block;
+            width: 250px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+
+        @media (max-width: 767px) {
+            .text {
+                display: block;
+                width: 120px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+
+        #input-search{
+           border:1px solid #0f8c77;
+            width: 370px;
+            padding-left: 10px;
+
+
+
+        }
+         #input-search:focus{
+            border:none;
+        }
+
+
+        .searchTerm:focus {
+            color: #0f8c77;
+        }
+
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 500px;
+
+            float: right;
+
+
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<br><br><br><br><br><br>
+<div class="container main-div" >
+
+
+            <div class="table-wrapper">
+            <table class="fl-table">
+            <thead>
+            <tr>
+                <th><i class="fas fa-user"></i> Name</th>
+                 <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-eye"></i> Password</th>
+                <th>Change Password</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td><span class="text">{{ data.user_name }}</span></td>
+                    <td><span class="text">{{ data.user_email }}</span></td>
+                    <td><span class="text">{{ data.user_password }}</span></td>
+
+                    <td><a href="#" data-toggle="modal" data-target="#myModal2{{ data.id }}"><span
+                            class="text"><i class="fas fa-edit"></i></span></a></td>
+
+
+                        </td>
+
+                </tr>
+
+
+                <div class="modal fade" id="myModal2{{ data.id }}" role="dialog" style="margin-top: 50px;">
+
+                    <div class="modal-dialog modal-lg" >
+                        <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
+                            <div class="modal-header">
+                                <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-edit"></i>
+                                    Edit profile</h3>
+
+                            </div>
+
+
+                            <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
+                                <form action="{% url 'email-otp' id=data.id %}" method="post"
+                                      enctype="multipart/form-data">
+                                    {% csrf_token %}
+
+
+
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-user"></i>
+                                            Username</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="user_name" aria-describedby="emailHelp"
+                                               value="{{ data.user_name }}"
+                                               readonly>
+
+                                    </div>
+                                     <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Email</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="user_email" aria-describedby="emailHelp"
+                                               value="{{ data.user_email }}"
+                                               readonly>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-eye"></i>
+                                            Password</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="user_password" aria-describedby="emailHelp"
+                                               value="{{ data.user_password}}"
+                                               required>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn" id="reply-btn">Submit</button>
+                                        <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+        <tbody>
+        </table>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+    <script>
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 2000)
+
+
+
+
+
+
+
+
+    </script>
+    </html>
+{% endblock %}

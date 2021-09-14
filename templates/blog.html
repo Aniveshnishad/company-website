@@ -2,6 +2,14 @@
 
 {% load static %}
 {% block content %}
+    <style>
+    .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+    </style>
     <br><br><br><br><br>
     <html lang="en-US" class="js
 									 scheme_default										"
@@ -84,6 +92,7 @@
                                                                                                          data-cfsrc="{{ data.image }}"
                                                                                                          class="attachment-qwery-thumb-square size-qwery-thumb-square wp-post-image"
                                                                                                          alt="image"
+                                                                                                         style="min-height: 300px;max-height: 300px;"
                                                                                                          loading="lazy"
                                                                                                          src="{{ data.image }}">
                                                                                                     <div class="mask"></div>
@@ -99,11 +108,11 @@
                                                                                                     <div class="post_meta sc_blogger_item_meta post_meta">
                                                                                                         <span class="post_meta_item post_categories cat_sep"><a
                                                                                                                 href=""
-                                                                                                                rel="category tag">Mindset</a></span><a
+                                                                                                                rel="category tag">Date</a></span><a
                                                                                                             href="{% url 'full-blog' id=data.id  %}"
                                                                                                             class="post_meta_item post_meta_comments icon-comment-light inited"><span
                                                                                                             class="post_meta_number"></span><span
-                                                                                                            class="post_meta_label">CubexO Software Solution</span></a>
+                                                                                                            class="post_meta_label">{{ data.date}}</span></a>
                                                                                                     </div>
                                                                                                     <h5 class="sc_blogger_item_title entry-title"
                                                                                                         data-item-number="1">

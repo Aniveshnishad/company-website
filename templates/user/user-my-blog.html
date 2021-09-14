@@ -1,0 +1,357 @@
+{% extends 'user/profile_base.html' %}
+
+{% load static %}
+{% block content %}
+    <br><br><br><br><br>
+     <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+    <script type="text/javascript">
+                        $(document).ready(function(){
+
+                                $("div").on("click",".delete",(function(){
+       let id=$(this).attr("data-sid");
+       let cs=$("input[name=csrfmiddlewaretoken]").val();
+        console.log('a');
+
+        const my_data={id:id,csrfmiddlewaretoken:cs};
+        mythis=this;
+        console.log("ju")
+
+        $.ajax({
+            url:"{% url 'delete-user-blog' %}",
+            method:"POST",
+            data:my_data,
+            dataType:'JSON',
+            success:function(data){
+
+                if (data.status == "delete"){
+
+                console.log('hi')
+                    $(mythis).closest("div").fadeOut(1000);
+
+                }
+                else{
+                    console.log('Error ');
+
+                }
+
+
+                             },
+        });
+
+    }));
+
+                        });
+
+
+    </script>
+
+     <style>
+#reply-btn {
+            background-color: #0f8c77;
+
+        }
+
+        #reply-btn:hover {
+            background-color: #0f8c66;
+
+        }
+
+        #exampleInputEmail1 {
+            border: none;
+
+            box-shadow: none;
+        }
+
+        #exampleInputEmail1:hover {
+            border: none;
+            border-top: 1px solid #0f8c77;
+            box-shadow: none;
+        }
+
+.btn-add{
+    background-color: #0f8c77;
+    float: right;
+    color:whitesmoke;
+    width:150px;
+    height: 35px;
+}
+.btn-add:hover{
+    background-color:whitesmoke;
+    float: right;
+    color:black;
+    width:150px;
+    height: 35px;
+    border:2px solid #0f8c77;
+}
+
+
+    </style>
+    <html lang="en-US" class="js
+									 scheme_default										"
+          style="--fixed-rows-height:0px;">
+
+    <br>
+
+    <body class="page-template-default page page-id-474 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled ua_iphone ua_mobile ua_ios ua_safari woocommerce-js tribe-js tinvwl-theme-style skin_default scheme_default blog_mode_page body_style_wide is_single sidebar_hide expand_content trx_addons_present header_type_custom header_style_header-custom-4083 header_position_default menu_side_none fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-474 e--ua-blink e--ua-chrome e--ua-webkit animate_to_inited added_to_cart_inited desktop_layout mobile_device"
+          data-elementor-device-mode="tablet">
+
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b48ac5 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+         data-id="3b48ac5" data-element_type="column">
+        <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+                <div class="sc_layouts_item elementor-element elementor-element-267cc58 animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                     data-id="267cc58" data-element_type="widget" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc_layouts_item elementor-element elementor-element-2e5ed53 sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                     data-id="2e5ed53" data-element_type="widget" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            <div class="container main-div1"><h2 style="color: #0f8c77;font-size:30px;">
+        <a href="{% url 'user-add-blog' %}" class="btn btn-add"
+        ><i class="fas fa-plus-square" ></i><span> Blog</span></a></h2></div><br><br>
+
+            <div class="sc_layouts_item elementor-element elementor-element-2e5ed53 sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                     data-id="2e5ed53" data-element_type="widget" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc_layouts_item elementor-element elementor-element-3505143 animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                     data-id="3505143" data-element_type="widget" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="body_wrap">
+                    <div class="page_wrap">
+
+                        <div class="page_content_wrap">
+                            <div class="content_wrap">
+                                <div class="content">
+                                    <a id="content_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
+                                    <article id="post-474"
+                                             class="post_item_single post_type_page post-474 page type-page status-publish hentry">
+                                        <div class="post_content entry-content">
+                                            <div data-elementor-type="wp-page" data-elementor-id="474"
+                                                 class="elementor elementor-474" data-elementor-settings="[]">
+                                                <div class="elementor-inner">
+                                                    <div class="elementor-section-wrap">
+                                                        <section
+                                                                class="elementor-section elementor-top-section elementor-element elementor-element-7de0df4 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                                data-id="7de0df4" data-element_type="section">
+                                                            <div class="elementor-container elementor-column-gap-extended">
+                                                                <div class="elementor-row">
+                                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2d3b787 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                         data-id="2d3b787" data-element_type="column">
+                                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                                            <div class="elementor-widget-wrap">
+                                                                                <div class="elementor-element elementor-element-bc5fd9d sc_style_default animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_blogger"
+                                                                                     data-id="bc5fd9d"
+                                                                                     data-element_type="widget"
+                                                                                     data-widget_type="trx_sc_blogger.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <div class="sc_blogger sc_blogger_default sc_blogger_default_classic_time sc_item_filters_tabs_none alignnone">
+                                                                                            <div class="sc_blogger_columns_wrap sc_item_columns sc_item_posts_container trx_addons_columns_wrap columns_padding_bottom">
+                                                                                                {% for data in obj %}
+                                                                                                    <div class="trx_addons_column-1_3">
+
+                                                                                                        <div data-post-id="298"
+                                                                                                             data-item-number="1"
+                                                                                                             class="sc_blogger_item sc_item_container post_container sc_blogger_item_default sc_blogger_item_default_classic_time sc_blogger_item_odd sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_no_excerpt sc_blogger_item_on_plate sc_blogger_item_image_position_top post-298 post type-post status-publish format-standard has-post-thumbnail hentry category-mindset tag-article tag-featured tag-style-1">
+                                                                                                            <div class="sc_blogger_item_body">
+                                                                                                                <div class="post_featured with_thumb hover_link sc_item_featured sc_blogger_item_featured">
+                                                                                                                    <img width="890"
+                                                                                                                         height="664"
+                                                                                                                         data-cfsrc="{{ data.image }}"
+                                                                                                                         class="attachment-qwery-thumb-square size-qwery-thumb-square wp-post-image"
+                                                                                                                         alt="image"
+                                                                                                                         style="min-height: 300px;max-height: 300px;"
+                                                                                                                         loading="lazy"
+                                                                                                                         src="{{ data.image }}">
+                                                                                                                    <div class="mask"></div>
+                                                                                                                    <a href="{% url 'full-blog' id=data.id %}"
+                                                                                                                       aria-hidden="true"
+                                                                                                                       class="link"></a>
+                                                                                                                </div>
+                                                                                                                <div class="sc_blogger_item_content entry-content"
+                                                                                                                     style="color: #0f8c77;">
+                                                                                                                    <div class="post_meta sc_blogger_item_meta post_meta_date"
+                                                                                                                         style="color: #0f8c77;">
+                                                                                                        <span class="post_meta_item post_date"
+                                                                                                              style="color: #0f8c77;"><a
+                                                                                                                href=""
+                                                                                                                style="color: #0f8c77;"><b
+                                                                                                                style="font-size:20px;">{{ data.date }}</b></a></span>
+                                                                                                                    </div>
+                                                                                                                    <div class="post_meta sc_blogger_item_meta post_meta">
+                                                                                                        <span class="post_meta_item post_categories cat_sep"><a
+                                                                                                                href=""
+                                                                                                                rel="category tag">Mindset</a></span><a
+                                                                                                                            href="{% url 'full-blog' id=data.id %}"
+                                                                                                                            class="post_meta_item post_meta_comments icon-comment-light inited"><span
+                                                                                                                            class="post_meta_number"></span><span
+                                                                                                                            class="post_meta_label">CubexO </span></a>
+                                                                                                                    </div>
+                                                                                                                    <h5 class="sc_blogger_item_title entry-title"
+                                                                                                                        data-item-number="1">
+                                                                                                                        <a href="{% url 'full-blog' id=data.id %}"
+                                                                                                                           rel="bookmark">{{ data.bolg_title }}</a>
+                                                                                                                    </h5>
+                                                                                                                </div>
+                                                                                                                <a href="#"
+                                                                                                                   class="btn"
+                                                                                                                   data-toggle="modal"
+                                                                                                                   data-target="#myModal3{{ data.id }}"
+                                                                                                                   style="background-color: #0f8c77;color:white;width:120px;margin-left:50px;"><i class="fa fa-edit"> Edit</i></a>
+                                                                                                                <a
+                                                                                                                   data-sid="{{ data.id }}" class="btn delete"
+                                                                                                                   style="background-color: #0f8c77;color:white;width:120px;margin-left:50px;"><i class="fa fa-trash"> Delete</i></a>
+
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                    <div class="modal fade"
+                                                                                                         id="myModal3{{ data.id }}"
+                                                                                                         role="dialog"
+                                                                                                         style="margin-top: 50px;">
+
+                                                                                                        <div class="modal-dialog modal-lg"
+                                                                                                             style="z-index:2">
+                                                                                                            <div class="modal-content"
+                                                                                                                 style="box-shadow: 2px 2px 3px 2px black">
+                                                                                                                <div class="modal-header">
+                                                                                                                    <h3 class="modal-title"
+                                                                                                                        style="color:#0f8c77">
+                                                                                                                        <i class="fas fa-reply-all"></i>
+                                                                                                                        Edit
+                                                                                                                        Blog
+                                                                                                                    </h3>
+
+                                                                                                                </div>
+
+
+                                                                                                                <div class="modal-body"
+                                                                                                                     style="box-shadow: 4px 2px 3px 2px #0f8c77">
+                                                                                                                    <form action="{% url 'update-user-blog' id=data.id %}"
+                                                                                                                          method="post"
+                                                                                                                          enctype="multipart/form-data">
+                                                                                                                        {% csrf_token %}
+
+                                                                                                                        <div class="form-row">
+                                                                                                                            <div class="form-group col-md-6">
+                                                                                                                                <label for="inputEmail4"
+                                                                                                                                       style="color:black"><i
+                                                                                                                                        class="fas fa-envelope-open"></i>
+                                                                                                                                    Blog
+                                                                                                                                    title</label>
+                                                                                                                                <input type="text"
+                                                                                                                                       class="form-control"
+                                                                                                                                       id="exampleInputEmail1"
+                                                                                                                                       name="blog_title"
+                                                                                                                                       value="{{ data.bolg_title }}"
+                                                                                                                                       required>
+                                                                                                                            </div>
+                                                                                                                            <div class="form-group col-md-6">
+                                                                                                                                <label for="inputPassword4"
+                                                                                                                                       style="color:black"><i
+                                                                                                                                        class="fas fa-book"></i>
+                                                                                                                                    Blog
+                                                                                                                                    Title
+                                                                                                                                    Tag</label>
+                                                                                                                                <input type="text"
+                                                                                                                                       class="form-control"
+                                                                                                                                       id="exampleInputEmail1"
+                                                                                                                                       name="blog_title_tag"
+                                                                                                                                       value="{{ data.blog_title_tag }}"
+                                                                                                                                       required>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="form-group col-md-12">
+                                                                                                                            <label for="inputEmail4"
+                                                                                                                                   style="color:black"><i
+                                                                                                                                    class="fab fa-blogger"></i>
+                                                                                                                                Blog</label>
+                                                                                                                            <textarea
+                                                                                                                                    class="form-control wpcf7-form-control-wrap"
+                                                                                                                                    id="editor1{{ data.id }}"
+                                                                                                                                    aria-describedby="emailHelp"
+                                                                                                                                    name="blog_body"
+                                                                                                                                    rows="10"
+                                                                                                                                    required>{{ data.blog_body|safe }}</textarea>
+
+                                                                                                                        </div>
+
+
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="submit"
+                                                                                                                                    class="btn"
+                                                                                                                                    id="reply-btn">
+                                                                                                                                Edit
+                                                                                                                            </button>
+                                                                                                                            <button type="button"
+                                                                                                                                    class="btn"
+                                                                                                                                    id="reply-btn"
+                                                                                                                                    data-dismiss="modal">
+                                                                                                                                Close
+                                                                                                                            </button>
+                                                                                                                        </div>
+                                                                                                                    </form>
+
+                                                                                                                </div>
+
+
+                                                                                                            </div>
+
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <script>
+                        CKEDITOR.replace( 'editor1{{ data.id }}' );
+
+
+
+
+                                                                                                    </script>
+
+                                                                                                {% endfor %}
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

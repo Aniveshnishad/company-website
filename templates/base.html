@@ -29,38 +29,41 @@
         <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&#038;display=swap"/>
     </noscript>
     <style>
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
 
-}
+        }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px whitesmoke;
-  border-radius:20px;
-}
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px whitesmoke;
+            border-radius: 20px;
+        }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #0f8c77;
-  border-radius: 10px;
-}
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #0f8c77;
+            border-radius: 10px;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background:whitesmoke;
-}
-</style>
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: whitesmoke;
+        }
+    </style>
     <style type="text/css"
            media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
         background: #2f39d3 !important;
     }
-    .menu_main_nav_area>ul, .sc_layouts_menu_nav, .sc_layouts_menu_dir_vertical .sc_layouts_menu_nav {
-    font-size: 17px;
-    line-height: 1.5em;
-}
 
+    .menu_main_nav_area > ul, .sc_layouts_menu_nav, .sc_layouts_menu_dir_vertical .sc_layouts_menu_nav {
+        font-size: 17px;
+        line-height: 1.5em;
+    }
+.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
     body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
         border-color: #2f39d3 !important;
     }
@@ -1393,6 +1396,7 @@
        }
    }, 2000)
 
+
     </script>
     <link property="stylesheet" rel='stylesheet' id='qwery-style-css'
           href="{% static 'wp-content/themes/qwery/style.css' %}"
@@ -1454,24 +1458,24 @@
     <script type='text/javascript' src={% static 'wp-includes/js/jquery/jquery.min.js' %} id='jquery-core-js'></script>
     <script type='text/javascript'
             src={% static 'wp-includes/js/jquery/jquery-migrate.min.js' %} id='jquery-migrate-js'></script>
-{#    <link rel="https://api.w.org/" href="https://qwery.ancorathemes.com/wp-json/"/>#}
-{#    <link rel="alternate" type="application/json" href="https://qwery.ancorathemes.com/wp-json/wp/v2/pages/5002"/>#}
-{#    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://qwery.ancorathemes.com/xmlrpc.php?rsd"/>#}
-{#    <link rel="wlwmanifest" type="application/wlwmanifest+xml"#}
-{#          href="https://qwery.ancorathemes.com/wp-includes/wlwmanifest.xml"/>#}
-{#    <meta name="generator" content="WordPress 5.7.2"/>#}
-{#    <meta name="generator" content="WooCommerce 5.5.2"/>#}
-{##}
-{#    <link rel="alternate" type="application/json+oembed"#}
-{#          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2F"/>#}
-{#    <link rel="alternate" type="text/xml+oembed"#}
-{#          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2F&#038;format=xml"/>#}
+    {#    <link rel="https://api.w.org/" href="https://qwery.ancorathemes.com/wp-json/"/>#}
+    {#    <link rel="alternate" type="application/json" href="https://qwery.ancorathemes.com/wp-json/wp/v2/pages/5002"/>#}
+    {#    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://qwery.ancorathemes.com/xmlrpc.php?rsd"/>#}
+    {#    <link rel="wlwmanifest" type="application/wlwmanifest+xml"#}
+    {#          href="https://qwery.ancorathemes.com/wp-includes/wlwmanifest.xml"/>#}
+    {#    <meta name="generator" content="WordPress 5.7.2"/>#}
+    {#    <meta name="generator" content="WooCommerce 5.5.2"/>#}
+    {##}
+    {#    <link rel="alternate" type="application/json+oembed"#}
+    {#          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2F"/>#}
+    {#    <link rel="alternate" type="text/xml+oembed"#}
+    {#          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2F&#038;format=xml"/>#}
     <link rel="preload"
           href="{% static 'wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff' %}"
           as="font" type="font/woff" crossorigin>
     <meta name="tec-api-version" content="v1">
-{#    <meta name="tec-api-origin" content="https://qwery.ancorathemes.com">#}
-{#    <link rel="https://theeventscalendar.com/" href="https://qwery.ancorathemes.com/wp-json/tribe/events/v1/"/>#}
+    {#    <meta name="tec-api-origin" content="https://qwery.ancorathemes.com">#}
+    {#    <link rel="https://theeventscalendar.com/" href="https://qwery.ancorathemes.com/wp-json/tribe/events/v1/"/>#}
     <noscript>
         <style>.woocommerce-product-gallery {
             opacity: 1 !important;
@@ -1530,6 +1534,7 @@
         }
         //});
     };
+
     </script>
     <style id="elementor-post-6817">.elementor-6817 .elementor-element.elementor-element-8885b09 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
         align-content: center;
@@ -1927,37 +1932,37 @@
     }</style>
     <style type="text/css" id="trx_addons-inline-styles-inline-css">
         .trx_addons_inline_1319075877 img.logo_image {
-        height: 250px;
+            height: 250px;
             max-height: 250px;
-    }
+        }
 
-    .trx_addons_inline_382819913 {
-        width: 388px;
-    }
+        .trx_addons_inline_382819913 {
+            width: 388px;
+        }
 
-    .trx_addons_inline_2025958270 img.logo_image {
-        max-height: 50px;
-    }
+        .trx_addons_inline_2025958270 img.logo_image {
+            max-height: 50px;
+        }
 
-    .trx_addons_inline_1728060402 img.logo_image {
-        max-height: 50px;
-    }
+        .trx_addons_inline_1728060402 img.logo_image {
+            max-height: 50px;
+        }
 
-    .qwery_inline_2132734292 {
-        background-image: url({% static 'wp-content/uploads/2020/05/port11-copyright.jpg' %});
-    }
+        .qwery_inline_2132734292 {
+            background-image: url({% static 'wp-content/uploads/2020/05/port11-copyright.jpg' %});
+        }
 
-    .qwery_inline_1389739081 {
-        background-image: url({% static 'wp-content/uploads/2020/05/port60-copyright-890x664.jpg' %});
-    }
+        .qwery_inline_1389739081 {
+            background-image: url({% static 'wp-content/uploads/2020/05/port60-copyright-890x664.jpg' %});
+        }
 
-    .qwery_inline_1819384852 {
-        background-image: url({% static 'wp-content/uploads/2020/05/port33-copyright-890x664.jpg' %});
-    }
+        .qwery_inline_1819384852 {
+            background-image: url({% static 'wp-content/uploads/2020/05/port33-copyright-890x664.jpg' %});
+        }
 
-    .trx_addons_inline_1001579509 img.logo_image {
-        max-height: 50px;
-    }
+        .trx_addons_inline_1001579509 img.logo_image {
+            max-height: 50px;
+        }
 
     </style>
 </head>
@@ -1992,7 +1997,7 @@
                                                                 src={% static 'wp-content/uploads/2020/05/logo.png' %}
                                                                         srcset={% static 'wp-content/uploads/2020/05/logo.png' %}
 
-                                                                alt="QUBEXO" ></a></div>
+                                                                alt="QUBEXO"></a></div>
                                                 </div>
                                                 <div class="sc_layouts_item elementor-element elementor-element-de8d7bc animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu"
                                                      data-id="de8d7bc" data-element_type="widget"
@@ -2018,6 +2023,11 @@
                                                                     <a href="{% url 'our-team' %}"><span>Our Team</span></a>
 
                                                                 </li>
+                                                                <li id="menu-item-5573"
+                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
+                                                                    <a href="{% url 'careers' %}"><span>Careers</span></a>
+
+                                                                </li>
 
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
@@ -2039,11 +2049,6 @@
                                                                 <li id="menu-item-5573"
                                                                     class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
                                                                     <a href="{% url 'events' %}"><span>Events</span></a>
-
-                                                                </li>
-                                                                <li id="menu-item-5573"
-                                                                    class="columns-4 trx_addons_stretch_window_boxed menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573">
-                                                                    <a href="{% url 'careers' %}"><span>Careers</span></a>
 
                                                                 </li>
 
@@ -2113,96 +2118,109 @@
                                                                         </form>
                                                                     </div>
                                                                 </div>
-                                                                <div class="search_overlay"></div>
+                                                                <div class=" search_overlay
+                                                                            ">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="sc_layouts_item elementor-element elementor-element-06ba2fc elementor-view-default animation_type_block sc_fly_static elementor-widget elementor-widget-icon"
-                                                     data-id="06ba2fc" data-element_type="widget"
-                                                     data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <a class="elementor-icon" href="#popup-1">
-                                                                <svg xmlns="" width="21"
-                                                                     height="21" viewBox="0 0 21 21" style="display: none;">
-                                                                    <g id="Right_Bar" data-name="Right Bar"
-                                                                       transform="translate(-2124 -2665)">
-                                                                        <g id="Ellipse_362" data-name="Ellipse 362"
-                                                                           transform="translate(2124 2665)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
+                                                    <div class="sc_layouts_item elementor-element elementor-element-06ba2fc elementor-view-default animation_type_block sc_fly_static elementor-widget elementor-widget-icon"
+                                                         data-id="06ba2fc" data-element_type="widget"
+                                                         data-widget_type="icon.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-icon-wrapper">
+                                                                <a class="elementor-icon" href="#popup-1">
+                                                                    <svg xmlns="" width="21"
+                                                                         height="21" viewBox="0 0 21 21"
+                                                                         style="display: none;">
+                                                                        <g id="Right_Bar" data-name="Right Bar"
+                                                                           transform="translate(-2124 -2665)">
+                                                                            <g id="Ellipse_362" data-name="Ellipse 362"
+                                                                               transform="translate(2124 2665)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_363" data-name="Ellipse 363"
+                                                                               transform="translate(2132 2665)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_364" data-name="Ellipse 364"
+                                                                               transform="translate(2140 2665)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_365" data-name="Ellipse 365"
+                                                                               transform="translate(2124 2673)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_366" data-name="Ellipse 366"
+                                                                               transform="translate(2132 2673)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_367" data-name="Ellipse 367"
+                                                                               transform="translate(2140 2673)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_368" data-name="Ellipse 368"
+                                                                               transform="translate(2124 2681)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_369" data-name="Ellipse 369"
+                                                                               transform="translate(2132 2681)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
+                                                                            <g id="Ellipse_370" data-name="Ellipse 370"
+                                                                               transform="translate(2140 2681)"
+                                                                               fill="none"
+                                                                               stroke-width="1.5">
+                                                                                <circle cx="2.5" cy="2.5" r="2.5"
+                                                                                        stroke="none"></circle>
+                                                                                <circle cx="2.5" cy="2.5" r="1.75"
+                                                                                        fill="none"></circle>
+                                                                            </g>
                                                                         </g>
-                                                                        <g id="Ellipse_363" data-name="Ellipse 363"
-                                                                           transform="translate(2132 2665)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_364" data-name="Ellipse 364"
-                                                                           transform="translate(2140 2665)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_365" data-name="Ellipse 365"
-                                                                           transform="translate(2124 2673)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_366" data-name="Ellipse 366"
-                                                                           transform="translate(2132 2673)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_367" data-name="Ellipse 367"
-                                                                           transform="translate(2140 2673)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_368" data-name="Ellipse 368"
-                                                                           transform="translate(2124 2681)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_369" data-name="Ellipse 369"
-                                                                           transform="translate(2132 2681)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                        <g id="Ellipse_370" data-name="Ellipse 370"
-                                                                           transform="translate(2140 2681)" fill="none"
-                                                                           stroke-width="1.5">
-                                                                            <circle cx="2.5" cy="2.5" r="2.5"
-                                                                                    stroke="none"></circle>
-                                                                            <circle cx="2.5" cy="2.5" r="1.75"
-                                                                                    fill="none"></circle>
-                                                                        </g>
-                                                                    </g>
-                                                                </svg>
-                                                            </a>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2210,7 +2228,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </section>
                         <section
                                 class="elementor-section elementor-top-section elementor-element elementor-element-7d827e7 elementor-section-content-middle sc_layouts_row sc_layouts_row_type_compact scheme_default sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
@@ -2313,6 +2330,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -2323,7 +2341,7 @@
             <div class="menu_mobile_inner with_widgets">
                 <div class="menu_mobile_header_wrap">
                     <a class="sc_layouts_logo" href="index.html">
-                        <img src={% static 'wp-content/uploads/2020/05/logo-white.png' %} style="width:250px;height:200px"
+                        <img src={% static 'wp-content/uploads/2020/05/logo-white.png' %} style="width:200px;height:200px"
                              srcset={% static 'wp-content/uploads/2020/05/logo-white.png' %} 2x alt="CUBEXO" width="99"
                              height="22">
                     </a>
@@ -2342,6 +2360,8 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'our-team' %}" aria-current="page"><span>Our Team</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
+                                    <a href="{% url 'careers' %}" aria-current="page"><span>Careers</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'service' %}" aria-current="page"><span>Services</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'blog' %}" aria-current="page"><span>Blogs</span></a></li>
@@ -2350,8 +2370,6 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
                                     <a href="{% url 'events' %}" aria-current="page"><span>Events</span></a></li>
 
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5002 current_page_item menu-item-9173">
-                                    <a href="{% url 'careers' %}" aria-current="page"><span>Careers</span></a></li>
                             </ul>
                         </nav>
                         <div class="socials_mobile"><a target="_blank" href="https://www.facebook.com/cubexoLLP/"
@@ -2394,14 +2412,10 @@
                 </div>
             </div>
         </div>
-
-
         {% include 'message.html' %}
+ {% block content %}
 
-
-        {% block content %}
-
-        {% endblock %}
+ {% endblock %}
 
         <a id="footer_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
         <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main												">
@@ -2447,15 +2461,18 @@
                                                                 <span class="sc_item_title_text">We make<span
                                                                         style="color: #0f8c77"> creative solutions</span> <br>for modern software.</span>
                                                             </h1>
-                                                            <div class="sc_item_button sc_button_wrap sc_align_center sc_item_button sc_item_button_default sc_title_button"
-                                                                 style="background-color:#1BBC9B;">
-                                                                <a href="about-agency.html"
-                                                                   class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"
-                                                                   style="background-color:#1BBC9B;"><span
-                                                                        class="sc_button_text"
-                                                                        style="background-color:#1BBC9B;"><span
-                                                                        class="sc_button_title">About Us</span></span></a>
-                                                            </div>
+                                                            <center>
+                                                                <br>
+                                                                <div class="sc_item_button sc_button_wrap sc_align_center sc_item_button sc_item_button_default sc_title_button"
+                                                                     style="background-color:#1BBC9B;width:300px;">
+                                                                    <a href="{% url 'about' %}"
+                                                                       class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"
+                                                                       style="background-color:#1BBC9B;"><span
+                                                                            class="sc_button_text"
+                                                                            style="background-color:#1BBC9B;"><span
+                                                                            class="sc_button_title">About Us</span></span></a>
+                                                                </div>
+                                                            </center>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2836,12 +2853,14 @@
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
                                                                 <a href="{% url 'our-team' %}"><span>Our Team</span></a>
                                                             </li>
-
+                                                            <li id="menu-item-9163"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
+                                                                <a href="{% url 'careers' %}"><span>Careers</span></a>
+                                                            </li>
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
                                                                 <a href="{% url 'service' %}"><span>Services</span></a>
                                                             </li>
-
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
                                                                 <a href="{% url 'blog' %}"><span>Blogs</span></a>
@@ -2851,14 +2870,11 @@
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
                                                                 <a href="{% url 'contact' %}"><span>Contact Us</span></a>
                                                             </li>
-                                                             <li id="menu-item-9164"
+                                                            <li id="menu-item-9164"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'contact' %}"><span>Events</span></a>
+                                                                <a href="{% url 'events' %}"><span>Events</span></a>
                                                             </li>
-                                                             <li id="menu-item-9163"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'careers' %}"><span>Careers</span></a>
-                                                            </li>
+
                                                         </ul>
                                                     </nav>
                                                 </div>
@@ -2888,7 +2904,8 @@
                                                                 href="https://www.instagram.com/ancora_themes/"
                                                                 class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
                                                                 class="social_icon social_icon_instagram" style=""><span
-                                                                class="icon-instagram"></span></span></a></div>
+                                                                class="icon-instagram"></span></span></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2912,7 +2929,7 @@
                 <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-cf4e536 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
                         data-id="cf4e536" data-element_type="section">
-                    <div class="elementor-container elementor-column-gap-no" >
+                    <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e45dd90 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
                                  data-id="e45dd90" data-element_type="column">
@@ -2966,6 +2983,7 @@
         body.className = body.className.replace(/\btribe-no-js\b/, 'tribe-js');
     })(document.body);
 
+
 </script>
 <script>(function () {
     function maybePrefixUrlField() {
@@ -2981,9 +2999,11 @@
         }
     }
 })();
+
 </script>
 <script type="text/javascript">
-    var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
+    var sbiajaxurl = "{%  static 'wp-admin/admin-ajax.php'%}";
+
 
 </script>
 <div class="sticky_socials_wrap sticky_socials_modern watch_scheme"><a target="_blank"
@@ -3037,6 +3057,7 @@ var tribe_l10n_datatables = {
         "clear": "Clear"
     }
 };/* ]]> */
+
 </script>
 <script type="text/javascript">
     (function () {
@@ -3044,6 +3065,7 @@ var tribe_l10n_datatables = {
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     })();
+
 
 </script>
 <script type="text/javascript">
@@ -3062,6 +3084,7 @@ var tribe_l10n_datatables = {
             slider.style.display = "block";
         }
     }
+
 
 </script>
 <script type='text/javascript' src={% static 'wp-includes/js/jquery/ui/core.min.js' %} id='jquery-ui-core-js'></script>
@@ -3085,6 +3108,7 @@ var tribe_l10n_datatables = {
         });
     });
 
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/advanced-popups/public/js/advanced-popups-public.js' %} id='advanced-popups-js'></script>
@@ -3098,6 +3122,7 @@ var tribe_l10n_datatables = {
     (window.FormData && window.FormData.prototype.keys) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>');
     (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>');
     ('objectFit' in document.documentElement.style) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js"></scr' + 'ipt>');
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3137,6 +3162,7 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/latepoint/public/javascripts/main_front.js' %}
@@ -3159,6 +3185,7 @@ var tribe_l10n_datatables = {
         "tabs_delay": "1000"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js' %}
@@ -3183,6 +3210,7 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js' %}
@@ -3194,6 +3222,7 @@ var tribe_l10n_datatables = {
     /* <![CDATA[ */
     var woocommerce_params = {"ajax_url": "/", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"};
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3209,6 +3238,7 @@ var tribe_l10n_datatables = {
         "request_timeout": "5000"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3282,6 +3312,7 @@ var tribe_l10n_datatables = {
         }]), RocketBrowserCompatibilityChecker
     }();
 
+
 </script>
 <script type='text/javascript' id='rocket-preload-links-js-extra'>
     /* <![CDATA[ */
@@ -3295,6 +3326,7 @@ var tribe_l10n_datatables = {
         "rateThrottle": "3"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' id='rocket-preload-links-js-after'>
@@ -3402,6 +3434,7 @@ var tribe_l10n_datatables = {
         t.run();
     }());
 
+
 </script>
 <script type='text/javascript' id='tinvwl-js-extra'>
     /* <![CDATA[ */
@@ -3422,6 +3455,7 @@ var tribe_l10n_datatables = {
         "plugin_url": "https:\/\/qwery.ancorathemes.com\/wp-content\/plugins\/ti-woocommerce-wishlist\/"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3526,6 +3560,7 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
 </script>
 <script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_addons/js/__scripts.js' %}
         id='trx_addons-js'></script>
@@ -3574,6 +3609,7 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/wp-gdpr-compliance/assets/js/front.min.js' %}
@@ -3609,6 +3645,7 @@ var tribe_l10n_datatables = {
         "button_hover": "default"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3691,6 +3728,7 @@ var tribe_l10n_datatables = {
         }
     };
 
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/mediaelement/mediaelement-and-player.min.js' %}
@@ -3705,6 +3743,7 @@ var tribe_l10n_datatables = {
         "stretching": "responsive"
     };
     /* ]]> */
+
 
 </script>
 <script type='text/javascript' defer="defer" src={% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js' %}
@@ -3824,6 +3863,7 @@ var tribe_l10n_datatables = {
             "featuredImage": false
         }
     };
+
 
 </script>
 <script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}
@@ -4041,6 +4081,7 @@ function htmlss(){
 
 }
 setInterval(htmlss,3000);
+
 
 </script>
 

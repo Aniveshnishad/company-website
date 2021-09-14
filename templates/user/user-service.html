@@ -1,0 +1,1477 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+    <br><br><br><br>
+<html lang="en-US" class="js
+									 scheme_light										"
+      style="--fixed-rows-height:0px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="//gmpg.org/xfn/11">
+    <title>Services – Business – Qwery</title>
+    <link rel="preload" as="style"
+          href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap"
+          media="all" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"/>
+    </noscript>
+    <link rel="preload" as="style"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap"
+          media="all" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&#038;display=swap"/>
+    </noscript>
+    <style type="text/css"
+           media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
+        background: #2f39d3 !important;
+    }
+
+    body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
+        border-color: #2f39d3 !important;
+    }
+
+    body table.booked-calendar tr.days, body table.booked-calendar tr.days th, body .booked-calendarSwitcher.calendar, body #booked-profile-page .booked-tabs, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th {
+        background: #f0f0f0 !important;
+    }
+
+    body table.booked-calendar tr.days th, body #booked-profile-page .booked-tabs {
+        border-color: #f0f0f0 !important;
+    }
+
+    #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover, body #booked-profile-page input[type=submit].button-primary, body table.booked-calendar input[type=submit].button-primary, body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary, body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary, body .booked-modal input[type=submit].button-primary, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button, body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block, body #booked-profile-page .appt-block .google-cal-button > a, body .booked-modal p.booked-title-bar, body table.booked-calendar td:hover .date span, body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active, body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover, .booked-ms-modal .booked-book-appt /* Multi-Slot Booking */
+    {
+        background: #c5a48e;
+    }
+
+    body #booked-profile-page input[type=submit].button-primary, body table.booked-calendar input[type=submit].button-primary, body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary, body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary, body .booked-modal input[type=submit].button-primary, body #booked-profile-page .appt-block .google-cal-button > a, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button, body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active, body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover {
+        border-color: #c5a48e;
+    }
+
+    body .booked-modal .bm-window p i.fa, body .booked-modal .bm-window a, body .booked-appt-list .booked-public-appointment-title, body .booked-modal .bm-window p.appointment-title, .booked-ms-modal.visible:hover .booked-book-appt {
+        color: #c5a48e;
+    }
+
+    .booked-appt-list .timeslot.has-title .booked-public-appointment-title {
+        color: inherit;
+    }</style>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+    <link rel="alternate" type="application/rss+xml" title="Qwery » Feed" href="https://qwery.ancorathemes.com/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Qwery » Comments Feed"
+          href="https://qwery.ancorathemes.com/comments/feed/">
+    <link rel="alternate" type="text/calendar" title="Qwery » iCal Feed"
+          href="https://qwery.ancorathemes.com/events/?ical=1">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://qwery.ancorathemes.com/services-business/">
+    <meta property="og:title" content="Services – Business">
+    <meta property="og:description" content="Corporate ServiceBe productive with our services.We appreciate your trust. Our clients choose us and our products because they know we're the best.
+			High-Quality  ProductsLorem ipsum dolor sit ametUI/UX  Creative DesignNam at urna nec metus
+			Branding Project  DevelopmentMaecenas in lorem et semQuality Coding  DevelopmentEtiam eu condimentum sapUnique  TechnologiesMaecenas magna maurisExcellent  SupportAliquam">
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <style id="rs-plugin-settings-inline-css" type="text/css">
+        #rs-demo-id {
+        }
+    </style>
+
+    <style id="woocommerce-inline-inline-css" type="text/css">
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+
+    <style id="elementor-frontend-inline-css" type="text/css">
+
+
+        .elementor-kit-15 {
+            --e-global-typography-primary-font-family: "Roboto";
+            --e-global-typography-primary-font-weight: 600;
+            --e-global-typography-secondary-font-family: "Roboto Slab";
+            --e-global-typography-secondary-font-weight: 400;
+            --e-global-typography-text-font-family: "Roboto";
+            --e-global-typography-text-font-weight: 400;
+            --e-global-typography-accent-font-family: "Roboto";
+            --e-global-typography-accent-font-weight: 500;
+        }
+
+        .elementor-section.elementor-section-boxed > .elementor-container {
+            max-width: 1320px;
+        }
+
+        .elementor-widget:not(:last-child) {
+            margin-bottom: 0px;
+        }
+
+        {
+        }
+        .sc_layouts_title_caption {
+            display: var(--page-title-display);
+        }
+
+        @media (max-width: 1024px) {
+            .elementor-section.elementor-section-boxed > .elementor-container {
+                max-width: 1024px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .elementor-section.elementor-section-boxed > .elementor-container {
+                max-width: 767px;
+            }
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-4d115bf:not(.elementor-motion-effects-element-type-background), .elementor-4004 .elementor-element.elementor-element-4d115bf > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            background-color: #FFFFFF;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-4d115bf {
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-4d115bf > .elementor-background-overlay {
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-column-wrap {
+            padding: 0% 18% 0% 0%;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-widget-wrap {
+            padding: 0% 18% 0% 0%;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-6458250 .elementor-spacer-inner {
+            height: 50px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-b5d52dc .elementor-spacer-inner {
+            height: 80px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-fbf4058:not(.elementor-motion-effects-element-type-background), .elementor-4004 .elementor-element.elementor-element-fbf4058 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            background-color: #F9F9F9;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-fbf4058 {
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-fbf4058 > .elementor-background-overlay {
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-f6f791d .elementor-spacer-inner {
+            height: 60px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-140d536 > .elementor-widget-container {
+            margin: 0px 0px -120px 0px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-5ab43f0 .elementor-spacer-inner {
+            height: 120px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-4de2b7b .elementor-spacer-inner {
+            height: 50px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-4de2b7b > .elementor-widget-container {
+            margin: -16px 0px 0px 0px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-1d5ed96 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+            align-content: center;
+            align-items: center;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-c345fb4 .elementor-spacer-inner {
+            height: 50px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-bf349ab .elementor-spacer-inner {
+            height: 10px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-8bc8271 .elementor-spacer-inner {
+            height: 50px;
+        }
+
+        .elementor-4004 .elementor-element.elementor-element-8515a44 .elementor-spacer-inner {
+            height: 50px;
+        }
+
+        @media (max-width: 1024px) {
+            .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-column-wrap {
+                padding: 0% 12% 0% 0%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-widget-wrap {
+                padding: 0% 12% 0% 0%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-6458250 .elementor-spacer-inner {
+                height: 40px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-b5d52dc .elementor-spacer-inner {
+                height: 40px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-f6f791d .elementor-spacer-inner {
+                height: 40px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-4de2b7b > .elementor-widget-container {
+                margin: -13px 0px 0px 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-column-wrap {
+                padding: 0px 0px 0px 0px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-fe8bfa1 > .elementor-element-populated.elementor-widget-wrap {
+                padding: 0px 0px 0px 0px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-6458250 .elementor-spacer-inner {
+                height: 30px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-b5d52dc .elementor-spacer-inner {
+                height: 20px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-dd994a3 > .elementor-widget-container {
+                margin: 0px 0px -20px 0px;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-4de2b7b > .elementor-widget-container {
+                margin: -7px 0px 0px 0px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .elementor-4004 .elementor-element.elementor-element-fe8bfa1 {
+                width: 51.473%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-206af10 {
+                width: 48.488%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-e3931b0 {
+                width: 39.848%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-37a8229 {
+                width: 60.152%;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .elementor-4004 .elementor-element.elementor-element-e3931b0 {
+                width: 44%;
+            }
+
+            .elementor-4004 .elementor-element.elementor-element-37a8229 {
+                width: 56%;
+            }
+        }
+    </style>
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__styles.css" type="text/css"
+          media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-widget_custom_links-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/widgets/custom_links/custom_links.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-woocommerce-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css"
+          type="text/css" media="(max-width:767px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_content-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/content/content.responsive.css"
+          type="text/css" media="(max-width:1439px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-animations-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/trx_addons.animations.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_services-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/services/services.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="wpgdprc.css-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/wp-gdpr-compliance/dist/css/front.min.css?ver=1629812885"
+          type="text/css" media="all">
+    <style id="wpgdprc.css-inline-css" type="text/css">
+
+        div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before {
+            content: 'Yes';
+        }
+
+        div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:after {
+            content: 'No';
+        }
+
+    </style>
+    <link property="stylesheet" rel="stylesheet" id="qwery-style-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/style.css" type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="mediaelement-css"
+          href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="wp-mediaelement-css"
+          href="https://qwery.ancorathemes.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.7.2"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-skin-default-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/style.css" type="text/css"
+          media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-plugins-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__plugins.css" type="text/css"
+          media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-mailchimp-for-wp-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/mailchimp-for-wp/mailchimp-for-wp.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-custom-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__custom.css" type="text/css"
+          media="all">
+    <link property="stylesheet" rel="stylesheet" id="e-animations-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.3.1"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce.css"
+          type="text/css" media="all">
+    <link property="stylesheet" rel="stylesheet" id="qwery-woocommerce-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/plugins/woocommerce/woocommerce-responsive.css"
+          type="text/css" media="(max-width:1679px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/css/__responsive.css" type="text/css"
+          media="(max-width:1439px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-mouse-helper-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css"
+          type="text/css" media="(max-width:1279px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-cpt_services-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/cpt/services/services.responsive.css"
+          type="text/css" media="(max-width:1439px)">
+    <link property="stylesheet" rel="stylesheet" id="trx_addons-sc_icons-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css"
+          type="text/css" media="(max-width:1279px)">
+    <link property="stylesheet" rel="stylesheet" id="qwery-responsive-css"
+          href="https://qwery.ancorathemes.com/wp-content/themes/qwery/skins/default/css/__responsive.css"
+          type="text/css" media="(max-width:1679px)">
+    <script type="text/javascript" src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1"
+            id="jquery-core-js"></script>
+    <script type="text/javascript"
+            src="https://qwery.ancorathemes.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"
+            id="jquery-migrate-js"></script>
+    <link rel="https://api.w.org/" href="https://qwery.ancorathemes.com/wp-json/">
+    <link rel="alternate" type="application/json" href="https://qwery.ancorathemes.com/wp-json/wp/v2/pages/4004">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://qwery.ancorathemes.com/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="https://qwery.ancorathemes.com/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.7.2">
+    <meta name="generator" content="WooCommerce 5.6.0">
+    <link rel="canonical" href="https://qwery.ancorathemes.com/services-business/">
+    <link rel="shortlink" href="https://qwery.ancorathemes.com/?p=4004">
+    <link rel="alternate" type="application/json+oembed"
+          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fservices-business%2F">
+    <link rel="alternate" type="text/xml+oembed"
+          href="https://qwery.ancorathemes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqwery.ancorathemes.com%2Fservices-business%2F&amp;format=xml">
+    <link rel="preload"
+          href="https://qwery.ancorathemes.com/wp-content/plugins/advanced-popups/fonts/advanced-popups-icons.woff"
+          as="font" type="font/woff" crossorigin="">
+    <meta name="tec-api-version" content="v1">
+    <meta name="tec-api-origin" content="https://qwery.ancorathemes.com">
+    <link rel="https://theeventscalendar.com/" href="https://qwery.ancorathemes.com/wp-json/tribe/events/v1/">
+    <noscript>
+        <style>.woocommerce-product-gallery {
+            opacity: 1 !important;
+        }</style>
+    </noscript>
+    <meta name="generator"
+          content="Powered by Slider Revolution 6.4.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+    <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-120x120.png"
+          sizes="32x32">
+    <link rel="icon" href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png"
+          sizes="192x192">
+    <link rel="apple-touch-icon"
+          href="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+    <meta name="msapplication-TileImage"
+          content="https://qwery.ancorathemes.com/wp-content/uploads/2020/08/cropped-favicon-300x300.png">
+    <script type="text/javascript">function setREVStartSize(e) {
+        //window.requestAnimationFrame(function() {
+        window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+        window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+        try {
+            var pw = document.getElementById(e.c).parentNode.offsetWidth,
+                newh;
+            pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+            e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+            e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+            e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+            e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+            e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+            e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+            e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+            if (e.layout === "fullscreen" || e.l === "fullscreen")
+                newh = Math.max(e.mh, window.RSIH);
+            else {
+                e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+                for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+                e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+                e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+                for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+                var nl = new Array(e.rl.length),
+                    ix = 0,
+                    sl;
+                e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+                e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+                e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+                e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+                for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+                sl = nl[0];
+                for (var i in nl) if (sl > nl[i] && nl[i] > 0) {
+                    sl = nl[i];
+                    ix = i;
+                }
+                var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+                newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+            }
+            if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
+            document.getElementById(e.c).height = newh + "px";
+            window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
+        } catch (e) {
+            console.log("Failure at Presize of Slider:" + e)
+        }
+        //});
+    };</script>
+    <style id="elementor-post-4614">.elementor-4614 .elementor-element.elementor-element-610d030b > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+        align-content: center;
+        align-items: center;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-610d030b:not(.elementor-motion-effects-element-type-background), .elementor-4614 .elementor-element.elementor-element-610d030b > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-image: url("https://qwery.ancorathemes.com/wp-content/uploads/2020/05/bg-8-call-to-action-copyright.jpg");
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-610d030b > .elementor-background-overlay {
+        background-color: #000000;
+        opacity: 0.6;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-610d030b {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-3061cd6b > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+        align-content: center;
+        align-items: center;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-3061cd6b {
+        padding: 22px 40px 22px 40px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-58bfe2a7 .logo_image {
+        max-height: 22px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-58bfe2a7 > .elementor-widget-container {
+        margin: 0px 75px 0px 0px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-57d98f2d > .elementor-widget-container {
+        margin: 0px 0px 0px 8px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-2e04bb8 .elementor-icon-wrapper {
+        text-align: center;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-2e04bb8 .elementor-icon i, .elementor-4614 .elementor-element.elementor-element-2e04bb8 .elementor-icon svg {
+        transform: rotate(0deg);
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-2e04bb8 > .elementor-widget-container {
+        margin: 0px 0px -6px 5px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-975e602 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+        align-content: center;
+        align-items: center;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-975e602 {
+        padding: 24px 0px 24px 0px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-2c44148 .logo_image {
+        max-height: 22px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-51696f30 .elementor-spacer-inner {
+        height: 60px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-1b0f2d96 .elementor-spacer-inner {
+        height: 20px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-34cae5e4 .elementor-spacer-inner {
+        height: 30px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon-wrapper {
+        text-align: center;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff.elementor-view-stacked .elementor-icon {
+        background-color: #FFFFFF;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff.elementor-view-framed .elementor-icon, .elementor-4614 .elementor-element.elementor-element-564c84ff.elementor-view-default .elementor-icon {
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff.elementor-view-framed .elementor-icon, .elementor-4614 .elementor-element.elementor-element-564c84ff.elementor-view-default .elementor-icon svg {
+        fill: #FFFFFF;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon {
+        font-size: 15px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon i, .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon svg {
+        transform: rotate(0deg);
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-1d66f4e5 .elementor-spacer-inner {
+        height: 120px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-fbd3aeb .elementor-spacer-inner {
+        height: 20px;
+    }
+
+    .elementor-4614 .elementor-element.elementor-element-ec1785b .elementor-spacer-inner {
+        height: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .elementor-4614 .elementor-element.elementor-element-601f8e2a {
+            width: 72.859%;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-651946c3 {
+            width: 27.073%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-4614 .elementor-element.elementor-element-975e602 {
+            padding: 20px 0px 20px 0px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-51696f30 .elementor-spacer-inner {
+            height: 30px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-34cae5e4 .elementor-spacer-inner {
+            height: 20px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon {
+            font-size: 14px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-1d66f4e5 .elementor-spacer-inner {
+            height: 80px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .elementor-4614 .elementor-element.elementor-element-975e602 {
+            padding: 10px 0px 10px 0px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-d742100 {
+            width: 50%;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-d7f51d2 {
+            width: 50%;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-34cae5e4 .elementor-spacer-inner {
+            height: 10px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-564c84ff .elementor-icon {
+            font-size: 12px;
+        }
+
+        .elementor-4614 .elementor-element.elementor-element-1d66f4e5 .elementor-spacer-inner {
+            height: 60px;
+        }
+    }</style>
+    <style id="elementor-post-4105">.elementor-4105 .elementor-element.elementor-element-18d868c:not(.elementor-motion-effects-element-type-background), .elementor-4105 .elementor-element.elementor-element-18d868c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: #171A21;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-18d868c {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-18d868c > .elementor-background-overlay {
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-3f46e54 .elementor-spacer-inner {
+        height: 50px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-9261ff8 .elementor-spacer-inner {
+        height: 8px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-93a1bdf:not(.elementor-motion-effects-element-type-background), .elementor-4105 .elementor-element.elementor-element-93a1bdf > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: #171A21;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-93a1bdf {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-93a1bdf > .elementor-background-overlay {
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-6ad75cc .logo_image {
+        max-height: 22px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-31ecdad .elementor-spacer-inner {
+        height: 6px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-b7fe1a9 .elementor-spacer-inner {
+        height: 6px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-6888a40 .elementor-spacer-inner {
+        height: 18px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-2bb9592 .elementor-spacer-inner {
+        height: 6px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-abfa6ef .elementor-spacer-inner {
+        height: 15px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-3b28994:not(.elementor-motion-effects-element-type-background), .elementor-4105 .elementor-element.elementor-element-3b28994 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: #171A21;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-3b28994 {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-3b28994 > .elementor-background-overlay {
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-fe894d7 .elementor-spacer-inner {
+        height: 50px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-c4332fb .elementor-spacer-inner {
+        height: 10px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-c860e37 {
+        --divider-border-style: solid;
+        --divider-color: #323641;
+        --divider-border-width: 1px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-c860e37 .elementor-divider-separator {
+        width: 100%;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-c860e37 .elementor-divider {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-7768da6 .elementor-spacer-inner {
+        height: 10px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-018f84a {
+        font-size: 16px;
+    }
+
+    .elementor-4105 .elementor-element.elementor-element-52de1a4 .elementor-spacer-inner {
+        height: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-4105 .elementor-element.elementor-element-abfa6ef .elementor-spacer-inner {
+            height: 10px;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-018f84a {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+        .elementor-4105 .elementor-element.elementor-element-0707a42 {
+            width: 21%;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-38cb843 {
+            width: 29%;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-a4e09ac {
+            width: 22%;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-2520245 {
+            width: 28%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .elementor-4105 .elementor-element.elementor-element-38cb843 {
+            width: 60%;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-38cb843 > .elementor-element-populated {
+            margin: 20px 0px 0px 0px;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-a4e09ac {
+            width: 40%;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-a4e09ac > .elementor-element-populated {
+            margin: 20px 0px 0px 0px;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-2520245 > .elementor-element-populated {
+            margin: 20px 0px 0px 0px;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-3b28994 {
+            padding: 10px 0px 10px 0px;
+        }
+
+        .elementor-4105 .elementor-element.elementor-element-018f84a {
+            font-size: 15px;
+            line-height: 1.4em;
+        }
+    }</style>
+    <style id="elementor-post-4509">.elementor-4509 .elementor-element.elementor-element-67b4187 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+        align-content: space-between;
+        align-items: space-between;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-1c135e79 .logo_image {
+        max-height: 22px;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-1c135e79 > .elementor-widget-container {
+        margin: 0px 0px 15px 0px;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-8d88f99 {
+        border-style: solid;
+        border-width: 1px 0px 0px 0px;
+        border-color: #DDDDDD;
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        padding: 45px 0px 0px 0px;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-8d88f99 > .elementor-background-overlay {
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-efdd0a4 .elementor-spacer-inner {
+        height: 10px;
+    }
+
+    .elementor-4509 .elementor-element.elementor-element-013bb75 .elementor-spacer-inner {
+        height: 5px;
+    }</style>
+    <style type="text/css" id="trx_addons-inline-styles-inline-css">.trx_addons_inline_1885952531 img.logo_image {
+        max-height: 22px;
+    }
+
+    .trx_addons_inline_793653555 {
+        width: 388px;
+    }
+
+    .trx_addons_inline_1736993546 img.logo_image {
+        max-height: 22px;
+    }
+
+    .trx_addons_inline_782881302 img.logo_image {
+        max-height: 22px;
+    }
+
+    .trx_addons_inline_295460628 img.logo_image {
+        max-height: 22px;
+    }</style>
+</head>
+<body class="page-template-default page page-id-4004 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled woocommerce-js tribe-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_wide is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-4614 header_position_default menu_side_none fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-4004 e--ua-blink e--ua-chrome e--ua-webkit animate_to_inited added_to_cart_inited desktop_layout mobile_device trx_addons_scroll_to_top_show"
+      data-elementor-device-mode="tablet">
+<div class="body_wrap">
+    <div class="page_wrap">
+        <a class="qwery_skip_link skip_to_content_link inited" href="#content_skip_link_anchor" tabindex="1">Skip to
+            content</a>
+        <a class="qwery_skip_link skip_to_footer_link inited" href="#footer_skip_link_anchor" tabindex="1">Skip to
+            footer</a>
+
+        <div class="page_content_wrap">
+            <div class="content_wrap">
+                <div class="content">
+                    <a id="content_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
+                    <article id="post-4004"
+                             class="post_item_single post_type_page post-4004 page type-page status-publish hentry">
+                        <div class="post_content entry-content">
+                            <div data-elementor-type="wp-page" data-elementor-id="4004" class="elementor elementor-4004"
+                                 data-elementor-settings="[]">
+                                <div class="elementor-inner">
+                                    <div class="elementor-section-wrap">
+                                        <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-4d115bf elementor-section-stretched scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="4d115bf" data-element_type="section"
+                                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
+                                                style="width: 965px; left: -15px;">
+                                            <div class="elementor-container elementor-column-gap-extended">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b6470b0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="b6470b0" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-6538d62 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="6538d62" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <section
+                                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-e557b6b elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                                        data-id="e557b6b" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-no">
+                                                                        <div class="elementor-row">
+                                                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-fe8bfa1 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                                 data-id="fe8bfa1"
+                                                                                 data-element_type="column">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div class="elementor-element elementor-element-b42731f animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_title"
+                                                                                             data-id="b42731f"
+                                                                                             data-element_type="widget"
+                                                                                             data-widget_type="trx_sc_title.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="sc_title sc_title_accent">
+                                                                                                    <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_accent">Corporate Service</span>
+                                                                                                    <h1 class="sc_item_title sc_title_title sc_item_title_style_accent sc_item_title_tag">
+                                                                                                        <span class="sc_item_title_text">Be <span style="color: #0f8c77" >Productive</span> with our <span style="color: #0f8c77" >Services</span>.</span>
+                                                                                                    </h1>
+                                                                                                    <div class="sc_item_descr sc_title_descr">
+                                                                                                        <p>We appreciate
+                                                                                                            your trust.
+                                                                                                            Our clients
+                                                                                                            choose us
+                                                                                                            and our
+                                                                                                            softwares
+                                                                                                            because they
+                                                                                                            know we're
+                                                                                                            the
+                                                                                                            best.</p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-206af10 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                                 data-id="206af10"
+                                                                                 data-element_type="column">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div class="elementor-element elementor-element-6458250 animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                                             data-id="6458250"
+                                                                                             data-element_type="widget"
+                                                                                             data-widget_type="spacer.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-spacer">
+                                                                                                    <div class="elementor-spacer-inner"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-cb0719e animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_icons"
+                                                                                             data-id="cb0719e"
+                                                                                             data-element_type="widget"
+                                                                                             data-widget_type="trx_sc_icons.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="sc_icons color_style_link2 sc_icons_light sc_icons_size_medium sc_align_none">
+                                                                                                    <div class="sc_icons_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom columns_in_single_row">
+                                                                                                        <div class="trx_addons_column-1_2 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-molecular" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-molecular" ></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title" >
+                                                                                                                        <span>High-Quality </span><span style="color: #0f8c77"> Software</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span>High quality software development</span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="trx_addons_column-1_2 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-deadline" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-deadline"></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title">
+                                                                                                                        <span>UI/UX </span><span style="color: #0f8c77;"> Creative Design</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span></span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                                <section
+                                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-e893c22 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                                        data-id="e893c22" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-no">
+                                                                        <div class="elementor-row">
+                                                                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8a6cd4b sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                                 data-id="8a6cd4b"
+                                                                                 data-element_type="column">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div class="elementor-element elementor-element-b5d52dc sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                                             data-id="b5d52dc"
+                                                                                             data-element_type="widget"
+                                                                                             data-widget_type="spacer.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-spacer">
+                                                                                                    <div class="elementor-spacer-inner"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                                <section
+                                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-7e13217 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                                        data-id="7e13217" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-no">
+                                                                        <div class="elementor-row">
+                                                                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-e5645bb sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                                                 data-id="e5645bb"
+                                                                                 data-element_type="column">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div class="elementor-element elementor-element-dd994a3 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_icons"
+                                                                                             data-id="dd994a3"
+                                                                                             data-element_type="widget"
+                                                                                             data-widget_type="trx_sc_icons.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="sc_icons color_style_link2 sc_icons_light sc_icons_size_medium sc_align_none">
+                                                                                                    <div class="sc_icons_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom columns_in_single_row">
+                                                                                                        <div class="trx_addons_column-1_4 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-target-2" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-target-2"></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title">
+                                                                                                                        <span>Smart Project </span><span style="color: #0f8c77"> Development</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span>Strong and soft projects development</span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="trx_addons_column-1_4 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-employee" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-employee"></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title">
+                                                                                                                        <span>Quality Coding </span><span style="color: #0f8c77"> Development</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span>Quality of coding </span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="trx_addons_column-1_4 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-share-1" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-share-1"></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title">
+                                                                                                                        <span>Trending </span><span style="color: #0f8c77"> Technologies</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span>We use all trending technologies</span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="trx_addons_column-1_4 trx_addons_column-1_2-mobile">
+                                                                                                            <div class="sc_icons_item">
+                                                                                                                <div class="sc_icons_icon sc_icon_type_ icon-support-style" style="color: #0f8c77">
+                                                                                                                    <span class="sc_icon_type_ icon-support-style"></span>
+                                                                                                                </div>
+                                                                                                                <div class="sc_icons_item_details">
+                                                                                                                    <h4 class="sc_icons_item_title">
+                                                                                                                        <span>Excellent </span><span style="color: #0f8c77"> Support</span>
+                                                                                                                    </h4>
+                                                                                                                    <div class="sc_icons_item_description">
+                                                                                                                        <span>Experts for support</span>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                                <div class="elementor-element elementor-element-9da3f04 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="9da3f04" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-fbf4058 elementor-section-stretched scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="fbf4058" data-element_type="section"
+                                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
+                                                style="width: 965px; left: -15px;">
+                                            <div class="elementor-container elementor-column-gap-extended">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7dc6864 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="7dc6864" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-bbc4293 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="bbc4293" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-b85e441 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_title"
+                                                                     data-id="b85e441" data-element_type="widget"
+                                                                     data-widget_type="trx_sc_title.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="sc_title sc_title_accent"><span
+                                                                                class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_accent">what we do</span>
+                                                                            <h1 class="sc_item_title sc_title_title sc_item_title_style_accent sc_item_title_tag">
+                                                                                <span class="sc_item_title_text">We <span style="color: #0f8c77"> develop</span> &amp; <span style="color: #0f8c77">create</span></span>
+                                                                            </h1></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-f6f791d animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="f6f791d" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-140d536 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_services"
+                                                                     data-id="140d536" data-element_type="widget"
+                                                                     data-widget_type="trx_sc_services.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="sc_services sc_services_strong sc_services_featured_top">
+                                                                            <div class="sc_services_columns_wrap sc_item_columns sc_item_posts_container sc_item_columns_3 trx_addons_columns_wrap columns_padding_bottom columns_in_single_row">
+                                                                                <div class="trx_addons_column-1_3">
+                                                                                    <div data-post-id="871"
+                                                                                         class="sc_services_item sc_item_container post_container with_content with_more with_image with_number post-871 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-skins">
+                                                                                        <div class="sc_services_item_content "
+                                                                                             style="background-image: url(https://images.pexels.com/photos/1010079/pexels-photo-1010079.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+                                                                                            <div class="sc_services_item_content_inner">
+                                                                                                <div class="sc_services_item_content_inner_top">
+                                                                                                    <span class="sc_services_item_number">01.</span>
+                                                                                                </div>
+                                                                                                <div class="sc_services_item_content_inner_bottom">
+                                                                                                    <h6 class="sc_services_item_title">
+                                                                                                        <a href="#">Multi-Functional
+                                                                                                            Themes</a>
+                                                                                                    </h6>
+                                                                                                    <div class="sc_services_item_text">
+                                                                                                        <p>Consectetur
+                                                                                                            adipiscing</p>
+                                                                                                    </div>
+                                                                                                    <div class="sc_services_item_button sc_item_button">
+                                                                                                        <a href="#"
+                                                                                                           class="sc_services_item_more_link">
+                                                                                                            <span class="link_text">Read More</span><span
+                                                                                                                class="link_icon"></span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <a class="sc_services_item_link"
+                                                                                               href="#"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="trx_addons_column-1_3">
+                                                                                    <div data-post-id="870"
+                                                                                         class="sc_services_item sc_item_container post_container with_content with_more with_image with_number post-870 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-skins">
+                                                                                        <div class="sc_services_item_content "
+                                                                                             style="background-image: url(https://images.pexels.com/photos/3585074/pexels-photo-3585074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+                                                                                            <div class="sc_services_item_content_inner">
+                                                                                                <div class="sc_services_item_content_inner_top">
+                                                                                                    <span class="sc_services_item_number">02.</span>
+                                                                                                </div>
+                                                                                                <div class="sc_services_item_content_inner_bottom">
+                                                                                                    <h6 class="sc_services_item_title">
+                                                                                                        <a href="#">Custom
+                                                                                                            UI/UX
+                                                                                                            Designs</a>
+                                                                                                    </h6>
+                                                                                                    <div class="sc_services_item_text">
+                                                                                                        <p>Consectetur
+                                                                                                            adipiscing</p>
+                                                                                                    </div>
+                                                                                                    <div class="sc_services_item_button sc_item_button">
+                                                                                                        <a href="#"
+                                                                                                           class="sc_services_item_more_link">
+                                                                                                            <span class="link_text">Read More</span><span
+                                                                                                                class="link_icon"></span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <a class="sc_services_item_link"
+                                                                                               href="#"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="trx_addons_column-1_3">
+                                                                                    <div data-post-id="864"
+                                                                                         class="sc_services_item sc_item_container post_container with_content with_more with_image with_number post-864 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-skins full_post_read">
+                                                                                        <div class="sc_services_item_content "
+                                                                                             style="background-image: url(https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+                                                                                            <div class="sc_services_item_content_inner">
+                                                                                                <div class="sc_services_item_content_inner_top">
+                                                                                                    <span class="sc_services_item_number">03.</span>
+                                                                                                </div>
+                                                                                                <div class="sc_services_item_content_inner_bottom">
+                                                                                                    <h6 class="sc_services_item_title">
+                                                                                                        <a href="#">Software Product</a>
+                                                                                                    </h6>
+                                                                                                    <div class="sc_services_item_text">
+                                                                                                        <p>Consectetur
+                                                                                                            adipiscing</p>
+                                                                                                    </div>
+                                                                                                    <div class="sc_services_item_button sc_item_button">
+                                                                                                        <a href="#"
+                                                                                                           class="sc_services_item_more_link">
+                                                                                                            <span class="link_text">Read More</span><span
+                                                                                                                class="link_icon"></span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <a class="sc_services_item_link"
+                                                                                               href="#"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-1ff2937 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="1ff2937" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-extended">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d782651 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="d782651" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-5ab43f0 animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="5ab43f0" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-4de2b7b sc_height_large animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="4de2b7b" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-1d5ed96 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="1d5ed96" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-extended">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e3931b0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="e3931b0" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-9aabac2 animation_type_block sc_fly_static elementor-widget elementor-widget-trx_sc_title"
+                                                                     data-id="9aabac2" data-element_type="widget"
+                                                                     data-widget_type="trx_sc_title.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="sc_title sc_title_default"><h2
+                                                                                class="sc_item_title sc_title_title sc_item_title_style_default">
+                                                                            <span class="sc_item_title_text">Subscribe to the <span style="color: #0f8c77" >exclusive updates</span>!</span>
+                                                                        </h2></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-37a8229 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="37a8229" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-c345fb4 sc_height_small sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="c345fb4" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-bf349ab sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="bf349ab" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-6113463 animation_type_block sc_fly_static elementor-widget elementor-widget-shortcode"
+                                                                     data-id="6113463" data-element_type="widget"
+                                                                     data-widget_type="shortcode.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-shortcode">
+                                                                            <script>(function () {
+                                                                                window.mc4wp = window.mc4wp || {
+                                                                                    listeners: [],
+                                                                                    forms: {
+                                                                                        on: function (evt, cb) {
+                                                                                            window.mc4wp.listeners.push(
+                                                                                                {
+                                                                                                    event: evt,
+                                                                                                    callback: cb
+                                                                                                }
+                                                                                            );
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            })();
+                                                                            </script>
+                                                                            <form id="style-3" action="{% url 'index' %}"
+                                                                                  class="mc4wp-form mc4wp-form-461 inited_validation"
+                                                                                  method="post" data-id="461"
+                                                                                  data-name="Subscribe"
+                                                                                  data-inited-validation="1">
+                                                                                {% csrf_token %}
+                                                                                <div class="mc4wp-form-fields"><input
+                                                                                        type="email" name="EMAIL"
+                                                                                        placeholder="Enter Your Email Address"
+                                                                                        class="fill_inited">
+                                                                                    <button ><span style="color: #0f8c77" >Subscribe</span></button>
+                                                                                    <input name="i_agree_privacy_policy"
+                                                                                           value="1" required=""
+                                                                                           type="checkbox" id="go1"
+                                                                                           class="inited"><label
+                                                                                            for="go1">I agree to the <a
+                                                                                            href="#"
+                                                                                            target="_blank">Privacy
+                                                                                        Policy</a>.</label></div>
+                                                                                <label style="display: none !important;">Leave
+                                                                                    this field empty if you're human:
+                                                                                    <input type="text"
+                                                                                           name="_mc4wp_honeypot"
+                                                                                           value="" tabindex="-1"
+                                                                                           autocomplete="off"
+                                                                                           class="fill_inited"></label><input
+                                                                                    type="hidden"
+                                                                                    name="_mc4wp_timestamp"
+                                                                                    value="1629849353"><input
+                                                                                    type="hidden" name="_mc4wp_form_id"
+                                                                                    value="461"><input type="hidden"
+                                                                                                       name="_mc4wp_form_element_id"
+                                                                                                       value="style-3">
+                                                                                <div class="mc4wp-response"></div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-8bc8271 sc_height_small sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="8bc8271" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-edc08aa elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="edc08aa" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-extended">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ab2a017 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                         data-id="ab2a017" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-8515a44 sc_height_large animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
+                                                                     data-id="8515a44" data-element_type="widget"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
+{% endblock %}

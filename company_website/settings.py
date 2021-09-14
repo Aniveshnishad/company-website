@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio.apps.PortfolioConfig',
     'Admin.apps.AdminConfig',
+    'company_user.apps.CompanyUserConfig',
     'ckeditor',
     'ckeditor_uploader',
 

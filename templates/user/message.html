@@ -1,0 +1,19 @@
+{% if messages %}
+
+{% for message in messages %}
+
+<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77;margin-top:80px;float:right;width:50%" id="msg" role="alert"  \>
+    <span style="color:black;">CubexO software Solution</span> <br>{{ message }}
+
+</div>
+<script>
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 5000)
+
+    </script>
+
+{% endfor %}
+{% endif %}

@@ -22,6 +22,7 @@ class Blogs(models.Model):
     blog_body= RichTextUploadingField(blank=True,null=True)
     image=models.ImageField(upload_to='static/blog-images/',blank=True)
     date=models.DateField(auto_now_add=True,blank=True)
+    user_name=models.CharField(max_length=200,blank=True)
     def __str__(self):
         return self.bolg_title
 
@@ -30,7 +31,7 @@ class JobPostDetail(models.Model):
     choose=(('Graduate','Graduate'),('Internship','Internship'),('Experience/Professional','Experience/Professional'))
     job_education=models.CharField(max_length=300,choices=choose,blank=True)
     job_title=models.CharField(max_length=200,blank=True)
-    job_description=RichTextUploadingField(max_length=2000,blank=True)
+    job_description=RichTextUploadingField(null=True,blank=True)
     def __str__(self):
         return self.job_title
 
@@ -52,6 +53,7 @@ class Event(models.Model):
     event_date=models.DateField(auto_now_add=True,blank=True)
     event_cover_image=models.ImageField(upload_to='static/event-cover-image/',blank=True)
     event_body=RichTextUploadingField(blank=True,null=True)
+    user_name=models.CharField(max_length=200,blank=True)
 
     def __str__(self):
         return self.event_name
