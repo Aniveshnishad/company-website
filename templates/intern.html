@@ -29,6 +29,9 @@
                   href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"/>
         </noscript>
         <style>
+            .card{
+                width: 18rem;float: left;margin-left: 40px;margin-top: 50px;
+            }
 
 .card:hover{
     perspective: 1000px;
@@ -1515,7 +1518,7 @@ data-id="592ee0a" data-element_type="section"
                                         </section>
 
 {% for data in data %}
-<div class="card text-end" style="width: 18rem;float: left;margin-left: 20px;">
+<div class="card text-end" >
   <div class="card-body">
     <h5 class="card-title" style="text-transform: capitalize;">{{ data.job_title }}</h5>
     <p class="card-text"><div  style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div></p>

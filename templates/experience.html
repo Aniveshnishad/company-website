@@ -9,6 +9,9 @@
 .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
 }
+.card{
+                width: 18rem;float: left;margin-left: 40px;margin-top: 50px;
+            }
     </style>
 
     <html lang="en-US" class="js
@@ -1532,7 +1535,7 @@ Unique Technologies     ">
                                         </section>
 
 {% for data in data %}
-<div class="card text-end" style="width: 18rem;float: left;margin-left: 20px;">
+<div class="card text-end">
   <div class="card-body">
     <h5 class="card-title" style="text-transform: capitalize;">{{ data.job_title }}</h5>
     <p class="card-text"><div  style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div></p>
