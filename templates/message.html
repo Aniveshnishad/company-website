@@ -1,9 +1,41 @@
+{% load static %}
 {% if messages %}
+
 {% for message in messages %}
+    <div aria-live="polite" id="msg"  aria-atomic="true" style="position: relative; min-height: 200px;">
 
-<div class="alert {{ message.tags }} m-2 " style="color: #0f8c77;float: right;margin-top:150px;" id="msg" role="alert" \>
-    <span style="color:black;">CubexO software Solution</span> <br>{{ message }}
+  <div style="position: absolute; top: 20px; right: 20px;">
 
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast {{ message.tags }} container-fluid" data-autohide="false" style="z-index:-1;margin-top: 20%;">
+      <div class="toast-header">
+          <br>
+
+       <img src="{% static 'wp-content/uploads/2020/05/logo.png' %}" style="width:80px;height:30px;"/>
+
+        <strong class="mr-auto">CubexO Software Solution</strong>
+        <small></small>
+
+
+    </button>
+      </div><br>
+      <div class="toast-body container-fluid" align="center" style="color: #0c0f26">
+          <b>{{ message }}</b>
+          <br><br>
+      </div>
+    </div>
+
+
+
+  </div>
 </div>
-    {% endfor %}
+
+    <script type="text/javascript">
+setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 4000)
+
+    </script>
+{% endfor %}
 {% endif %}

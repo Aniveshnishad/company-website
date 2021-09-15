@@ -280,6 +280,7 @@ def manager_login(request):
 
 def manager_logout(request):
     request.session.flush()
+    messages.success(request,"Successfully Logout")
     return render(request, "manager/manager.html")
 
 

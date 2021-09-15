@@ -1,59 +1,262 @@
+{% load static %}
 
-    <br><br><br><br><br>
-    {% include 'user/message.html' %}
-    <html>
 
-    <head>
-        <title>CubexO Manager</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.js"
-                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+<html>
+
+<head>
+     <link rel="stylesheet"
+          href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <link rel="stylesheet"
+          href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-              crossorigin="anonymous">
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-              crossorigin="anonymous">
+    <!-- Optional theme -->
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"></script>
-    </head>
-    <style>
-        .div_container{
-            align:center;
-            width:500px;
-            margin-top:5%;
+    <!-- Latest compiled and minified JavaScript -->
 
-        }
-    </style>
-    <body>
 
-    <br><br><br>
+    <title>CubexO Manager</title>
 
-    <div class="container div_container" style="box-shadow:0px 3px 20px -6px #0e8c77">
-        <br>
-        <div class="container-fluid" align="center"><h2 style="color: #0f8c77"><i class="fas fa-key"></i> User Login</h2></div><br>
-        <form action="{% url 'user-login' %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="exampleInputEmail1"><i class="fas fa-user"></i> Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                      name="user_name" placeholder="Enter Username">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone
-                    else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1"><i class="fas fa-eye"></i> Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="user_password" placeholder="Password">
-            </div>
 
-            <button type="submit" class="btn" style="background: #0f8c77;width:150px;height:40px;color:whitesmoke;">Submit</button>
-        </form><br><br>
-    </div><br><br><br><br>
+</head>
 
+<style>
+
+html {
+  height: 100%;
+}
+input:-webkit-autofill {
+
+ -webkit-box-shadow: 0 0 0 50px #0c0f26 inset;/*your box-shadow*/
+    -webkit-text-fill-color: white;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px #0c0f26 inset;/*your box-shadow*/
+    -webkit-text-fill-color: white;
+
+
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+    background:#0f8c77;
+
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+   background: linear-gradient(#0c0f26,#0c0f26);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #0f8c77;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: whitesmoke;
+  font-size: 12px;
+}
+
+.login-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #0f8c77;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box button:hover {
+  background: #0f8c77;
+  color: #fff;
+  border-radius: 5px;
+
+}
+
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent,black);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, red);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, olive);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, brown);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+</style>
+
+<body>
+{% include 'user/message.html' %}
+<div class="login-box">
+    <h2><i class="fas fa-key"></i> Login</h2>
+  <form action="{%  url 'user-login' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="user-box">
+      <input type="text" name="user_name" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="user_password" required="">
+      <label>Password</label>
+    </div>
+    <button type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </button>
+  </form>
+</div>
+<script type="text/javascript">
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 4000)
+
+
+</script>
+
+</body>
+</html>

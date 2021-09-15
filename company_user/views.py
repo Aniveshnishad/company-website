@@ -114,6 +114,7 @@ def user_my_blog(request):
 
 def user_logout(request):
     request.session.flush()
+    messages.success(request,"Successfully Logout")
     return render(request, "user/user-login.html")
 
 
