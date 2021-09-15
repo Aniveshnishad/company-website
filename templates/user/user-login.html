@@ -1,6 +1,5 @@
+{% include 'user/message.html' %}
 {% load static %}
-
-
 <html>
 
 <head>
@@ -221,12 +220,28 @@ body {
     bottom: 100%;
   }
 }
+@media (min-width: 600px) {
+    .login-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 745px;
+    height: 448px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#0c0f26,#0c0f26);
+    box-sizing: border-box;
+
+    border-radius: 10px;
+}
+
+}
 
 
 </style>
 
 <body>
-{% include 'user/message.html' %}
+
 <div class="login-box">
     <h2><i class="fas fa-key"></i> Login</h2>
   <form action="{%  url 'user-login' %}" method="post" enctype="multipart/form-data">
