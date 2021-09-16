@@ -18,7 +18,6 @@ from django.contrib import messages
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -29,7 +28,6 @@ SECRET_KEY = 'django-insecure-mw4w*twjj0y9)%_^rbh+!@5u6mm#!w(ghnm))j)wwje6j(hm7x
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 mimetypes.add_type("text/css", ".css", True)
 # Application definition
@@ -50,11 +48,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 
-
-
-
 ]
-X_FRAME_OPTIONS='SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -101,7 +96,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -120,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -134,13 +127,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT=os.path.join(BASE_DIR,"static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # STATICFILES_DIRS= os.path.join(BASE_DIR, "static"),
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "wp-content"),
@@ -159,20 +149,18 @@ CKEDITOR_UPLOAD_PATH = 'blogs/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
 
-
-MESSAGE_TAGS ={
-    messages.DEBUG:'alert-info',
-    messages.INFO:'alert-info',
-    messages.SUCCESS:'alert-success',
-    messages.WARNING:'alert-warring',
-    messages.ERROR:'alert-danger',
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warring',
+    messages.ERROR: 'alert-danger',
 }
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER="anivesh.nishad07@gmail.com"
-EMAIL_HOST_PASSWORD="9589957396@"
-EMAIL_USE_SSL=False
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "anivesh.nishad07@gmail.com"
+EMAIL_HOST_PASSWORD = "9589957396@"
+EMAIL_USE_SSL = False
