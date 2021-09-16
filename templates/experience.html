@@ -1533,61 +1533,69 @@ Unique Technologies     ">
                                                 </div>
                                             </div>
                                         </section>
+ {% for data in data %}
+                                                                                                            <div class="card text-end"
+                                                                                                                 >
+                                                                                                                <div class="card-body">
+                                                                                                                    <h5 class="card-title"
+                                                                                                                        style="text-transform: capitalize;">{{ data.job_title }}</h5>
+                                                                                                                    <p class="card-text">
+                                                                                                                    <div style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div>
+                                                                                                                    </p>
+                                                                                                                    <a href="apply-form/{{ data.id }}">
+                                                                                                                        <button type="button"
+                                                                                                                                style="background-color: #0f8c77;width:120px;height:40px;color:white">
+                                                                                                                            Apply
+                                                                                                                            Here
+                                                                                                                        </button>
+                                                                                                                        <br><br>
+                                                                                                                    </a>
 
-{% for data in data %}
-<div class="card text-end">
-  <div class="card-body">
-    <h5 class="card-title" style="text-transform: capitalize;">{{ data.job_title }}</h5>
-    <p class="card-text"><div  style="height:280px;width:300px;overflow: hidden;">{{ data.job_description|safe }}</div></p>
-    <a href="apply-form/{{ data.id }}"><button type="button"  style="background-color: #0f8c77;width:120px;height:40px;color:white">Apply Here</button> </a>
-  </div>
-</div>
+                                                                                                                </div>
 
-{% endfor %}
-                                    <br><br><bR><br>
- <div class="col-lg-12">
-    <div class="pagination-main text-center">
-        <ul class="pagination">
-            {% if data.has_previous %}
-                <li>
-                    <a href="?page={{ data.previous_page_number }}"
-                       style="color: #0f8c77"><i
-                            class="fa fa-angle-double-left"
-                            aria-hidden="true"></i></a>
-                </li>
-            {% endif %}
-            <li class="active"><a
-                    href="#"
-                    style="background-color: #0f8c77">{{ data.number }}</a>
-            </li>
-
-            {% if data.has_next %}
-                <li>
-                    <a href="?page={{ data.next_page_number }}"
-                       style="color: #0f8c77"><i
-                            class="fa fa-angle-double-right"
-                            aria-hidden="true"></i></a>
-                </li>
-            {% endif %}
-        </ul>
-    </div>
-</div>
+                                                                                                            </div>
+                                                                                                        {% endfor %}
 
 
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </article>
+                                                                                <div class="col-lg-12 container">
+                                                                            <div class="pagination-main text-center">
+                                                                                <ul class="pagination">
+                                                                                    {% if data.has_previous %}
+                                                                                        <li>
+                                                                                            <a href="?page={{ data.previous_page_number }}"
+                                                                                               style="color: #0f8c77"><i
+                                                                                                    class="fa fa-angle-double-left"
+                                                                                                    aria-hidden="true"></i></a>
+                                                                                        </li>
+                                                                                    {% endif %}
+                                                                                    <li class="active"><a
+                                                                                            href="#"
+                                                                                            style="background-color: #0f8c77">{{ data.number }}</a>
+                                                                                    </li>
 
-
-
+                                                                                    {% if data.has_next %}
+                                                                                        <li>
+                                                                                            <a href="?page={{ data.next_page_number }}"
+                                                                                               style="color: #0f8c77"><i
+                                                                                                    class="fa fa-angle-double-right"
+                                                                                                    aria-hidden="true"></i></a>
+                                                                                        </li>
+                                                                                    {% endif %}
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
 
-                                        </div>
-                                    </div>
+
+
+
 
 
                                     <script><br><br>

@@ -9,12 +9,12 @@ from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Ev
 
 def index_page(request):
     obj =Blogs.objects.all().order_by('-id')
-    return render(request, "index.html",{"data":obj})
+    return render(request, "index.html",{"data":obj,"index":"data"})
 
 
 def blog_page(request):
     obj = Blogs.objects.all()
-    return render(request, "blog.html", {"obj": obj})
+    return render(request, "blog.html", {"obj": obj,"blog":"data"})
 
 
 def full_blog(request, id):
@@ -24,19 +24,19 @@ def full_blog(request, id):
 
 
 def about_page(request):
-    return render(request, "about_us.html")
+    return render(request, "about_us.html",{"isPage":"data"})
 
 
 def service_page(request):
-    return render(request, "services.html")
+    return render(request, "services.html", {"service": "data"})
 
 
 def our_team(request):
-    return render(request, "our_team.html")
+    return render(request, "our_team.html",{"out_team":"data"})
 
 
 def careers_page(request):
-    return render(request, "careers.html")
+    return render(request, "careers.html",{"career":"data"})
 
 
 def graduate_page(request):
@@ -73,10 +73,11 @@ def contact_page(request):
         obj = ContactForm(name=name, email=email, number=number, subject=subject, message=message)
         messages.success(request, 'Hey! you submitted Successfully')
         obj.save()
+        return render(request,"contact.html")
     else:
         pass
 
-    return render(request, "contact.html")
+    return render(request, "contact.html",{"contact":"data"})
 
 
 # for admin views
@@ -106,7 +107,7 @@ def submit_form(request):
 
 def events_page(request):
     obj=Event.objects.all()
-    return render(request,"events.html",{"obj":obj})
+    return render(request,"events.html",{"obj":obj,"event":"data"})
 def full_event(request, id):
     obj = Event.objects.get(id=id)
     return render(request, "full-event.html", {"obj": obj})

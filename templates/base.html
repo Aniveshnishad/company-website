@@ -61,9 +61,11 @@
         font-size: 17px;
         line-height: 1.5em;
     }
-.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
-    color: #0f8c77;
-}
+
+    .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+        color: #0f8c77;
+    }
+
     body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
         border-color: #2f39d3 !important;
     }
@@ -1397,6 +1399,14 @@
    }, 2000)
 
 
+
+
+
+
+
+
+
+
     </script>
     <link property="stylesheet" rel='stylesheet' id='qwery-style-css'
           href="{% static 'wp-content/themes/qwery/style.css' %}"
@@ -1534,6 +1544,14 @@
         }
         //});
     };
+
+
+
+
+
+
+
+
 
     </script>
     <style id="elementor-post-6817">.elementor-6817 .elementor-element.elementor-element-8885b09 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
@@ -2397,8 +2415,8 @@
                                 <div class="textwidget custom-html-widget">
                                     <div class="extra_item">
                                         <h6>Have a Project?</h6>
-                                        <a ><span class="__cf_email__"
-                                                         data-cfemail="036a6d656c43746661706a77662d606c6e">inbox@cubexo.io</span></a>
+                                        <a><span class="__cf_email__"
+                                                 data-cfemail="036a6d656c43746661706a77662d606c6e">inbox@cubexo.io</span></a>
                                     </div>
                                     <div class="extra_item">
                                         <h6>Want to Work With Me?</h6>
@@ -2413,9 +2431,9 @@
             </div>
         </div>
         {% include 'message.html' %}
- {% block content %}
+        {% block content %}
 
- {% endblock %}
+        {% endblock %}
 
         <a id="footer_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
         <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main												">
@@ -2466,12 +2484,19 @@
                                                                 <div class="sc_item_button sc_button_wrap sc_align_center sc_item_button sc_item_button_default sc_title_button"
                                                                      style="background-color:#1BBC9B;width:300px;">
 
-                                                                    <a href="{% url 'about' %}"
+
+                                                                    <a href="{% if isPage %}
+                                                                    #about_return_page
+                                                                    {% else %}
+                                                                    {% url 'about' %}
+                                                                    {% endif %} "
                                                                        class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"
                                                                        style="background-color:#1BBC9B;"><span
                                                                             class="sc_button_text"
                                                                             style="background-color:#1BBC9B;"><span
                                                                             class="sc_button_title">About Us</span></span></a>
+
+
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -2574,7 +2599,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-text-editor elementor-clearfix">
                                                             <p><a class="underline_anim"
-                                                                  ><span
+                                                            ><span
                                                                     class="__cf_email__"
                                                             >inbox@cubexo.io</span></a>
                                                             </p></div>
@@ -2633,32 +2658,60 @@
                                                                 <ul class="custom_links_list">
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'index' %}"><span
+                                                                            href="{% if Page %}
+#Top
+{% else %}
+{% url 'index' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Portfolio</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'service' %}"><span
+                                                                            href="{% if service %}
+#Top
+{% else %}
+{% url 'service' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Services</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'about' %}"><span
+                                                                            href="{% if isPage %}
+#Top
+{% else %}
+{% url 'about' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">About Us</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'contact' %}"><span
+                                                                            href="
+{% url 'contact' %}
+
+"><span
                                                                             class="custom_links_list_item_title">Appointment</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'contact' %}"><span
+                                                                            href="{% if contact %}
+#Top
+{% else %}
+{% url 'contact' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Contacts</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'events' %}"><span
+                                                                            href="{% if event %}
+#Top
+{% else %}
+{% url 'events' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Events</span></a>
                                                                     </li>
                                                                 </ul>
@@ -2985,6 +3038,14 @@
     })(document.body);
 
 
+
+
+
+
+
+
+
+
 </script>
 <script>(function () {
     function maybePrefixUrlField() {
@@ -3001,29 +3062,57 @@
     }
 })();
 
+
+
+
+
+
+
+
+
 </script>
 <script type="text/javascript">
-    var sbiajaxurl = "{%  static 'wp-admin/admin-ajax.php'%}";
+    var sbiajaxurl = "{% static 'wp-admin/admin-ajax.php' %}";
+
+
+
+
+
+
+
+
 
 
 </script>
-<div class="sticky_socials_wrap sticky_socials_modern watch_scheme"><a target="_blank"
-                                                                       href="https://www.facebook.com/cubexoLLP/"
-                                                                       class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_facebook-1" style=""><span class="icon-facebook-1"></span></span><span
-        class="social_name social_facebook-1">Facebook</span></a><a target="_blank"
-                                                                    href="https://twitter.com/cubexoc"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_twitter-new" style=""><span class="icon-twitter-new"></span></span><span
-        class="social_name social_twitter-new">Twitter</span></a><a target="_blank"
-                                                                    href="https://in.linkedin.com/company/cubexo-software-solutions"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_dribble-new" style=""> <i class="fab fa-linkedin-in"></i></span><span
-        class="social_name social_linkedin-new">LinkedIn</span></a><a target="_blank"
-                                                                      href="#"
-                                                                      class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_instagram" style=""><span class="icon-instagram"></span></span><span
-        class="social_name social_instagram">Instagram</span></a></div>
+<div class="sticky_socials_wrap sticky_socials_modern watch_scheme">
+    <a target="_blank"
+       href="https://www.facebook.com/cubexoLLP/"
+       class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+            class="social_icon social_icon_facebook-1"
+            style=""><span
+            class="icon-facebook-1"></span></span><span
+            class="social_name social_facebook-1">Facebook</span></a><a
+        target="_blank"
+        href="https://twitter.com/cubexoc"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_twitter-new"
+        style=""><span
+        class="icon-twitter-new"></span></span><span
+        class="social_name social_twitter-new">Twitter</span></a><a
+        target="_blank"
+        href="https://in.linkedin.com/company/cubexo-software-solutions"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_dribble-new"
+        style=""> <i class="fab fa-linkedin-in"></i></span><span
+        class="social_name social_linkedin-new">LinkedIn</span></a><a
+        target="_blank"
+        href="#"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_instagram"
+        style=""><span
+        class="icon-instagram"></span></span><span
+        class="social_name social_instagram">Instagram</span></a>
+</div>
 <div class="trx_addons_mouse_helper trx_addons_mouse_helper_permanent"></div>
 <script> /* <![CDATA[ */
 var tribe_l10n_datatables = {
@@ -3059,6 +3148,14 @@ var tribe_l10n_datatables = {
     }
 };/* ]]> */
 
+
+
+
+
+
+
+
+
 </script>
 <script type="text/javascript">
     (function () {
@@ -3066,6 +3163,14 @@ var tribe_l10n_datatables = {
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     })();
+
+
+
+
+
+
+
+
 
 
 </script>
@@ -3087,11 +3192,22 @@ var tribe_l10n_datatables = {
     }
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' src={% static 'wp-includes/js/jquery/ui/core.min.js' %} id='jquery-ui-core-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/jquery/ui/datepicker.min.js' %}
-        id='jquery-ui-datepicker-js'></script>
-<script type='text/javascript' id='jquery-ui-datepicker-js-after'>
+<script type='text/javascript'
+        src={% static 'wp-includes/js/jquery/ui/core.min.js' %} id='jquery-ui-core-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/jquery/ui/datepicker.min.js' %}
+                id='jquery-ui-datepicker-js'></script>
+<script type='text/javascript'
+        id='jquery-ui-datepicker-js-after'>
     jQuery(document).ready(function (jQuery) {
         jQuery.datepicker.setDefaults({
             "closeText": "Close",
@@ -3110,12 +3226,21 @@ var tribe_l10n_datatables = {
     });
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/advanced-popups/public/js/advanced-popups-public.js' %} id='advanced-popups-js'></script>
 <script type='text/javascript'
         src={% static 'wp-includes/js/dist/vendor/wp-polyfill.min.js' %} id='wp-polyfill-js'></script>
-<script type='text/javascript' id='wp-polyfill-js-after'>
+<script type='text/javascript'
+        id='wp-polyfill-js-after'>
     ('fetch' in window) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js"></scr' + 'ipt>');
     (document.contains) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js"></scr' + 'ipt>');
     (window.DOMRect) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js"></scr' + 'ipt>');
@@ -3123,6 +3248,14 @@ var tribe_l10n_datatables = {
     (window.FormData && window.FormData.prototype.keys) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>');
     (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>');
     ('objectFit' in document.documentElement.style) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js"></scr' + 'ipt>');
+
+
+
+
+
+
+
+
 
 
 </script>
@@ -3134,7 +3267,8 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/latepoint/public/javascripts/vendor/jquery.inputmask.bundle.min.js' %}
                 id='jquery-mask-js'></script>
-<script type='text/javascript' id='latepoint-main-front-js-extra'>
+<script type='text/javascript'
+        id='latepoint-main-front-js-extra'>
     /* <![CDATA[ */
     var latepoint_helper = {
         "ajaxurl": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3164,6 +3298,14 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/latepoint/public/javascripts/main_front.js' %}
@@ -3171,11 +3313,13 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/revslider/public/assets/js/rbtools.min.js' %}
                 id='tp-tools-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/revslider/public/assets/js/rs6.min.js' %}
-        id='revmin-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/revslider/public/assets/js/rs6.min.js' %}
+                id='revmin-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js' %} id='magnific-popup-js'></script>
-<script type='text/javascript' id='trx_demo_panels-js-extra'>
+<script type='text/javascript'
+        id='trx_demo_panels-js-extra'>
     /* <![CDATA[ */
     var TRX_DEMO_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3188,18 +3332,29 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js' %}
-        id='trx_demo_panels-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/twenty20/assets/js/jquery.twenty20.js' %}
-        id='twenty20-style-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js' %}
+                id='trx_demo_panels-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/twenty20/assets/js/jquery.twenty20.js' %}
+                id='twenty20-style-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/twenty20/assets/js/jquery.event.move.js' %}
                 id='twenty20-eventmove-style-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockui.min.js' %}
                 id='jquery-blockui-js'></script>
-<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+<script type='text/javascript'
+        id='wc-add-to-cart-js-extra'>
     /* <![CDATA[ */
     var wc_add_to_cart_params = {
         "ajax_url": "/",
@@ -3212,6 +3367,14 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js' %}
@@ -3219,17 +3382,27 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js' %}
                 id='js-cookie-js'></script>
-<script type='text/javascript' id='woocommerce-js-extra'>
+<script type='text/javascript'
+        id='woocommerce-js-extra'>
     /* <![CDATA[ */
     var woocommerce_params = {"ajax_url": "/", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"};
     /* ]]> */
+
+
+
+
+
+
+
+
 
 
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js' %}
                 id='woocommerce-js'></script>
-<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+<script type='text/javascript'
+        id='wc-cart-fragments-js-extra'>
     /* <![CDATA[ */
     var wc_cart_fragments_params = {
         "ajax_url": "/",
@@ -3241,11 +3414,20 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js' %}
                 id='wc-cart-fragments-js'></script>
-<script type='text/javascript' id='rocket-browser-checker-js-after'>
+<script type='text/javascript'
+        id='rocket-browser-checker-js-after'>
     "use strict";
     var _createClass = function () {
         function defineProperties(target, props) {
@@ -3314,8 +3496,17 @@ var tribe_l10n_datatables = {
     }();
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' id='rocket-preload-links-js-extra'>
+<script type='text/javascript'
+        id='rocket-preload-links-js-extra'>
     /* <![CDATA[ */
     var RocketPreloadLinksConfig = {
         "excludeUris": "\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/checkout\/|\/cart\/|\/my-account\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php",
@@ -3329,8 +3520,17 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' id='rocket-preload-links-js-after'>
+<script type='text/javascript'
+        id='rocket-preload-links-js-after'>
     (function () {
         "use strict";
         var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
@@ -3436,6 +3636,14 @@ var tribe_l10n_datatables = {
     }());
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' id='tinvwl-js-extra'>
     /* <![CDATA[ */
@@ -3458,11 +3666,20 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/js/public.min.js' %}
                 id='tinvwl-js'></script>
-<script type='text/javascript' id='trx_addons-js-extra'>
+<script type='text/javascript'
+        id='trx_addons-js-extra'>
     /* <![CDATA[ */
     var TRX_ADDONS_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3562,9 +3779,18 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_addons/js/__scripts.js' %}
-        id='trx_addons-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_addons/js/__scripts.js' %}
+                id='trx_addons-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.js' %}
                 id='trx_addons-mouse-helper-js'></script>
@@ -3585,8 +3811,9 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/addons/bg-canvas/bg-canvas.js' %}
                 id='trx_addons-bg-canvas-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_addons/js/typed/typed.min.js' %}
-        id='typed-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_addons/js/typed/typed.min.js' %}
+                id='typed-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/js/tweenmax/tweenmax.min.js' %}
                 id='tweenmax-js'></script>
@@ -3599,7 +3826,8 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.js' %}
                 id='trx_addons-cpt_portfolio-js'></script>
-<script type='text/javascript' id='wpgdprc.js-js-extra'>
+<script type='text/javascript'
+        id='wpgdprc.js-js-extra'>
     /* <![CDATA[ */
     var wpgdprcData = {
         "ajaxURL": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3611,11 +3839,20 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/wp-gdpr-compliance/assets/js/front.min.js' %}
                 id='wpgdprc.js-js'></script>
-<script type='text/javascript' id='qwery-init-js-extra'>
+<script type='text/javascript'
+        id='qwery-init-js-extra'>
     /* <![CDATA[ */
     var QWERY_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3648,10 +3885,19 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/themes/qwery/js/__scripts.js' %} id='qwery-init-js'></script>
-<script type='text/javascript' id='mediaelement-core-js-before'>
+<script type='text/javascript'
+        id='mediaelement-core-js-before'>
     var mejsL10n = {
         "language": "en", "strings": {
             "mejs.download-file": "Download File",
@@ -3730,13 +3976,23 @@ var tribe_l10n_datatables = {
     };
 
 
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/mediaelement/mediaelement-and-player.min.js' %}
                 id='mediaelement-core-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/mediaelement/mediaelement-migrate.min.js' %}
-        id='mediaelement-migrate-js'></script>
-<script type='text/javascript' id='mediaelement-js-extra'>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/mediaelement/mediaelement-migrate.min.js' %}
+                id='mediaelement-migrate-js'></script>
+<script type='text/javascript'
+        id='mediaelement-js-extra'>
     /* <![CDATA[ */
     var _wpmejsSettings = {
         "pluginPath": "\/wp-includes\/js\/mediaelement\/",
@@ -3746,32 +4002,50 @@ var tribe_l10n_datatables = {
     /* ]]> */
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js' %}
-        id='wp-mediaelement-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/themes/qwery/skins/default/skin.js' %}
-        id='qwery-skin-default-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js' %}
+                id='wp-mediaelement-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/themes/qwery/skins/default/skin.js' %}
+                id='qwery-skin-default-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/wp-embed.min.js' %} id='wp-embed-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' %}
-        id='swiper-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' %}
+                id='swiper-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/imagesloaded.min.js' %} id='imagesloaded-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/masonry.min.js' %} id='masonry-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/masonry.min.js' %} id='masonry-js'></script>
 <script type='text/javascript' defer defer="defer"
         src={% static 'wp-content/plugins/mailchimp-for-wp/assets/js/forms.js' %}
                 id='mc4wp-forms-api-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min.js' %}
-        id='elementor-webpack-runtime-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js' %}
-        id='elementor-frontend-modules-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' %}
-        id='elementor-waypoints-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' %}
-        id='share-link-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' %}
-        id='elementor-dialog-js'></script>
-<script type='text/javascript' id='elementor-frontend-js-before'>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min.js' %}
+                id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js' %}
+                id='elementor-frontend-modules-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' %}
+                id='elementor-waypoints-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' %}
+                id='share-link-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' %}
+                id='elementor-dialog-js'></script>
+<script type='text/javascript'
+        id='elementor-frontend-js-before'>
     var elementorFrontendConfig = {
         "environmentMode": {"edit": false, "wpPreview": false, "isScriptDebug": false},
         "i18n": {
@@ -3866,11 +4140,21 @@ var tribe_l10n_datatables = {
     };
 
 
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}
-        id='elementor-frontend-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/preloaded-modules.min.js' %}
-        id='preloaded-modules-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}
+                id='elementor-frontend-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/preloaded-modules.min.js' %}
+                id='preloaded-modules-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/themes/qwery/plugins/woocommerce/woocommerce.js' %}
                 id='qwery-woocommerce-js'></script>
@@ -4082,6 +4366,14 @@ function htmlss(){
 
 }
 setInterval(htmlss,3000);
+
+
+
+
+
+
+
+
 
 
 </script>

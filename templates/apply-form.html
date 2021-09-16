@@ -201,6 +201,8 @@
                                                                                                                             class="wpcf7-form-control-wrap your-name">
                                                                                                                         <input
                                                                                                                             type="text"
+                                                                                                                           pattern="[A-Za-z ]{1,32}"
+                                                                                                                            title="Please Enter Valid Name"
                                                                                                                             name="name"
                                                                                                                             size="80"
                                                                                                                             placeholder="Name" required="required" >
@@ -211,6 +213,7 @@
                                                                                                                     <span class="style-line icon-email" style="color: #0f8c77"><span
                                                                                                                             class="wpcf7-form-control-wrap your-email"><input
                                                                                                                             type="email"
+                                                                                                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                                                                                                             name="email"
                                                                                                                             value=""
                                                                                                                             size="80"
@@ -226,6 +229,7 @@
                                                                                                                     <span class="style-line icon-phone" style="color: #0f8c77"><span
                                                                                                                             class="wpcf7-form-control-wrap phone"><input
                                                                                                                             type="tel"
+                                                                                                                            pattern="[6789][0-9]{9}" title="Number should start with 6,7,8,9 and maximum 10 Number allowed"
                                                                                                                             name="number"
                                                                                                                             value=""
                                                                                                                             size="80"
@@ -255,6 +259,7 @@
                                                                                                                             class="wpcf7-form-control-wrap phone"><input
                                                                                                                             type="text"
                                                                                                                             name="city"
+                                                                                                                            pattern="[A-Za-z ]{1,32}"
                                                                                                                             value=""
                                                                                                                             size="40"
                                                                                                                             class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel fill_inited"
