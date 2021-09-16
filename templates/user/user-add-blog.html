@@ -106,11 +106,29 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-image"></i> Cover Image</label>
                     <input type="file" class="form-control wpcf7-form-control-wrap"
+                           id="image"
 
                            aria-describedby="emailHelp"
                            name="image" required>
 
                 </div>
+                <script>
+                var file = document.getElementById('image');
+
+file.onchange = function(e) {
+  var ext = this.value.match(/\.([^\.]+)$/)[1];
+  switch (ext) {
+    case 'jpg':
+    case 'bmp':
+    case 'png':
+    case 'tif':
+
+      break;
+    default:
+      alert(' File Formate Not allowed');
+      this.value = '';
+  }
+};</script>
 
 
                 <div class="form-group">

@@ -426,4 +426,4 @@ def test(request):
         obj = ApplyDetails.objects.filter(
             Q(name__istartswith=search) | Q(number__istartswith=search) | Q(email__istartswith=search))
 
-    return render(request, "test_page.html", {"data": obj})
+    return render(request, "test_page.html")

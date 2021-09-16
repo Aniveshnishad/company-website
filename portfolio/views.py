@@ -6,15 +6,14 @@ from django.shortcuts import render
 from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Event
 
 
-
 def index_page(request):
-    obj =Blogs.objects.all().order_by('-id')
-    return render(request, "index.html",{"data":obj,"index":"data"})
+    obj = Blogs.objects.all().order_by('-id')
+    return render(request, "index.html", {"data": obj, "index": "data"})
 
 
 def blog_page(request):
     obj = Blogs.objects.all()
-    return render(request, "blog.html", {"obj": obj,"blog":"data"})
+    return render(request, "blog.html", {"obj": obj, "blog": "data"})
 
 
 def full_blog(request, id):
@@ -22,9 +21,8 @@ def full_blog(request, id):
     return render(request, "full_blog.html", {"obj": obj})
 
 
-
 def about_page(request):
-    return render(request, "about_us.html",{"isPage":"data"})
+    return render(request, "about_us.html", {"isPage": "data"})
 
 
 def service_page(request):
@@ -32,11 +30,11 @@ def service_page(request):
 
 
 def our_team(request):
-    return render(request, "our_team.html",{"out_team":"data"})
+    return render(request, "our_team.html", {"out_team": "data"})
 
 
 def careers_page(request):
-    return render(request, "careers.html",{"career":"data"})
+    return render(request, "careers.html", {"career": "data"})
 
 
 def graduate_page(request):
@@ -73,11 +71,11 @@ def contact_page(request):
         obj = ContactForm(name=name, email=email, number=number, subject=subject, message=message)
         messages.success(request, 'Hey! you submitted Successfully')
         obj.save()
-        return render(request,"contact.html")
+        return render(request, "contact.html")
     else:
         pass
 
-    return render(request, "contact.html",{"contact":"data"})
+    return render(request, "contact.html", {"contact": "data"})
 
 
 # for admin views
@@ -96,19 +94,25 @@ def submit_form(request):
         city = request.POST['city']
         cover_leter = request.POST['cover_leter']
         file_cv = request.FILES['file_cv']
-        obj = ApplyDetails(name=name, email=email, number=number, subject=subject, city=city, cover_leter=cover_leter,
-                           file_cv=file_cv)
+
+        obj = ApplyDetails.objects.create(name=name, email=email, number=number, subject=subject, city=city,
+                               cover_leter=cover_leter,
+                               file_cv=file_cv)
+
         obj.save()
+
         messages.success(request, "Submitted Successfully")
-        return render(request, "index.html")
+        return render(request, "careers.html")
     else:
         messages.error(request, "Somthing went Wrong!")
-        return render(request, "index.html")
+        return render(request, "careers.html")
+
 
 def events_page(request):
-    obj=Event.objects.all()
-    return render(request,"events.html",{"obj":obj,"event":"data"})
+    obj = Event.objects.all()
+    return render(request, "events.html", {"obj": obj, "event": "data"})
+
+
 def full_event(request, id):
     obj = Event.objects.get(id=id)
     return render(request, "full-event.html", {"obj": obj})
-
