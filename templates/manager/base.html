@@ -2401,10 +2401,8 @@
 
 
         {% endblock %}
-
         <a id="footer_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
-
-        <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main">
+        <footer class="footer_wrap footer_custom footer_custom_8919 footer_custom_footer-main												">
             <div data-elementor-type="cpt_layouts" data-elementor-id="8919" class="elementor elementor-8919"
                  data-elementor-settings="[]">
                 <div class="elementor-inner">
@@ -2447,15 +2445,26 @@
                                                                 <span class="sc_item_title_text">We make<span
                                                                         style="color: #0f8c77"> creative solutions</span> <br>for modern software.</span>
                                                             </h1>
-                                                            <div class="sc_item_button sc_button_wrap sc_align_center sc_item_button sc_item_button_default sc_title_button"
-                                                                 style="background-color:#1BBC9B;">
-                                                                <a href="{% url 'manager-about-us' %}"
-                                                                   class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"
-                                                                   style="background-color:#1BBC9B;"><span
-                                                                        class="sc_button_text"
-                                                                        style="background-color:#1BBC9B;"><span
-                                                                        class="sc_button_title">About Us</span></span></a>
-                                                            </div>
+                                                            <center>
+                                                                <br>
+                                                                <div class="sc_item_button sc_button_wrap sc_align_center sc_item_button sc_item_button_default sc_title_button"
+                                                                     style="background-color:#1BBC9B;width:300px;">
+
+
+                                                                    <a href="{% if isPage %}
+                                                                    #about_return_page
+                                                                    {% else %}
+                                                                    {% url 'about' %}
+                                                                    {% endif %} "
+                                                                       class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"
+                                                                       style="background-color:#1BBC9B;"><span
+                                                                            class="sc_button_text"
+                                                                            style="background-color:#1BBC9B;"><span
+                                                                            class="sc_button_title">About Us</span></span></a>
+
+
+                                                                </div>
+                                                            </center>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2499,7 +2508,7 @@
                                                     <div class="elementor-widget-container">
                                                         <a href="#"
                                                            class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1001579509"><img
-                                                                class="logo_image"
+                                                                class="logo_image" loading="lazy"
                                                                 style="width:180px;height:150px;color:white;"
                                                                 src={% static 'wp-content/uploads/2020/05/logo-white.png' %}
                                                                         srcset={% static 'wp-content/uploads/2020/05/logo-white.png' %}
@@ -2556,7 +2565,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-text-editor elementor-clearfix">
                                                             <p><a class="underline_anim"
-                                                                  ><span
+                                                            ><span
                                                                     class="__cf_email__"
                                                             >inbox@cubexo.io</span></a>
                                                             </p></div>
@@ -2615,28 +2624,61 @@
                                                                 <ul class="custom_links_list">
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'manager-home' %}"><span
+                                                                            href="{% if Page %}
+#Top
+{% else %}
+{% url 'manager-home' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Portfolio</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'manager-service' %}"><span
+                                                                            href="{% if service %}
+#Top
+{% else %}
+{% url 'manager-service' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Services</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'manager-about-us' %}"><span
+                                                                            href="{% if isPage %}
+#Top
+{% else %}
+{% url 'manager-about-us' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">About Us</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'manager-contacts' %}"><span
+                                                                            href="
+{% url 'manager-contacts' %}
+
+"><span
                                                                             class="custom_links_list_item_title">Appointment</span></a>
                                                                     </li>
                                                                     <li class="custom_links_list_item"><a
                                                                             class="custom_links_list_item_link"
-                                                                            href="{% url 'manager-contacts' %}"><span
+                                                                            href="{% if contact %}
+#Top
+{% else %}
+{% url 'manager-contacts' %}
+{% endif %}
+"><span
                                                                             class="custom_links_list_item_title">Contacts</span></a>
+                                                                    </li>
+                                                                    <li class="custom_links_list_item"><a
+                                                                            class="custom_links_list_item_link"
+                                                                            href="{% if event %}
+#Top
+{% else %}
+{% url 'manager-candidates' %}
+{% endif %}
+"><span
+                                                                            class="custom_links_list_item_title">Candidates</span></a>
                                                                     </li>
                                                                 </ul>
                                                             </aside>
@@ -2776,7 +2818,6 @@
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
 <div class="sc_layouts_panel_hide_content"></div>
@@ -2803,7 +2844,7 @@
                                                 <div class="elementor-widget-container">
                                                     <a href="#"
                                                        class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_2025958270"><img
-                                                            class="logo_image" style="width:100px;height:70px;"
+                                                            class="logo_image" style="width:100px;height:70px;" loading="lazy"
                                                             src={% static 'wp-content/uploads/2020/05/logo.png' %}
                                                                     srcset={% static 'wp-content/uploads/2020/05/logo.png' %}
                                                             2x
@@ -2818,43 +2859,42 @@
                                                         <ul id="sc_layouts_menu_848557526" class="sc_layouts_menu_nav">
                                                             <li id="menu-item-9150"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-5002 current_page_item menu-item-9150">
-                                                                <a href="{% url 'manager-home' %}"
-                                                                   aria-current="page"><span> Home</span></a>
+                                                                <a href="{% url 'home' %}"
+                                                                   aria-current="page"><span>Home</span></a>
                                                             </li>
 
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'manager-contacts' %}"> Contacts</span></a>
-                                                            </li>
-
-
-                                                            <li id="menu-item-9163"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'manager-add-blogs' %}"><span> Blogs</span></a>
+                                                                <a href="{% url 'about' %}"><span>About Us</span></a>
                                                             </li>
 
 
                                                             <li id="menu-item-9163"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
-                                                                <a href="{% url 'manager-candidates' %}"><span> Applications</span></a>
+                                                                <a href="{% url 'our-team' %}"><span>Our Team</span></a>
+                                                            </li>
+                                                            <li id="menu-item-9163"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
+                                                                <a href="{% url 'careers' %}"><span>Careers</span></a>
+                                                            </li>
+                                                            <li id="menu-item-9163"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
+                                                                <a href="{% url 'service' %}"><span>Services</span></a>
+                                                            </li>
+                                                            <li id="menu-item-9163"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9163">
+                                                                <a href="{% url 'blog' %}"><span>Blogs</span></a>
                                                             </li>
 
                                                             <li id="menu-item-9164"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'manager-add-job' %}"><span> Job</span></a>
-                                                            </li>
-                                                              <li id="menu-item-9164"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'manager-add-event' %}"><span> Events</span></a>
+                                                                <a href="{% url 'contact' %}"><span>Contact Us</span></a>
                                                             </li>
                                                             <li id="menu-item-9164"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'manager-profile' %}"><span> Profile</span></a>
+                                                                <a href="{% url 'events' %}"><span>Events</span></a>
                                                             </li>
-                                                            <li id="menu-item-9164"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9164">
-                                                                <a href="{% url 'manager-logout' %}"><span> Logout</span></a>
-                                                            </li>
+
                                                         </ul>
                                                     </nav>
                                                 </div>
@@ -2884,7 +2924,8 @@
                                                                 href="https://www.instagram.com/ancora_themes/"
                                                                 class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
                                                                 class="social_icon social_icon_instagram" style=""><span
-                                                                class="icon-instagram"></span></span></a></div>
+                                                                class="icon-instagram"></span></span></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2908,7 +2949,7 @@
                 <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-cf4e536 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
                         data-id="cf4e536" data-element_type="section">
-                    <div class="elementor-container elementor-column-gap-no" >
+                    <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e45dd90 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
                                  data-id="e45dd90" data-element_type="column">
@@ -2946,59 +2987,6 @@
 </div>
 <a href="#" class="trx_addons_scroll_to_top scroll_to_top_style_modern watch_scheme" title="Scroll to top"><span
         class="scroll_to_top_text">Go To Top</span><span class="scroll_to_top_icon"></span></a>
-<div class="adp-popup adp-popup-type-content adp-popup-location-center adp-preview-image-left adp-preview-image-no"
-     data-limit-display="1" data-limit-lifetime="1" data-open-trigger="delay" data-open-delay-number="25"
-     data-open-scroll-position="10" data-open-scroll-type="%" data-open-manual-selector="" data-close-trigger="none"
-     data-close-delay-number="30" data-close-scroll-position="10" data-close-scroll-type="%"
-     data-open-animation="popupOpenFade" data-exit-animation="popupExitFade" data-light-close="false"
-     data-overlay="true" data-mobile-disable="false" data-body-scroll-disable="false" data-overlay-close="false"
-     data-esc-close="true" data-f4-close="false" data-id="9110" style="width:1050px;">
-    <div class="adp-popup-wrap">
-        <div class="adp-popup-container">
-            <div class="adp-popup-outer" style="max-width:100%;">
-                <div class="adp-popup-content">
-                    <div class="adp-popup-inner">
-                        <div class="sc_layouts sc_layouts_default sc_layouts_7074" data-delay="0">
-                            <div data-elementor-type="cpt_layouts" data-elementor-id="7074"
-                                 class="elementor elementor-7074" data-elementor-settings="[]">
-                                <div class="elementor-inner">
-                                    <div class="elementor-section-wrap">
-                                        <section
-                                                class="elementor-section elementor-top-section elementor-element elementor-element-d394f72 elementor-section-full_width elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                                data-id="d394f72" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-extended">
-                                                <div class="elementor-row">
-                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-91a3141 sc_layouts_hide_on_mobile sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                                         data-id="91a3141" data-element_type="column"
-                                                         data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div class="elementor-element elementor-element-637990e animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                                                     data-id="637990e" data-element_type="widget"
-                                                                     data-widget_type="spacer.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-spacer">
-                                                                            <div class="elementor-spacer-inner"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="adp-popup-close"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="adp-popup-overlay"></div>
 <div class="adp-popup adp-popup-type-notification-box adp-popup-location-bottom-left adp-preview-image-left adp-preview-image-no"
      data-limit-display="1" data-limit-lifetime="1" data-open-trigger="delay" data-open-delay-number="1"
@@ -3007,25 +2995,22 @@
      data-open-animation="popupOpenFade" data-exit-animation="popupExitFade" data-light-close="false"
      data-overlay="false" data-mobile-disable="false" data-body-scroll-disable="false" data-overlay-close="false"
      data-esc-close="false" data-f4-close="false" data-id="9109" style="width:335px;">
-    <div class="adp-popup-wrap">
-        <div class="adp-popup-container">
-            <div class="adp-popup-outer" style="max-width:100%;">
-                <div class="adp-popup-text">
-                    Our site uses cookies. Learn more about our use of cookies: cookie policy
-                </div>
-                <button class="adp-button adp-popup-button adp-popup-accept">
-                    Accept
-                </button>
-                <button type="button" class="adp-popup-close"></button>
-            </div>
-        </div>
-    </div>
+
 </div>
 <script>
     (function (body) {
         'use strict';
         body.className = body.className.replace(/\btribe-no-js\b/, 'tribe-js');
     })(document.body);
+
+
+
+
+
+
+
+
+
 
 </script>
 <script>(function () {
@@ -3042,28 +3027,58 @@
         }
     }
 })();
-</script>
-<script type="text/javascript">
-    var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
+
+
+
+
+
+
+
+
 
 </script>
-<div class="sticky_socials_wrap sticky_socials_modern watch_scheme"><a target="_blank"
-                                                                       href="https://www.facebook.com/cubexoLLP/"
-                                                                       class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_facebook-1" style=""><span class="icon-facebook-1"></span></span><span
-        class="social_name social_facebook-1">Facebook</span></a><a target="_blank"
-                                                                    href="https://twitter.com/cubexoc"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_twitter-new" style=""><span class="icon-twitter-new"></span></span><span
-        class="social_name social_twitter-new">Twitter</span></a><a target="_blank"
-                                                                    href="https://in.linkedin.com/company/cubexo-software-solutions"
-                                                                    class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_dribble-new" style=""> <i class="fab fa-linkedin-in"></i></span><span
-        class="social_name social_linkedin-new">LinkedIn</span></a><a target="_blank"
-                                                                      href="#"
-                                                                      class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
-        class="social_icon social_icon_instagram" style=""><span class="icon-instagram"></span></span><span
-        class="social_name social_instagram">Instagram</span></a></div>
+<script type="text/javascript">
+    var sbiajaxurl = "{% static 'wp-admin/admin-ajax.php' %}";
+
+
+
+
+
+
+
+
+
+
+</script>
+<div class="sticky_socials_wrap sticky_socials_modern watch_scheme">
+    <a target="_blank"
+       href="https://www.facebook.com/cubexoLLP/"
+       class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+            class="social_icon social_icon_facebook-1"
+            style=""><span
+            class="icon-facebook-1"></span></span><span
+            class="social_name social_facebook-1">Facebook</span></a><a
+        target="_blank"
+        href="https://twitter.com/cubexoc"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_twitter-new"
+        style=""><span
+        class="icon-twitter-new"></span></span><span
+        class="social_name social_twitter-new">Twitter</span></a><a
+        target="_blank"
+        href="https://in.linkedin.com/company/cubexo-software-solutions"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_dribble-new"
+        style=""> <i class="fab fa-linkedin-in"></i></span><span
+        class="social_name social_linkedin-new">LinkedIn</span></a><a
+        target="_blank"
+        href="#"
+        class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span
+        class="social_icon social_icon_instagram"
+        style=""><span
+        class="icon-instagram"></span></span><span
+        class="social_name social_instagram">Instagram</span></a>
+</div>
 <div class="trx_addons_mouse_helper trx_addons_mouse_helper_permanent"></div>
 <script> /* <![CDATA[ */
 var tribe_l10n_datatables = {
@@ -3098,6 +3113,15 @@ var tribe_l10n_datatables = {
         "clear": "Clear"
     }
 };/* ]]> */
+
+
+
+
+
+
+
+
+
 </script>
 <script type="text/javascript">
     (function () {
@@ -3105,6 +3129,15 @@ var tribe_l10n_datatables = {
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     })();
+
+
+
+
+
+
+
+
+
 
 </script>
 <script type="text/javascript">
@@ -3124,11 +3157,23 @@ var tribe_l10n_datatables = {
         }
     }
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' src={% static 'wp-includes/js/jquery/ui/core.min.js' %} id='jquery-ui-core-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/jquery/ui/datepicker.min.js' %}
-        id='jquery-ui-datepicker-js'></script>
-<script type='text/javascript' id='jquery-ui-datepicker-js-after'>
+<script type='text/javascript'
+        src={% static 'wp-includes/js/jquery/ui/core.min.js' %} id='jquery-ui-core-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/jquery/ui/datepicker.min.js' %}
+                id='jquery-ui-datepicker-js'></script>
+<script type='text/javascript'
+        id='jquery-ui-datepicker-js-after'>
     jQuery(document).ready(function (jQuery) {
         jQuery.datepicker.setDefaults({
             "closeText": "Close",
@@ -3146,12 +3191,22 @@ var tribe_l10n_datatables = {
         });
     });
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/advanced-popups/public/js/advanced-popups-public.js' %} id='advanced-popups-js'></script>
 <script type='text/javascript'
         src={% static 'wp-includes/js/dist/vendor/wp-polyfill.min.js' %} id='wp-polyfill-js'></script>
-<script type='text/javascript' id='wp-polyfill-js-after'>
+<script type='text/javascript'
+        id='wp-polyfill-js-after'>
     ('fetch' in window) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js"></scr' + 'ipt>');
     (document.contains) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js"></scr' + 'ipt>');
     (window.DOMRect) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js"></scr' + 'ipt>');
@@ -3159,6 +3214,15 @@ var tribe_l10n_datatables = {
     (window.FormData && window.FormData.prototype.keys) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>');
     (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>');
     ('objectFit' in document.documentElement.style) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js"></scr' + 'ipt>');
+
+
+
+
+
+
+
+
+
 
 </script>
 <script type='text/javascript' defer="defer"
@@ -3169,7 +3233,8 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/latepoint/public/javascripts/vendor/jquery.inputmask.bundle.min.js' %}
                 id='jquery-mask-js'></script>
-<script type='text/javascript' id='latepoint-main-front-js-extra'>
+<script type='text/javascript'
+        id='latepoint-main-front-js-extra'>
     /* <![CDATA[ */
     var latepoint_helper = {
         "ajaxurl": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3198,6 +3263,15 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/latepoint/public/javascripts/main_front.js' %}
@@ -3205,11 +3279,13 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/revslider/public/assets/js/rbtools.min.js' %}
                 id='tp-tools-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/revslider/public/assets/js/rs6.min.js' %}
-        id='revmin-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/revslider/public/assets/js/rs6.min.js' %}
+                id='revmin-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js' %} id='magnific-popup-js'></script>
-<script type='text/javascript' id='trx_demo_panels-js-extra'>
+<script type='text/javascript'
+        id='trx_demo_panels-js-extra'>
     /* <![CDATA[ */
     var TRX_DEMO_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3221,18 +3297,30 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js' %}
-        id='trx_demo_panels-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/twenty20/assets/js/jquery.twenty20.js' %}
-        id='twenty20-style-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_demo/js/trx_demo_panels.js' %}
+                id='trx_demo_panels-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/twenty20/assets/js/jquery.twenty20.js' %}
+                id='twenty20-style-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/twenty20/assets/js/jquery.event.move.js' %}
                 id='twenty20-eventmove-style-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockui.min.js' %}
                 id='jquery-blockui-js'></script>
-<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+<script type='text/javascript'
+        id='wc-add-to-cart-js-extra'>
     /* <![CDATA[ */
     var wc_add_to_cart_params = {
         "ajax_url": "/",
@@ -3244,6 +3332,15 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js' %}
@@ -3251,16 +3348,27 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js' %}
                 id='js-cookie-js'></script>
-<script type='text/javascript' id='woocommerce-js-extra'>
+<script type='text/javascript'
+        id='woocommerce-js-extra'>
     /* <![CDATA[ */
     var woocommerce_params = {"ajax_url": "/", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"};
     /* ]]> */
+
+
+
+
+
+
+
+
+
 
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js' %}
                 id='woocommerce-js'></script>
-<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+<script type='text/javascript'
+        id='wc-cart-fragments-js-extra'>
     /* <![CDATA[ */
     var wc_cart_fragments_params = {
         "ajax_url": "/",
@@ -3271,11 +3379,21 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js' %}
                 id='wc-cart-fragments-js'></script>
-<script type='text/javascript' id='rocket-browser-checker-js-after'>
+<script type='text/javascript'
+        id='rocket-browser-checker-js-after'>
     "use strict";
     var _createClass = function () {
         function defineProperties(target, props) {
@@ -3343,8 +3461,18 @@ var tribe_l10n_datatables = {
         }]), RocketBrowserCompatibilityChecker
     }();
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' id='rocket-preload-links-js-extra'>
+<script type='text/javascript'
+        id='rocket-preload-links-js-extra'>
     /* <![CDATA[ */
     var RocketPreloadLinksConfig = {
         "excludeUris": "\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/checkout\/|\/cart\/|\/my-account\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php",
@@ -3357,8 +3485,18 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' id='rocket-preload-links-js-after'>
+<script type='text/javascript'
+        id='rocket-preload-links-js-after'>
     (function () {
         "use strict";
         var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
@@ -3463,6 +3601,15 @@ var tribe_l10n_datatables = {
         t.run();
     }());
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' id='tinvwl-js-extra'>
     /* <![CDATA[ */
@@ -3484,11 +3631,21 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/ti-woocommerce-wishlist/assets/js/public.min.js' %}
                 id='tinvwl-js'></script>
-<script type='text/javascript' id='trx_addons-js-extra'>
+<script type='text/javascript'
+        id='trx_addons-js-extra'>
     /* <![CDATA[ */
     var TRX_ADDONS_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3587,9 +3744,19 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_addons/js/__scripts.js' %}
-        id='trx_addons-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_addons/js/__scripts.js' %}
+                id='trx_addons-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.js' %}
                 id='trx_addons-mouse-helper-js'></script>
@@ -3610,8 +3777,9 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/addons/bg-canvas/bg-canvas.js' %}
                 id='trx_addons-bg-canvas-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/plugins/trx_addons/js/typed/typed.min.js' %}
-        id='typed-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/plugins/trx_addons/js/typed/typed.min.js' %}
+                id='typed-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/js/tweenmax/tweenmax.min.js' %}
                 id='tweenmax-js'></script>
@@ -3624,7 +3792,8 @@ var tribe_l10n_datatables = {
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/trx_addons/components/cpt/portfolio/portfolio.js' %}
                 id='trx_addons-cpt_portfolio-js'></script>
-<script type='text/javascript' id='wpgdprc.js-js-extra'>
+<script type='text/javascript'
+        id='wpgdprc.js-js-extra'>
     /* <![CDATA[ */
     var wpgdprcData = {
         "ajaxURL": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3635,11 +3804,21 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/plugins/wp-gdpr-compliance/assets/js/front.min.js' %}
                 id='wpgdprc.js-js'></script>
-<script type='text/javascript' id='qwery-init-js-extra'>
+<script type='text/javascript'
+        id='qwery-init-js-extra'>
     /* <![CDATA[ */
     var QWERY_STORAGE = {
         "ajax_url": "https:\/\/qwery.ancorathemes.com\/wp-admin\/admin-ajax.php",
@@ -3671,10 +3850,20 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/themes/qwery/js/__scripts.js' %} id='qwery-init-js'></script>
-<script type='text/javascript' id='mediaelement-core-js-before'>
+<script type='text/javascript'
+        id='mediaelement-core-js-before'>
     var mejsL10n = {
         "language": "en", "strings": {
             "mejs.download-file": "Download File",
@@ -3752,13 +3941,24 @@ var tribe_l10n_datatables = {
         }
     };
 
+
+
+
+
+
+
+
+
+
 </script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/mediaelement/mediaelement-and-player.min.js' %}
                 id='mediaelement-core-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/mediaelement/mediaelement-migrate.min.js' %}
-        id='mediaelement-migrate-js'></script>
-<script type='text/javascript' id='mediaelement-js-extra'>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/mediaelement/mediaelement-migrate.min.js' %}
+                id='mediaelement-migrate-js'></script>
+<script type='text/javascript'
+        id='mediaelement-js-extra'>
     /* <![CDATA[ */
     var _wpmejsSettings = {
         "pluginPath": "\/wp-includes\/js\/mediaelement\/",
@@ -3767,32 +3967,51 @@ var tribe_l10n_datatables = {
     };
     /* ]]> */
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js' %}
-        id='wp-mediaelement-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-content/themes/qwery/skins/default/skin.js' %}
-        id='qwery-skin-default-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/mediaelement/wp-mediaelement.min.js' %}
+                id='wp-mediaelement-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-content/themes/qwery/skins/default/skin.js' %}
+                id='qwery-skin-default-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/wp-embed.min.js' %} id='wp-embed-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' %}
-        id='swiper-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' %}
+                id='swiper-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-includes/js/imagesloaded.min.js' %} id='imagesloaded-js'></script>
-<script type='text/javascript' defer="defer" src={% static 'wp-includes/js/masonry.min.js' %} id='masonry-js'></script>
+<script type='text/javascript' defer="defer"
+        src={% static 'wp-includes/js/masonry.min.js' %} id='masonry-js'></script>
 <script type='text/javascript' defer defer="defer"
         src={% static 'wp-content/plugins/mailchimp-for-wp/assets/js/forms.js' %}
                 id='mc4wp-forms-api-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min.js' %}
-        id='elementor-webpack-runtime-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js' %}
-        id='elementor-frontend-modules-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' %}
-        id='elementor-waypoints-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' %}
-        id='share-link-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' %}
-        id='elementor-dialog-js'></script>
-<script type='text/javascript' id='elementor-frontend-js-before'>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min.js' %}
+                id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js' %}
+                id='elementor-frontend-modules-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' %}
+                id='elementor-waypoints-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' %}
+                id='share-link-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' %}
+                id='elementor-dialog-js'></script>
+<script type='text/javascript'
+        id='elementor-frontend-js-before'>
     var elementorFrontendConfig = {
         "environmentMode": {"edit": false, "wpPreview": false, "isScriptDebug": false},
         "i18n": {
@@ -3886,11 +4105,22 @@ var tribe_l10n_datatables = {
         }
     };
 
+
+
+
+
+
+
+
+
+
 </script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}
-        id='elementor-frontend-js'></script>
-<script type='text/javascript' src={% static 'wp-content/plugins/elementor/assets/js/preloaded-modules.min.js' %}
-        id='preloaded-modules-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}
+                id='elementor-frontend-js'></script>
+<script type='text/javascript'
+        src={% static 'wp-content/plugins/elementor/assets/js/preloaded-modules.min.js' %}
+                id='preloaded-modules-js'></script>
 <script type='text/javascript' defer="defer"
         src={% static 'wp-content/themes/qwery/plugins/woocommerce/woocommerce.js' %}
                 id='qwery-woocommerce-js'></script>
@@ -4102,6 +4332,15 @@ function htmlss(){
 
 }
 setInterval(htmlss,3000);
+
+
+
+
+
+
+
+
+
 
 </script>
 
