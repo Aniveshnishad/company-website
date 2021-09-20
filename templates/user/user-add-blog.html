@@ -68,52 +68,52 @@
             <br><br>
         </div>
         <div class="container-fluid">
-        <form action="{% url 'post-blog-user' %}" method="post"
-              enctype="multipart/form-data">
-            {% csrf_token %}
+            <form action="{% url 'post-blog-user' %}" method="post"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
 
-            <div class="form-group">
-                <label for="exampleInputEmail1"><i class="fab fa-blogger"></i> Blog Title</label>
-                <input type="text" class="form-control wpcf7-form-control-wrap"
+                <div class="form-group">
+                    <label for="exampleInputEmail1"><i class="fab fa-blogger"></i> Blog Title</label>
+                    <input type="text" class="form-control wpcf7-form-control-wrap"
 
-                       aria-describedby="emailHelp"
-                       name="blog_title" required
-                >
+                           aria-describedby="emailHelp"
+                           name="blog_title" required
+                    >
 
-            </div>
+                </div>
 
 
-            <div class="form-group">
-                <label for="exampleInputEmail1"><i class="fas fa-tag"></i> Blog Tag</label>
-                <input type="text" class="form-control wpcf7-form-control-wrap"
+                <div class="form-group">
+                    <label for="exampleInputEmail1"><i class="fas fa-tag"></i> Blog Tag</label>
+                    <input type="text" class="form-control wpcf7-form-control-wrap"
 
-                       aria-describedby="emailHelp"
-                       name="blog_tag" required>
+                           aria-describedby="emailHelp"
+                           name="blog_tag" required>
 
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1"><i class="fab fa-blogger"></i> Blog</label>
-                <textarea id="editor1" class="form-control wpcf7-form-control-wrap"
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1"><i class="fab fa-blogger"></i> Blog</label>
+                    <textarea id="editor1" class="form-control wpcf7-form-control-wrap"
 
-                          name="blog_body" rows="10" required>
+                              name="blog_body" rows="10" required>
 
                 </textarea>
 
 
-            </div>
-            <div class="form-group">
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1"><i class="fas fa-image"></i> Cover Image</label>
-                    <input type="file" class="form-control wpcf7-form-control-wrap"
-                           id="image"
-
-                           aria-describedby="emailHelp"
-                           name="image" required>
-
                 </div>
-                <script>
-                var file = document.getElementById('image');
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"><i class="fas fa-image"></i> Cover Image</label>
+                        <input type="file" class="form-control wpcf7-form-control-wrap"
+                               id="file"
+                               aria-describedby="emailHelp"
+                               name="image" required>
+
+                    </div>
+
+                    <script>
+                var file = document.getElementById('file');
 
 file.onchange = function(e) {
   var ext = this.value.match(/\.([^\.]+)$/)[1];
@@ -128,26 +128,39 @@ file.onchange = function(e) {
       alert(' File Format Not allowed, only jpg,bmp,png,tif');
       this.value = '';
   }
-};</script>
+};
+ $('#file').on('change', function() {
+
+            const size =
+               (this.files[0].size / 1024 / 1024).toFixed(2);
+
+            if (size > 4 || size < 2) {
+                alert("File must be between the size of 2-4 MB");
+            } else {
+                $("#output").html('<b>' +
+                   'This file size is: ' + size + " MB" + '</b>');
+            }
+        });
+                    </script>
 
 
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <input type="hidden" class="form-control wpcf7-form-control-wrap"
+                        <input type="hidden" class="form-control wpcf7-form-control-wrap"
 
-                           aria-describedby="emailHelp"
-                           name="user_name" value="{{ data }}" readonly>
+                               aria-describedby="emailHelp"
+                               name="user_name" value="{{ data }}" readonly>
 
+                    </div>
+
+
+                    <button type="submit" class="btn" style="background: #0f8c77;color: black">
+                        Submit
+                    </button>
                 </div>
-
-
-                <button type="submit" class="btn" style="background: #0f8c77;color: black">
-                    Submit
-                </button>
-            </div>
-        </form>
+            </form>
         </div>
-<br><bR><br>
+        <br><bR><br>
 
     </div>
     <div class="sc_layouts_item elementor-element elementor-element-2d9f453 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
@@ -176,9 +189,13 @@ file.onchange = function(e) {
 
 
 
+
+
     </script>
     <script>
                         CKEDITOR.replace( 'editor1' );
+
+
 
 
     </script>

@@ -140,6 +140,7 @@ def update_user_blog(request, id):
             update.bolg_title = request.POST['blog_title']
             update.blog_title_tag = request.POST['blog_title_tag']
             update.blog_body = request.POST['blog_body']
+            update.image=request.FILES['image']
             update.save()
             messages.success(request, "Successfully updated Blog")
             return redirect('user-profile')
