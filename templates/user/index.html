@@ -1,7 +1,28 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="page_content_wrap">
+    <style>
+    .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+.scheme_default, body.scheme_default {
+    --theme-color-alter_link2: #0f8c77;
+    --theme-color-alter_hover2: #0f8c77;
+}
+.sc_testimonials_chit .swiper-pagination-custom .swiper-pagination-button.swiper-pagination-button-active, .sc_testimonials_chit .sc_slider_controls.slider_pagination_style_bullets .slider_pagination_bullet.swiper-pagination-bullet-active, .sc_testimonials_chit .sc_slider_controls.slider_pagination_style_bullets .slider_pagination_bullet:hover, .sc_testimonials_chit .slider_container .slider_pagination_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active, .sc_testimonials_chit .slider_outer .slider_pagination_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active, .sc_testimonials_chit .slider_container .slider_pagination_wrap .swiper-pagination-bullet:hover, .sc_testimonials_chit .slider_outer .slider_pagination_wrap .swiper-pagination-bullet:hover {
+    border-color: #0f8c77;
+    background-color: #0f8c77;
+}
+.sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .swiper-pagination-custom .swiper-pagination-button.swiper-pagination-button-active, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .sc_slider_controls.slider_pagination_style_bullets .slider_pagination_bullet.swiper-pagination-bullet-active, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .sc_slider_controls.slider_pagination_style_bullets .slider_pagination_bullet:hover, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .slider_container .slider_pagination_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .slider_outer .slider_pagination_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .slider_container .slider_pagination_wrap .swiper-pagination-bullet:hover, .sc_blogger_classic-masonry.sc_blogger_classic-masonry_default .slider_outer .slider_pagination_wrap .swiper-pagination-bullet:hover {
+    border-color:#0f8c77 ;
+    background-color:#0f8c77 ;
+}
+
+    </style>
+    <div class="page_content_wrap" id="Top">
         <div class="content_wrap_fullscreen">
             <div class="content">
                 <a id="content_skip_link_anchor" class="qwery_skip_link_anchor" href="#"></a>
@@ -47,6 +68,7 @@
                                                                                                     <img src={% static 'wp-content/plugins/revslider/public/assets/assets/transparent.png' %}
                                                                                                                  alt="Slide"
                                                                                                          title="Home"
+                                                                                                         loading="lazy"
                                                                                                          class="rev-slidebg tp-rs-img"
                                                                                                          data-bg="c:#f9f9f9;"
                                                                                                          data-parallax="off"
@@ -224,9 +246,10 @@
                                                                                                                 data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;st:300;sp:1000;sR:300;"
                                                                                                                 data-frame_999="o:0;st:w;sR:7700;"
                                                                                                                 style="z-index:19;">
-                                                                                                            <img src={% static 'wp-content/uploads/revslider/slider-1/hire3.jpg' %}
+                                                                                                            <img src="{% static 'wp-content/uploads/revslider/slider-1/hire3.jpg' %}"
                                                                                                                          alt="SliderPrimaryImage"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="555"
                                                                                                                  height="1156"
                                                                                                                  data-no-retina>
@@ -247,6 +270,7 @@
                                                                                                             <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-2-min.png' %}
                                                                                                                          alt="SliderDecorativeDots"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="130"
                                                                                                                  height="130"
                                                                                                                  data-no-retina>
@@ -268,6 +292,7 @@
                                                                                                             <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-3-min.png' %}
                                                                                                                          alt="SliderDecorativeShape"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="222"
                                                                                                                  height="97"
                                                                                                                  data-no-retina>
@@ -287,6 +312,7 @@
                                                                                                             <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-4-min.png' %}
                                                                                                                          alt="SliderDecorativeDots2"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="130"
                                                                                                                  height="130"
                                                                                                                  data-no-retina>
@@ -310,6 +336,7 @@
                                                                                                             <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-5-min.png' %}
                                                                                                                          alt="SliderDecorativeShape2"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="507"
                                                                                                                  height="1014"
                                                                                                                  data-no-retina>
@@ -331,6 +358,7 @@
                                                                                                             <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-9-min.png' %}
                                                                                                                          alt="SliderDecorativeCircle"
                                                                                                                  class="tp-rs-img"
+                                                                                                                 loading="lazy"
                                                                                                                  width="177"
                                                                                                                  height="177"
                                                                                                                  data-no-retina>
@@ -349,8 +377,9 @@
                                                                                                                 data-frame_1_mask="u:t;x:0,0px,0px,0px;y:0,0px,0px,0px;"
                                                                                                                 data-frame_999="o:0;st:w;sR:6160;"
                                                                                                                 style="z-index:17;">
-                                                                                                            <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-7-min.png' %}
+                                                                                                            <img src={% static 'wp-content/uploads/revslider/slider-1/slider-image-9-min.png' %}
                                                                                                                          alt="SliderDecorativeCircle2"
+                                                                                                                 loading="lazy"
                                                                                                                  class="tp-rs-img"
                                                                                                                  width="297"
                                                                                                                  height="297"
@@ -377,6 +406,7 @@
                                                                                                                  class="tp-rs-img"
                                                                                                                  width="397"
                                                                                                                  height="397"
+                                                                                                                 loading="lazy"
                                                                                                                  data-no-retina>
                                                                                                         </rs-layer>
                                                                                                     </rs-group>
@@ -473,15 +503,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
                                                                                         </script>
                                                                                         <script>
                                                                                                 var htmlDivCss = unescape(".font-1%20%7B%0A%09font-family%3A%20%27sofia-pro%27%2C%20sans-serif%20%21important%3B%0A%7D%0A.font-2%20%7B%0A%09font-family%3A%20%27europa%27%2C%20sans-serif%20%21important%3B%0A%7D%0A.font-2-400%20%7B%0A%20%20%20%20font-weight%3A%20400%20%21important%3B%0A%7D%0A.button-underline%20%7B%0A%09overflow%3A%20hidden%3B%0A%7D%0A.button-underline%3Aafter%20%7B%0A%09content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20bottom%3A%200px%3B%0A%20%20%20%20left%3A%200%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%202px%3B%0A%20%20%20%20background-color%3A%20%231f242e%3B%0A%20%20%09transition%3A%200.4s%20ease%3B%0A%20%20%20%20transform%3A%20scaleX%281%29%3B%0A%20%20%20%20transform-origin%3A%20left%3B%0A%7D%0A.button-underline%3Ahover%3Aafter%20%7B%0A%09transform%3A%20scaleX%280%29%3B%0A%7D%0A%0A%0A.play-icon%20%7B%0A%09color%3A%20%232F39D3%3B%0A%20%20%20%20font-size%3A%2022px%3B%0A%20%20%20%20margin-right%3A%2024px%3B%0A%20%20%20%20position%3A%20relative%3B%0A%7D%0A.play-icon%3Abefore%20%7B%0A%20%20%20%20content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20top%3A%2050%25%3B%0A%20%20%20%20left%3A%2050%25%3B%0A%20%20%20%20transform%3A%20translate%28-52%25%2C%20-50%25%29%3B%0A%20%20%20%20width%3A%2049px%3B%0A%20%20%20%20height%3A%2049px%3B%0A%20%20%20%20background-color%3A%20transparent%3B%0A%20%20%20%20border%3A%20%232F39D3%202px%20solid%3B%0A%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20transition%3A%200.3s%20ease%3B%0A%20%20%20%20z-index%3A%201%3B%0A%7D%0A.play-icon%3Aafter%20%7B%0A%09content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20top%3A%2050%25%3B%0A%20%20%20%20left%3A%2050%25%3B%0A%20%20%20%20transform%3A%20translate%28-52%25%2C%20-50%25%29%3B%0A%20%20%20%20-moz-transform%3A%20translate%28-51%25%2C%20-50%25%29%3B%0A%20%20%20%20width%3A%2049px%3B%0A%20%20%20%20height%3A%2049px%3B%0A%20%20%20%20background-color%3A%20transparent%3B%0A%20%20%20%20border%3A%20rgba%2847%2C%2057%2C%20211%2C%200.05%29%205px%20solid%3B%0A%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20transition%3A%200.3s%20ease%3B%0A%20%20%20%20z-index%3A%200%3B%0A%20%20%20%20box-sizing%3A%20content-box%20%21important%3B%0A%7D%0A.watch-intro%3Ahover%20.play-icon%3Aafter%20%7B%0A%09border%3A%20rgba%2847%2C%2057%2C%20211%2C%200.2%29%205px%20solid%3B%0A%7D%0A%40media%20%28max-width%3A%201023px%29%20%7B%0A.play-icon%20%7B%0A%20%20%20%20font-size%3A%2018px%3B%0A%20%20%20%20margin-right%3A%2014px%3B%0A%7D%0A.play-icon%3Abefore%20%7B%0A%20%20%20%20transform%3A%20translate%28-50%25%2C%20-50%25%29%3B%0A%20%20%20%20width%3A%2029px%3B%0A%20%20%20%20height%3A%2029px%3B%0A%20%20%20%20border%3A%20%232F39D3%202px%20solid%3B%0A%7D%0A.play-icon%3Aafter%20%7B%0A%20%20%20%20transform%3A%20translate%28-50%25%2C%20-50%25%29%3B%0A%20%20%20%20width%3A%2029px%3B%0A%20%20%20%20height%3A%2029px%3B%0A%20%20%20%20border%3A%20rgba%2847%2C%2057%2C%20211%2C%200.05%29%204px%20solid%3B%0A%7D%0A.watch-intro%3Ahover%20.play-icon%3Aafter%20%7B%0A%09border%3A%20rgba%2847%2C%2057%2C%20211%2C%200.2%29%204px%20solid%3B%0A%7D%0A%20%20.watch-intro%20%7B%0A%20%20%20%20left%3A%206px%20%21important%3B%0A%20%20%7D%0A%7D%0A%40media%20%28max-width%3A%20668px%29%20%7B%0A%20%20rs-zone%20rs-row-wrap%20%7B%0A%20%20%20%20left%3A%200px%20%21important%3B%0A%20%20%7D%0A%7D%0A%40media%20%28max-width%3A%201440px%29%20and%20%28min-width%3A%201280px%29%20%7B%0A%20%20.slider-row%20%7B%0A%20%20%20%20margin-left%3A%2080px%20%21important%3B%0A%20%20%7D%0A%20%20.watch-intro%20%7B%0A%20%20%20%20margin-left%3A%2080px%20%21important%3B%0A%20%20%7D%0A%7D%0A%40media%20%28max-width%3A%20500px%29%20and%20%28min-width%3A%20480px%29%20and%20%28max-height%3A%20340px%29%20%7B%0A%20%20.slider-row%20%7B%0A%20%20%20%20padding-left%3A%2030px%20%21important%3B%0A%20%20%7D%0A%20%20.watch-intro%20%7B%0A%20%20%20%20margin-left%3A%2010px%20%21important%3B%0A%20%20%7D%0A%7D");
@@ -497,15 +518,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
                                                                                         </script>
                                                                                         <script>
                                                                                                 var htmlDivCss = unescape("%2F%2A%20%0D%0AICON%20SET%20%0D%0A%2A%2F%0D%0A%40font-face%20%7B%0D%0A%20%20font-family%3A%20%27Material%20Icons%27%3B%0D%0A%20%20font-style%3A%20normal%3B%0D%0A%20%20font-weight%3A%20400%3B%20%20%0D%0A%20%20src%3A%20url%28%2F%2Ffonts.gstatic.com%2Fs%2Fmaterialicons%2Fv41%2FflUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2%29%20format%28%27woff2%27%29%3B%0D%0A%7D%0D%0A%0D%0Ars-module%20.material-icons%20%7B%0D%0A%20%20font-family%3A%20%27Material%20Icons%27%3B%0D%0A%20%20font-weight%3A%20normal%3B%0D%0A%20%20font-style%3A%20normal%3B%0D%0A%09font-size%3A%20inherit%3B%0D%0A%20%20display%3A%20inline-block%3B%20%20%0D%0A%20%20text-transform%3A%20none%3B%0D%0A%20%20letter-spacing%3A%20normal%3B%0D%0A%20%20word-wrap%3A%20normal%3B%0D%0A%20%20white-space%3A%20nowrap%3B%0D%0A%20%20direction%3A%20ltr%3B%0D%0A%20%20vertical-align%3A%20top%3B%0D%0A%20%20line-height%3A%20inherit%3B%0D%0A%20%20%2F%2A%20Support%20for%20IE.%20%2A%2F%0D%0A%20%20font-feature-settings%3A%20%27liga%27%3B%0D%0A%0D%0A%20%20-webkit-font-smoothing%3A%20antialiased%3B%0D%0A%20%20text-rendering%3A%20optimizeLegibility%3B%0D%0A%20%20-moz-osx-font-smoothing%3A%20grayscale%3B%0D%0A%7D");
@@ -517,15 +529,6 @@
                                                                                                     htmlDiv.innerHTML = '';
                                                                                                     document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
                                                                                                 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -546,7 +549,7 @@
                                     </section>
                                     <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-00b950a scheme_light elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                            data-id="00b950a" data-element_type="section"
+                                            id="Top" data-id="00b950a" data-element_type="section"
                                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                         <div class="elementor-container elementor-column-gap-extended">
                                             <div class="elementor-row">
@@ -727,7 +730,7 @@
                                                                                     </div>
                                                                                     <div class="sc_icons_item_details">
                                                                                         <h4 class="sc_icons_item_title">
-                                                                                            <a href="#"
+                                                                                            <a
                                                                                                style="color: #0f8c77;">
                                                                                                 Endless
                                                                                                 Possibilities </a>
@@ -735,11 +738,10 @@
                                                                                         <div class="sc_icons_item_description">
                                                                                             <span>We develop digital strategies, products and services that will matter.</span>
                                                                                         </div>
-                                                                                        <a href="#"
+                                                                                        <a
                                                                                            class="sc_icons_item_more_link">
-                                                                                            <span class="link_text">Read More</span><span
-                                                                                                class="link_icon"></span>
-                                                                                        </a><a href="#"
+                                                                                            <span class="link_text"></span>
+                                                                                        </a><a
                                                                                                class="sc_icons_item_link">
                                                                                     </a></div>
                                                                                 </div>
@@ -863,18 +865,17 @@
                                                                                     </div>
                                                                                     <div class="sc_icons_item_details">
                                                                                         <h4 class="sc_icons_item_title">
-                                                                                            <a href="#"
+                                                                                            <a
                                                                                                style="color: #0f8c77">
                                                                                                 Super Clean
                                                                                                 Code </a></h4>
                                                                                         <div class="sc_icons_item_description">
                                                                                             <span>We are extremely proud to offer our clients the cleanest products possible.</span>
                                                                                         </div>
-                                                                                        <a href="#"
+                                                                                        <a
                                                                                            class="sc_icons_item_more_link">
-                                                                                            <span class="link_text">Read More</span><span
-                                                                                                class="link_icon"></span>
-                                                                                        </a><a href="#"
+                                                                                            <span class="link_text"></span>
+                                                                                        </a><a
                                                                                                class="sc_icons_item_link">
                                                                                     </a></div>
                                                                                 </div>
@@ -921,18 +922,17 @@
                                                                                          style="color:#0f8c77;">
                                                                                         <h4 class="sc_icons_item_title"
                                                                                             style="color:#0f8c77;">
-                                                                                            <a href="#"
+                                                                                            <a
                                                                                                style="color: #0f8c77">
                                                                                                 Free Updates &
                                                                                                 Support </a></h4>
                                                                                         <div class="sc_icons_item_description">
                                                                                             <span>Our professional support team is always ready to assist you 24/7</span>
                                                                                         </div>
-                                                                                        <a href="#"
+                                                                                        <a
                                                                                            class="sc_icons_item_more_link">
-                                                                                            <span class="link_text">Read More</span><span
-                                                                                                class="link_icon"></span>
-                                                                                        </a><a href="#"
+                                                                                            <span class="link_text"></span>
+                                                                                        </a><a
                                                                                                class="sc_icons_item_link">
                                                                                     </a></div>
                                                                                 </div>
@@ -941,15 +941,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="elementor-element elementor-element-69fc2f3 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                                                 data-id="69fc2f3" data-element_type="widget"
-                                                                 data-widget_type="spacer.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-spacer">
-                                                                        <div class="elementor-spacer-inner"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1008,7 +1000,7 @@
                                                                                 best.</p>
                                                                         </div>
                                                                         <div class="sc_item_button sc_button_wrap sc_item_button sc_item_button_default sc_title_button">
-                                                                            <a href="{% static 'about' %}"
+                                                                            <a href="{% url 'user-about' %}"
                                                                                class="sc_button sc_button_default sc_button_shadow sc_button_size_normal sc_button_icon_left"
                                                                                style="background-color:#1BBC9B;">
                                                                 <span class="sc_button_text"
@@ -1035,7 +1027,7 @@
                                                                              data-id="6405815"
                                                                              data-element_type="column"
                                                                              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                                            <img src="{% static 'images/team12.png' %}">
+                                                                            <img src="{% static 'images/team12.png' %}" loading="lazy">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1064,6 +1056,7 @@
                                                                         <img src={% static 'images/team11.png' %}
                                                                                      title="team-11-copyright"
                                                                              style="width:100%;height:300px; "
+                                                                             loading="lazy"
                                                                              alt="team-11-copyright"/></div>
                                                                 </div>
                                                             </div>
@@ -1115,7 +1108,7 @@
                                                                              data-element_type="column"
                                                                              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                                             <img src="{% static 'images/team11.png' %}"
-                                                                                 style="width:100%;" aign="center">
+                                                                                 style="width:100%;" aign="center" loading="lazy">
                                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                                 <div class="elementor-widget-wrap">
 
@@ -1167,121 +1160,7 @@
                                             </div>
                                         </div>
                                     </section>
-                                    <section
-                                            class="elementor-section elementor-top-section elementor-element elementor-element-40dc12d scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                            data-id="40dc12d" data-element_type="section"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                        <div class="elementor-container elementor-column-gap-extended">
-                                            <div class="elementor-row">
-                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8d88d8d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                                     data-id="8d88d8d" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-3517467 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
-                                                                 data-id="3517467" data-element_type="widget"
-                                                                 data-widget_type="image.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-image">
-                                                                        <a href="about-creative.html"
-                                                                           target="_blank">
-                                                                            <img width="550" height="234"
-                                                                                 src={% static 'wp-content/uploads/2020/07/air_large.png' %}
-                                                                                         class="attachment-fullsize-full"
-                                                                                 alt="" loading="lazy"
-                                                                                 srcset={% static 'wp-content/uploads/2020/07/air_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/air_large-300x128.png' %}
-                                                                                 300w, {% static 'wp-content/uploads/2020/07/air_large-370x157.png' %}
-                                                                                 370w, {% static 'wp-content/uploads/2020/07/air_large-410x174.png' %}
-                                                                                 410w"
-                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d9dc1d8 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                                     data-id="d9dc1d8" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-8d31dc8 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
-                                                                 data-id="8d31dc8" data-element_type="widget"
-                                                                 data-widget_type="image.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-image">
-                                                                        <a href="about-business.html"
-                                                                           target="_blank">
-                                                                            <img width="550" height="234"
-                                                                                 src={% static 'wp-content/uploads/2020/07/nike_large.png' %}
-                                                                                         class="attachment-fullsize-full"
-                                                                                 alt="" loading="lazy"
-                                                                                 srcset={% static 'wp-content/uploads/2020/07/nike_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/nike_large-300x128.png' %}
-                                                                                 300w, {% static 'wp-content/uploads/2020/07/nike_large-370x157.png' %}
-                                                                                 370w, {% static 'wp-content/uploads/2020/07/nike_large-410x174.png' %}
-                                                                                 410w"
-                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bfca8f4 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                                     data-id="bfca8f4" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-0e98623 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
-                                                                 data-id="0e98623" data-element_type="widget"
-                                                                 data-widget_type="image.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-image">
-                                                                        <a href="about-agency.html" target="_blank">
-                                                                            <img width="550" height="234"
-                                                                                 src={% static 'wp-content/uploads/2020/07/allaz_large.png' %}
-                                                                                         class="attachment-fullsize-full"
-                                                                                 alt="" loading="lazy"
-                                                                                 srcset={% static 'wp-content/uploads/2020/07/allaz_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/allaz_large-300x128.png' %}
-                                                                                 300w, {% static 'wp-content/uploads/2020/07/allaz_large-370x157.png' %}
-                                                                                 370w, {% static 'wp-content/uploads/2020/07/allaz_large-410x174.png' %}
-                                                                                 410w"
-                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-a2fcc64 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-                                                     data-id="a2fcc64" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-861d814 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
-                                                                 data-id="861d814" data-element_type="widget"
-                                                                 data-widget_type="image.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-image">
-                                                                        <a href="about-modern.html" target="_blank">
-                                                                            <img width="550" height="234"
-                                                                                 src={% static 'wp-content/uploads/2020/07/envato_large.png' %}
-                                                                                         class="attachment-fullsize-full"
-                                                                                 alt="" loading="lazy"
-                                                                                 srcset={% static 'wp-content/uploads/2020/07/envato_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/envato_large-300x128.png' %}
-                                                                                 300w, {% static 'wp-content/uploads/2020/07/envato_large-370x157.png' %}
-                                                                                 370w, {% static 'wp-content/uploads/2020/07/envato_large-410x174.png' %}
-                                                                                 410w"
-                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
+
                                     <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-bedd863 scheme_light elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
                                             data-id="bedd863" data-element_type="section"
@@ -1336,7 +1215,6 @@
                                                                                             <div class="sc_services_item_content_inner_bottom">
                                                                                                 <h6 class="sc_services_item_title">
                                                                                                     <a href="{% url 'user-about' %}"><span
-
                                                                                                             style="color: #0f8c77">Software Development</span></a>
                                                                                                 </h6>
                                                                                                 <div class="sc_services_item_text">
@@ -1798,11 +1676,11 @@
                                                                                          data-widget_type="trx_sc_button.default">
                                                                                         <div class="elementor-widget-container">
                                                                                             <div class="sc_item_button sc_button_wrap sc_align_right">
-                                                                                                <a href="about-agency.html"
+                                                                                                <a href="# "
                                                                                                    class="sc_button hide_on_mobile sc_button_simple sc_button_size_normal sc_button_icon_left color_style_dark"><span
-                                                                                                        class="sc_button_text"><span
-                                                                                                        class="sc_button_title"
-                                                                                                        style="color: #0f8c77">More</span></span></a>
+                                                                                                        class=""><span
+                                                                                                        class=""
+                                                                                                        style="color: #0f8c77"></span></span></a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -1812,11 +1690,11 @@
                                                                                          data-widget_type="trx_sc_button.default">
                                                                                         <div class="elementor-widget-container">
                                                                                             <div class="sc_item_button sc_button_wrap sc_align_left">
-                                                                                                <a href="about-agency.html"
+                                                                                                <a href="#"
                                                                                                    class="sc_button hide_on_tablet hide_on_notebook hide_on_desktop hide_on_wide sc_button_simple sc_button_size_normal sc_button_icon_left color_style_dark"><span
-                                                                                                        class="sc_button_text"><span
-                                                                                                        class="sc_button_title"
-                                                                                                        style="color: #0f8c77">More</span></span></a>
+                                                                                                        class=""><span
+                                                                                                        class=""
+                                                                                                        style="color: #0f8c77"></span></span></a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -1864,7 +1742,7 @@
                                                                                             data-title="Site Of The Day"
                                                                                             style=""><img
                                                                                                 src={% static 'wp-content/uploads/2020/08/client1-image-copyright.png' %}
-                                                                                                        alt="SiteOfTheDay">
+                                                                                                        alt="SiteOfTheDay" loading="lazy">
                                                                                             <div class="slide_overlay slide_overlay_small"></div>
                                                                                             <div class="slide_info slide_info_small">
                                                                                                 <h3 class="slide_title">
@@ -1882,7 +1760,7 @@
                                                                                         data-title="Site Of The Day"
                                                                                         style=""><img
                                                                                             src={% static 'wp-content/uploads/2020/08/client2-image-copyright.png' %}
-                                                                                                    alt="SiteOfTheDay">
+                                                                                                    alt="SiteOfTheDay" loading="lazy">
                                                                                         <div class="slide_overlay slide_overlay_small"></div>
                                                                                         <div class="slide_info slide_info_small">
                                                                                             <h3 class="slide_title">
@@ -1900,7 +1778,7 @@
                                                                                     data-title="Site Of The Day"
                                                                                     style=""><img
                                                                                         src={% static 'wp-content/uploads/2020/08/client3-image-copyright.png' %}
-                                                                                                alt="SiteOfTheDay">
+                                                                                                alt="SiteOfTheDay" loading="lazy">
                                                                                     <div class="slide_overlay slide_overlay_small"></div>
                                                                                     <div class="slide_info slide_info_small">
                                                                                         <h3 class="slide_title">
@@ -1918,7 +1796,7 @@
                                                                                 data-title="Site Of The Day"
                                                                                 style=""><img
                                                                                     src={% static 'wp-content/uploads/2020/08/client4-image-copyright.png' %}
-                                                                                            alt="SiteOfTheDay">
+                                                                                            alt="SiteOfTheDay" loading="lazy">
                                                                                 <div class="slide_overlay slide_overlay_small"></div>
                                                                                 <div class="slide_info slide_info_small">
                                                                                     <h3 class="slide_title">
@@ -1960,10 +1838,8 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </article>
             </div>
-
+            </section>
             <section
                     class="elementor-section elementor-top-section elementor-element elementor-element-beed241 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
                     data-id="beed241" data-element_type="section"
@@ -2056,6 +1932,7 @@
                                                                     <div class="elementor-image">
                                                                         <img src="{% static 'images/demo.jpg' %}"
                                                                              title="post-101-copyright"
+                                                                             loading="lazy"
                                                                              alt="post-101-copyright"/>
                                                                     </div>
                                                                 </div>
@@ -2091,7 +1968,8 @@
                                          data-id="d7c55f2" data-element_type="widget"
                                          data-widget_type="trx_sc_title.default">
                                         <div class="elementor-widget-container">
-                                            <div class="sc_title sc_title_default"><span
+                                            <div class="sc_title sc_title_default">
+                                                <br><span
                                                     class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default">creative approach</span>
                                                 <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
                                             <span class="sc_item_title_text">We <span
@@ -2153,6 +2031,7 @@
                                             <div class="elementor-image">
                                                 <img src="{% static 'images/demo2.jpg' %}"
                                                      title="post-13-copyright"
+                                                     loading="lazy"
                                                      alt="post-13-copyright"/></div>
                                         </div>
                                     </div>
@@ -2208,7 +2087,7 @@
                                                                         <span class="sc_item_subtitle sc_title_subtitle sc_align_center sc_item_subtitle_above sc_item_title_style_default">about us</span>
                                                                         <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag">
                                                                     <span class="sc_item_title_text">An original team of creators <br> <span
-                                                                            style="color: #0f8c77"> designers & dreamers</span>.</span>
+                                                                            style="color: black"> designers & dreamers</span></span>
                                                                         </h1></div>
                                                                 </div>
                                                             </div>
@@ -2481,15 +2360,15 @@
                                                                                                 fill="none"/> </g> </svg></span>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="sc_services_item_info">
+                                                                                    <div class="sc_services_item_info" style="color:black;">
                                                                                         <div class="sc_services_item_header">
                                                                                             <div class="sc_services_item_subtitle">
-                                                                                                <a href="#"
+                                                                                                <a
                                                                                                    title="View all posts in Book Now">Contact
                                                                                                     Now</a>
                                                                                             </div>
                                                                                             <h4 class="sc_services_item_title entry-title">
-                                                                                                <a href="#">Call
+                                                                                                <a >Call
                                                                                                     or
                                                                                                     Chat
                                                                                                     Online</a>
@@ -2512,12 +2391,12 @@
                                                                                                 helped!</p>
                                                                                         </div>
                                                                                         <div class="sc_services_item_button sc_item_button">
-                                                                                            <a href="{% url 'user-contact' %}"
+                                                                                            <a href="{% url 'contact' %}"
                                                                                                class="sc_button_arrow"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <a class="sc_services_item_link"
-                                                                                       href="{% url 'user-contact' %}"></a>
+                                                                                       href="{% url 'contact' %}"></a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="trx_addons_column-1_3">
@@ -2742,15 +2621,15 @@
                                                                                                 fill="none"/> </g> </svg></span>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="sc_services_item_info">
+                                                                                    <div class="sc_services_item_info" style="color:black">
                                                                                         <div class="sc_services_item_header">
                                                                                             <div class="sc_services_item_subtitle">
-                                                                                                <a href="#"
+                                                                                                <a
                                                                                                    title="View all posts in Book Now">Visit
                                                                                                     Now</a>
                                                                                             </div>
                                                                                             <h4 class="sc_services_item_title entry-title">
-                                                                                                <a href="#">Visit
+                                                                                                <a >Visit
                                                                                                     an
                                                                                                     Office</a>
                                                                                             </h4>
@@ -2775,12 +2654,12 @@
                                                                                                 tea!</p>
                                                                                         </div>
                                                                                         <div class="sc_services_item_button sc_item_button">
-                                                                                            <a href="{% url 'user-contact' %}"
+                                                                                            <a href="{% url 'contact' %}"
                                                                                                class="sc_button_arrow"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <a class="sc_services_item_link"
-                                                                                       href="{% url 'user-contact' %}"></a>
+                                                                                       href="{% url 'contact' %}"></a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="trx_addons_column-1_3">
@@ -3006,15 +2885,15 @@
                                                                                                 fill="none"/> </g> </svg></span>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="sc_services_item_info">
+                                                                                    <div class="sc_services_item_info" style="color:black">
                                                                                         <div class="sc_services_item_header">
                                                                                             <div class="sc_services_item_subtitle">
-                                                                                                <a href="#"
+                                                                                                <a
                                                                                                    title="View all posts in Book Now">Apply
                                                                                                     Now</a>
                                                                                             </div>
                                                                                             <h4 class="sc_services_item_title entry-title">
-                                                                                                <a href="#">Online
+                                                                                                <a >Online
                                                                                                     Appointment</a>
                                                                                             </h4>
                                                                                         </div>
@@ -3036,12 +2915,12 @@
                                                                                                 you!</p>
                                                                                         </div>
                                                                                         <div class="sc_services_item_button sc_item_button">
-                                                                                            <a href="{% url 'user-contact' %}"
+                                                                                            <a href="{% url 'contact' %}"
                                                                                                class="sc_button_arrow"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <a class="sc_services_item_link"
-                                                                                       href="{% url 'user-contact' %}"></a>
+                                                                                       href="{% url 'contact' %}"></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -3054,24 +2933,8 @@
                                             </div>
                                         </div>
                                     </section>
-                                    <div class="elementor-element elementor-element-fff68a6 sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                         data-id="fff68a6" data-element_type="widget"
-                                         data-widget_type="spacer.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-spacer">
-                                                <div class="elementor-spacer-inner"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-fb8cf0c sc_height_huge sc_layouts_hide_on_mobile animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
-                                         data-id="fb8cf0c" data-element_type="widget"
-                                         data-widget_type="spacer.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-spacer">
-                                                <div class="elementor-spacer-inner"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -3137,8 +3000,8 @@
                                                     class="sc_item_subtitle sc_title_subtitle sc_align_center sc_item_subtitle_above sc_item_title_style_default">What We Do</span>
                                                 <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag sc_typed">
                                                                                 <span class="sc_item_title_text"><span
-                                                                                        style="color: #0f8c77">Software </span>, Websites, Quality assurance <span
-                                                                                        style="color: #0f8c77">digital experiences</span>, crafted with love, intelligence, <br> precision and <u><span
+                                                                                        style="">Software</span>, Websites, Quality assurance <span
+                                                                                        style="">digital experiences</span>, crafted with love, intelligence, <br> precision and <u><span
                                                                                         class="sc_typed_entry"
                                                                                         style="color: #0f8c77"
                                                                                         data-strings="[&quot;style&quot;,&quot;emotion&quot;,&quot;pride&quot;]"
@@ -3251,13 +3114,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <a class="post_link sc_team_item_link"
-                                                                   href="team/amy-walker.html"></a>
+                                                                  ></a>
                                                                 <div class="trx_addons_hover_mask"></div>
                                                             </div>
                                                             <div class="sc_team_item_info">
                                                                 <div class="sc_team_item_header">
                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                        <a href="team/amy-walker.html">Amy
+                                                                        <a>Amy
                                                                             Walker</a></h4>
                                                                     <div class="sc_team_item_subtitle">
                                                                         Project Manager
@@ -3304,13 +3167,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <a class="post_link sc_team_item_link"
-                                                                   href="team/david-green.html"></a>
+                                                                   ></a>
                                                                 <div class="trx_addons_hover_mask"></div>
                                                             </div>
                                                             <div class="sc_team_item_info">
                                                                 <div class="sc_team_item_header">
                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                        <a href="team/david-green.html">David
+                                                                        <a >David
                                                                             Green</a></h4>
                                                                     <div class="sc_team_item_subtitle">
                                                                         Web Developer
@@ -3357,13 +3220,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <a class="post_link sc_team_item_link"
-                                                                   href="team/natalie-jones.html"></a>
+                                                                  ></a>
                                                                 <div class="trx_addons_hover_mask"></div>
                                                             </div>
                                                             <div class="sc_team_item_info">
                                                                 <div class="sc_team_item_header">
                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                        <a href="team/natalie-jones.html">Natalie
+                                                                        <a >Natalie
                                                                             Jones</a></h4>
                                                                     <div class="sc_team_item_subtitle">
                                                                         Web Designer
@@ -3410,13 +3273,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <a class="post_link sc_team_item_link"
-                                                                   href="team/nick-carter.html"></a>
+                                                                   ></a>
                                                                 <div class="trx_addons_hover_mask"></div>
                                                             </div>
                                                             <div class="sc_team_item_info">
                                                                 <div class="sc_team_item_header">
                                                                     <h4 class="sc_team_item_title entry-title">
-                                                                        <a href="team/nick-carter.html">Nick
+                                                                        <a >Nick
                                                                             Carter</a></h4>
                                                                     <div class="sc_team_item_subtitle">
                                                                         Project Manager
@@ -3444,6 +3307,121 @@
                     </div>
                 </div>
             </section>
+              <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-40dc12d scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                            data-id="40dc12d" data-element_type="section"
+                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-container elementor-column-gap-extended">
+                                            <div class="elementor-row">
+                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8d88d8d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                     data-id="8d88d8d" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-3517467 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
+                                                                 data-id="3517467" data-element_type="widget"
+                                                                 data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-image">
+                                                                        <a
+                                                                           target="_blank">
+                                                                            <img width="550" height="234"
+                                                                                 src={% static 'wp-content/uploads/2020/07/air_large.png' %}
+                                                                                         class="attachment-fullsize-full"
+                                                                                 alt="" loading="lazy"
+                                                                                 srcset={% static 'wp-content/uploads/2020/07/air_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/air_large-300x128.png' %}
+                                                                                 300w, {% static 'wp-content/uploads/2020/07/air_large-370x157.png' %}
+                                                                                 370w, {% static 'wp-content/uploads/2020/07/air_large-410x174.png' %}
+                                                                                 410w"
+                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d9dc1d8 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                     data-id="d9dc1d8" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-8d31dc8 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
+                                                                 data-id="8d31dc8" data-element_type="widget"
+                                                                 data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-image">
+                                                                        <a
+                                                                           target="_blank">
+                                                                            <img width="550" height="234"
+                                                                                 src={% static 'wp-content/uploads/2020/07/nike_large.png' %}
+                                                                                         class="attachment-fullsize-full"
+                                                                                 alt="" loading="lazy"
+                                                                                 srcset={% static 'wp-content/uploads/2020/07/nike_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/nike_large-300x128.png' %}
+                                                                                 300w, {% static 'wp-content/uploads/2020/07/nike_large-370x157.png' %}
+                                                                                 370w, {% static 'wp-content/uploads/2020/07/nike_large-410x174.png' %}
+                                                                                 410w"
+                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bfca8f4 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                     data-id="bfca8f4" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-0e98623 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
+                                                                 data-id="0e98623" data-element_type="widget"
+                                                                 data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-image">
+                                                                        <a  target="_blank">
+                                                                            <img width="550" height="234"
+                                                                                 src={% static 'wp-content/uploads/2020/07/allaz_large.png' %}
+                                                                                         class="attachment-fullsize-full"
+                                                                                 alt="" loading="lazy"
+                                                                                 srcset={% static 'wp-content/uploads/2020/07/allaz_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/allaz_large-300x128.png' %}
+                                                                                 300w, {% static 'wp-content/uploads/2020/07/allaz_large-370x157.png' %}
+                                                                                 370w, {% static 'wp-content/uploads/2020/07/allaz_large-410x174.png' %}
+                                                                                 410w"
+                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-a2fcc64 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
+                                                     data-id="a2fcc64" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-861d814 animation_type_block sc_fly_static elementor-widget elementor-widget-image"
+                                                                 data-id="861d814" data-element_type="widget"
+                                                                 data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-image">
+                                                                        <a target="_blank">
+                                                                            <img width="550" height="234"
+                                                                                 src={% static 'wp-content/uploads/2020/07/envato_large.png' %}
+                                                                                         class="attachment-fullsize-full"
+                                                                                 alt="" loading="lazy"
+                                                                                 srcset={% static 'wp-content/uploads/2020/07/envato_large.png' %} 550w, {% static 'wp-content/uploads/2020/07/envato_large-300x128.png' %}
+                                                                                 300w, {% static 'wp-content/uploads/2020/07/envato_large-370x157.png' %}
+                                                                                 370w, {% static 'wp-content/uploads/2020/07/envato_large-410x174.png' %}
+                                                                                 410w"
+                                                                            sizes="(max-width: 600px) 100vw, 550px"/>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
             <section
                     class="elementor-section elementor-top-section elementor-element elementor-element-3cf2a84 elementor-section-full_width scheme_default elementor-section-height-default elementor-section-height-default sc_fly_static"
                     data-id="3cf2a84" data-element_type="section"
@@ -3855,6 +3833,7 @@
                                                                          class="attachment-qwery-thumb-masonry-big size-qwery-thumb-masonry-big wp-post-image"
                                                                          alt=""
                                                                          style="max-height: 300px;min-height: 300px;"
+                                                                         loading="lazy"
                                                                          srcset={{ data.image }} 840w
                                                                          sizes="(max-width: 840px) 100vw, 840px"/>
                                                                     <div class="mask"></div>

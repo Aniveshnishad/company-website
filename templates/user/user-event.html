@@ -2,6 +2,14 @@
 
 {% load static %}
 {% block content %}
+    <style>
+    .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+    </style>
     <br><br><br><br><br>
     <html lang="en-US" class="js
 									 scheme_default										"
@@ -43,7 +51,7 @@
             </div>
 
     <div class="body_wrap">
-        <div class="page_wrap">
+        <div class="page_wrap" id="Top">
 
             <div class="page_content_wrap">
                 <div class="content_wrap">
@@ -94,16 +102,16 @@
                                                                                                 <div class="sc_blogger_item_content entry-content" style="color: #0f8c77;">
                                                                                                     <div class="post_meta sc_blogger_item_meta post_meta_date" style="color: #0f8c77;" >
                                                                                                         <span class="post_meta_item post_date" style="color: #0f8c77;"><a
-                                                                                                                href="" style="color: #0f8c77;" ><b style="font-size:20px;">{{ data.event_date }}</b></a></span>
+                                                                                                                href="{% url 'full-event' id=data.id  %}" style="color: #0f8c77;" ><b style="font-size:20px;">{{ data.event_date }}</b></a></span>
                                                                                                     </div>
                                                                                                     <div class="post_meta sc_blogger_item_meta post_meta">
                                                                                                         <span class="post_meta_item post_categories cat_sep"><a
-                                                                                                                href=""
-                                                                                                                rel="category tag">Mindset</a></span><a
+                                                                                                                href="{% url 'full-event' id=data.id  %}"
+                                                                                                                rel="category tag">User</a></span><a
                                                                                                             href="{% url 'full-event' id=data.id  %}"
                                                                                                             class="post_meta_item post_meta_comments icon-comment-light inited"><span
-                                                                                                            class="post_meta_number">0</span><span
-                                                                                                            class="post_meta_label">Comments</span></a>
+                                                                                                            class="post_meta_number">{{ data.user_name }}</span><span
+                                                                                                            class="post_meta_label"></span></a>
                                                                                                     </div>
                                                                                                     <h5 class="sc_blogger_item_title entry-title"
                                                                                                         data-item-number="1">

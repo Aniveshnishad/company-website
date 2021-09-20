@@ -1,6 +1,14 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block content %}
+    <style>
+    .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+.sticky_socials_wrap.sticky_socials_modern .social_item:hover {
+    color: #0f8c77;
+}
+    </style>
     <br>
 
     <html lang="en-US" class="js
@@ -32,10 +40,6 @@
         <style type="text/css"
                media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
             background: #0f8c77 !important;
-        }
-        .scheme_default, body.scheme_default{
-            --theme-color-text_link2: #0f8c77;
-            --theme-color-text_hover2: #0f8c77;
         }
 
         body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .appt-block .google-cal-button > a:hover {
@@ -147,6 +151,10 @@ Unique Technologies     ">
             .elementor-widget:not(:last-child) {
                 margin-bottom: 0px;
             }
+            .scheme_default, body.scheme_default{
+            --theme-color-text_link2: #0f8c77;
+            --theme-color-text_hover2: #0f8c77;
+        }
 
             {
             }
@@ -302,7 +310,7 @@ Unique Technologies     ">
             }
 
             .elementor-10958 .elementor-element.elementor-element-592ee0a:not(.elementor-motion-effects-element-type-background), .elementor-10958 .elementor-element.elementor-element-592ee0a > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                background-image: url("{% static 'wp-content/uploads/2020/04/post-7-copyright.jpg'%}");
+                background-image: url("https://qwery.ancorathemes.com/wp-content/uploads/2020/04/post-7-copyright.jpg");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -401,7 +409,7 @@ Unique Technologies     ">
             }
 
             .elementor-10958 .elementor-element.elementor-element-c13bbc6:not(.elementor-motion-effects-element-type-background), .elementor-10958 .elementor-element.elementor-element-c13bbc6 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                background-image: url("{%  static 'wp-content/uploads/2020/05/post-63-copyright.jpg'%}");
+                background-image: url("https://qwery.ancorathemes.com/wp-content/uploads/2020/05/post-63-copyright.jpg");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -613,7 +621,7 @@ Unique Technologies     ">
         }
 
         .elementor-11866 .elementor-element.elementor-element-600fd747:not(.elementor-motion-effects-element-type-background), .elementor-11866 .elementor-element.elementor-element-600fd747 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-image: url("{%  static 'wp-content/uploads/2020/08/header-bg-style-1-copyright.jpg'%}");
+            background-image: url("https://qwery.ancorathemes.com/wp-content/uploads/2020/08/header-bg-style-1-copyright.jpg");
             background-position: center center;
             background-size: cover;
         }
@@ -1011,7 +1019,7 @@ Unique Technologies     ">
     <body class="page-template-default page page-id-10958 wp-custom-logo theme-qwery latepoint hide_fixed_rows_enabled woocommerce-js tribe-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_fullscreen is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-11866 header_position_default menu_side_none fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-10958 e--ua-blink e--ua-chrome e--ua-webkit animate_to_inited added_to_cart_inited mobile_device trx_addons_scroll_to_top_show mobile_layout"
           data-elementor-device-mode="mobile">
     <div class="body_wrap">
-        <div class="page_wrap">
+        <div class="page_wrap" id="Top">
 
             <div class="page_content_wrap">
                 <div class="content_wrap_fullscreen">
@@ -1401,7 +1409,7 @@ Unique Technologies     ">
                                                                 best.</p>
                                                         </div>
                                                         <div class="sc_item_button sc_button_wrap sc_item_button sc_item_button_default sc_title_button">
-                                                            <a href="{% url 'about' %}"
+                                                            <a href="{% url 'user-about' %}"
                                                                class="sc_button sc_button_default sc_button_shadow sc_button_size_normal sc_button_icon_left"
                                                                style="background-color:#1BBC9B;">
                                                                 <span class="sc_button_text"
@@ -1428,7 +1436,7 @@ Unique Technologies     ">
                                                              data-id="6405815"
                                                              data-element_type="column"
                                                              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                           <img src="{% static 'images/team12.png' %}" style="height:300px;max-width: 500px;">
+                                                           <img src="{% static 'images/team12.png' %}" style="height:300px;max-width: 500px;" loading="lazy">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1455,7 +1463,7 @@ Unique Technologies     ">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-image">
                                                         <img src={% static 'images/team11.png' %}
-                                                                     title="team-11-copyright" style="width:100%;height:300px; "
+                                                                     title="team-11-copyright" style="width:100%;height:300px; " loading="lazy"
                                                              alt="team-11-copyright"/></div>
                                                 </div>
                                             </div>
@@ -1506,7 +1514,7 @@ Unique Technologies     ">
                                                              data-id="2a03cbe"
                                                              data-element_type="column"
                                                              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                           <img src="{% static 'images/team11.png' %}" style="width:100%;" aign="center">
+                                                           <img src="{% static 'images/team11.png' %}" style="width:100%;" loading="lazy" aign="center">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
 
@@ -1680,7 +1688,7 @@ Unique Technologies     ">
                                                                                                  data-id="00f3f1a"
                                                                                                  data-element_type="widget"
                                                                                                  data-widget_type="trx_sc_services.default">
-                                                                                                <div class="elementor-widget-container" style="">
+                                                                                                <div class="elementor-widget-container" style="background-color: #0f8c77">
                                                                                                     <div class="sc_services color_style_link2 sc_services_shine sc_services_featured_top">
                                                                                                         <div class="sc_services_columns_wrap sc_item_columns sc_item_posts_container sc_item_columns_3 trx_addons_columns_wrap columns_padding_bottom columns_in_single_row">
                                                                                                             <div class="trx_addons_column-1_3 " id="animation_div">
@@ -1689,11 +1697,11 @@ Unique Technologies     ">
                                                                                                                     <div class="sc_services_item_content "
                                                                                                                          style="">
                                                                                                                         <div class="sc_services_item_content_inner">
-                                                                                                                            <a href=""
+                                                                                                                            <a href="{% url 'user-about' %}"
                                                                                                                                id="sc_services_1905071768_icon-molecular_1"
-                                                                                                                               class="sc_services_item_icon sc_icon_type_icons icon-share-1 " ></a>
+                                                                                                                               class="sc_services_item_icon sc_icon_type_icons icon-share-1 " style="color: #0f8c77"></a>
                                                                                                                             <h6 class="sc_services_item_title">
-                                                                                                                                <a href="">Effective
+                                                                                                                                <a href="{% url 'user-about' %}">Effective
                                                                                                                                     Solutions</a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
@@ -1711,7 +1719,7 @@ Unique Technologies     ">
                                                                                                                                     labore.</p>
                                                                                                                             </div>
                                                                                                                             <div class="sc_services_item_button sc_item_button">
-                                                                                                                                <a href=""
+                                                                                                                                <a href="{% url 'user-about' %}"
                                                                                                                                    class="sc_services_item_more_link">
                                                                                                                                     <span class="link_text">Read more</span><span
                                                                                                                                         class="link_icon"></span>
@@ -1719,7 +1727,7 @@ Unique Technologies     ">
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <a class="sc_services_item_link"
-                                                                                                                           href=""></a>
+                                                                                                                           href="{% url 'user-about' %}"></a>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1727,13 +1735,13 @@ Unique Technologies     ">
                                                                                                                 <div data-post-id="750"
                                                                                                                      class="sc_services_item sc_item_container post_container with_content with_image with_icon post-750 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-second">
                                                                                                                     <div class="sc_services_item_content "
-                                                                                                                         style="background-image: url({%  static 'wp-content/uploads/2020/04/post-24-copyright-840x560.jpg'%});">
+                                                                                                                         style="">
                                                                                                                         <div class="sc_services_item_content_inner">
-                                                                                                                            <a href=""
+                                                                                                                            <a href="{% url 'user-about' %}"
                                                                                                                                id="sc_services_689156957_icon-deadline_2"
                                                                                                                                class="sc_services_item_icon sc_icon_type_icons icon-deadline" style="color: #0f8c77"></a>
                                                                                                                             <h6 class="sc_services_item_title">
-                                                                                                                                <a href="">Individual
+                                                                                                                                <a href="{% url 'user-about' %}">Individual
                                                                                                                                     Approach</a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
@@ -1751,7 +1759,7 @@ Unique Technologies     ">
                                                                                                                                     labore.</p>
                                                                                                                             </div>
                                                                                                                             <div class="sc_services_item_button sc_item_button">
-                                                                                                                                <a href="#"
+                                                                                                                                <a
                                                                                                                                    class="sc_services_item_more_link">
                                                                                                                                     <span class="link_text">Read more</span><span
                                                                                                                                         class="link_icon"></span>
@@ -1759,7 +1767,7 @@ Unique Technologies     ">
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <a class="sc_services_item_link"
-                                                                                                                           href=""></a>
+                                                                                                                           href="{% url 'user-about' %}"></a>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1767,13 +1775,13 @@ Unique Technologies     ">
                                                                                                                 <div data-post-id="749"
                                                                                                                      class="sc_services_item sc_item_container post_container with_content with_image with_icon post-749 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-second">
                                                                                                                     <div class="sc_services_item_content "
-                                                                                                                         style="background-image: url({%  static 'wp-content/uploads/2020/04/post-11-copyright-840x560.jpg'%});">
+                                                                                                                         style="">
                                                                                                                         <div class="sc_services_item_content_inner">
-                                                                                                                            <a href=""
+                                                                                                                            <a href="{% url 'user-contact' %}"
                                                                                                                                id="sc_services_782600123_icon-share-1_3"
                                                                                                                                class="sc_services_item_icon sc_icon_type_icons icon-share-1 " style="color: #0f8c77"></a>
                                                                                                                             <h6 class="sc_services_item_title">
-                                                                                                                                <a href="">Technical
+                                                                                                                                <a href="{% url 'user-contact' %}">Technical
                                                                                                                                     Support</a>
                                                                                                                             </h6>
                                                                                                                             <div class="sc_services_item_text">
@@ -1791,7 +1799,7 @@ Unique Technologies     ">
                                                                                                                                     labore.</p>
                                                                                                                             </div>
                                                                                                                             <div class="sc_services_item_button sc_item_button">
-                                                                                                                                <a href="#"
+                                                                                                                                <a href="{% url 'user-contact' %}"
                                                                                                                                    class="sc_services_item_more_link">
                                                                                                                                     <span class="link_text">Read more</span><span
                                                                                                                                         class="link_icon"></span>
@@ -1799,7 +1807,7 @@ Unique Technologies     ">
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <a class="sc_services_item_link"
-                                                                                                                           href=""></a>
+                                                                                                                           href="{% url 'user-contact' %}"></a>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1862,7 +1870,7 @@ Unique Technologies     ">
     </script>
 
     <script type="text/javascript">
-var sbiajaxurl = "wp-admin/admin-ajax.php";
+var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
 
 
     </script>

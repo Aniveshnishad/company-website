@@ -10,7 +10,8 @@ from portfolio.models import Blogs, Event
 
 def user_home(request):
     if 'user_name' in request.session:
-        return render(request, "user/index.html")
+        obj = Blogs.objects.all()
+        return render(request, "user/index.html",{"data":obj})
     else:
         return render(request, "user/user-login.html")
 
@@ -65,7 +66,7 @@ def user_service(request):
 
 def user_blog(request):
     if 'user_name' in request.session:
-        obj = Blogs.objects.all()
+        obj = Blogs.objects.all().order_by('-id')
         return render(request, "user/user-blog.html", {"obj": obj})
     else:
         return render(request, "user/user-login.html")
@@ -80,7 +81,7 @@ def user_contact(request):
 
 def user_event(request):
     if 'user_name' in request.session:
-        obj = Event.objects.all()
+        obj = Event.objects.all().order_by('-id')
         return render(request, "user/user-event.html", {"obj": obj})
     else:
         return render(request, "user/user-login.html")
@@ -97,7 +98,7 @@ def user_profile(request):
 def user_my_event(request):
     if "user_name" in request.session:
         user_name = request.session['user_name']
-        obj = Event.objects.filter(user_name=user_name)
+        obj = Event.objects.filter(user_name=user_name).order_by('-id')
         return render(request, "user/user-my-event.html", {"obj": obj})
     else:
         return render(request, "user/user-login.html")
@@ -106,7 +107,7 @@ def user_my_event(request):
 def user_my_blog(request):
     if "user_name" in request.session:
         user_name = request.session['user_name']
-        obj = Blogs.objects.filter(user_name=user_name)
+        obj = Blogs.objects.filter(user_name=user_name).order_by('-id')
         return render(request, "user/user-my-blog.html", {"obj": obj})
     else:
         return render(request, "user/user-login.html")

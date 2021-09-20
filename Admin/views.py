@@ -29,7 +29,25 @@ def manager(request):
 def manager_home(request):
     try:
         if request.session['manager_name'] is not None:
-            return render(request, "manager/manager-home.html")
+            obj=Blogs.objects.all().order_by('-id')
+            return render(request, "manager/manager-home.html",{"data":obj})
+    except:
+        return render(request, "manager/manager.html")
+
+
+
+def manager_service(request):
+    try:
+        if request.session['manager_name'] is not None:
+            return render(request, "manager/manager-service.html")
+    except:
+        return render(request, "manager/manager.html")
+
+
+def manager_about_us(request):
+    try:
+        if request.session['manager_name'] is not None:
+            return render(request, "manager/manager-about-us.html")
     except:
         return render(request, "manager/manager.html")
 
