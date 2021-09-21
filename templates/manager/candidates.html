@@ -251,41 +251,7 @@
 
             }
 
-            @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-            .search {
-                width: 100%;
-                position: relative;
-                display: flex;
-            }
-
-
-            #input-search {
-                border: 1px solid #0f8c77;
-                width: 370px;
-                padding-left: 10px;
-
-
-            }
-
-            #input-search:focus {
-                border: none;
-            }
-
-
-            .searchTerm:focus {
-                color: #0f8c77;
-            }
-
-
-            /*Resize the wrap to see the search bar change!*/
-            .wrap {
-                width: 500px;
-
-                float: right;
-
-
-            }
 
             input[type=Search] {
                 -webkit-box-sizing: border-box;
@@ -296,6 +262,7 @@
                 width: 200px;
                 margin-left: 80px;
                 margin-top: -25px;
+                padding-left: 10px;
             }
 
             #example_paginate > ul > li.paginate_button.page-item.active > a {
@@ -341,7 +308,12 @@
                 border: 1px solid #ddd;
             }
 
+
+
         </style>
+        <script>
+
+        </script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
               integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
@@ -546,11 +518,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
         -->
         <script>
-    $(document).ready(function () {
-        $('#example').DataTable();
-    });
 
+       $('#example').DataTable({
+   "bFilter": true,
+   "bInfo": true,
+   "bLengthChange": true,
+   oLanguage: {
+       sLengthMenu: "Show List_MENU_",
 
+    },
+});
 
 
         </script>
