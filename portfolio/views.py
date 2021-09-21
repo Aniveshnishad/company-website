@@ -9,7 +9,8 @@ from django.shortcuts import render
 from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Event
 
 
-
+def test_page(request):
+    return render(request,"test_page.html")
 def index_page(request):
     obj = Blogs.objects.all().order_by('-id')
     return render(request, "index.html", {"data": obj, "index": "data"})
