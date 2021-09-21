@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
@@ -30,6 +32,6 @@
  {{ obj.blog_body|safe}}
 
 </div>
-
+{% endcache %}
 <br><br><bR><br><bR>
    {% endblock %}

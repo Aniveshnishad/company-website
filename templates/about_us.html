@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    {% load cache %}
+    {% cache 1000 content %}
     <br><br><Br>
 
     <html lang="en-US" class="js
@@ -2184,6 +2186,7 @@
                                                                                                  data-widget_type="image.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-image">
+
                                                                                                         <img width="630"
                                                                                                              height="616"
                                                                                                              src="{% static 'images/back2.jpg'%}"
@@ -2192,6 +2195,7 @@
                                                                                                              loading="lazy"
                                                                                                              srcset="{% static 'images/back1.jpg'%}' %} 630w, {% static 'images/back2.jpg'%} 300w,{% static 'images/back2.jpg'%}  370w,{% static 'images/back2.jpg'%}  410w,{% static 'images/back2.jpg' %}  600w"
                                                                                                              sizes="(max-width: 630px) 100vw, 630px">
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2606,5 +2610,5 @@
     </div>
 
 
-
+{% endcache %}
 {% endblock %}

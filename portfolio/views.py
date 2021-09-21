@@ -2,8 +2,12 @@ from django.contrib import messages
 from django.core.paginator import Paginator
 from django.shortcuts import render
 
+
+
 # Create your views here.
+
 from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Event
+
 
 
 def index_page(request):

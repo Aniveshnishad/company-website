@@ -1,6 +1,8 @@
 {% extends 'manager/base.html' %}
 {% load static %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <br><br><Br>
 
     <html lang="en-US" class="js
@@ -2606,5 +2608,5 @@
     </div>
 
 
-
+{% endcache %}
 {% endblock %}

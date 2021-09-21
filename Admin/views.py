@@ -134,16 +134,6 @@ def candidates(request):
         return render(request, "manager/manager.html")
 
 
-def search(request):
-    if request.method == "POST":
-        search = request.POST['search']
-        obj = ApplyDetails.objects.filter(
-            Q(name__istartswith=search) | Q(number__istartswith=search) | Q(email__istartswith=search))
-        paginator = Paginator(obj, 10)
-        page_number = request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
-        return render(request, "manager/search.html", {"data": page_obj})
-
 
 def profile(request):
     try:

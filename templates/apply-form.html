@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css">
     <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
@@ -385,5 +387,5 @@ file.onchange = function(e) {
             </div>
         </section>
     </div>
-
+{%  endcache %}
 {% endblock %}

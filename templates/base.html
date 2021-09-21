@@ -1,4 +1,6 @@
+
 {% load static %}
+ {% load cache %}
 {% load static %}<!DOCTYPE html>
 <html lang="en-US" class="no-js
 									 scheme_light										">
@@ -2430,7 +2432,9 @@
                 </div>
             </div>
         </div>
+
         {% include 'message.html' %}
+
         {% block content %}
 
         {% endblock %}
@@ -4381,4 +4385,5 @@ setInterval(htmlss,3000);
 
 </body>
 </html>
+
 

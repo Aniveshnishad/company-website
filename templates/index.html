@@ -1,6 +1,9 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
@@ -22,6 +25,7 @@
 }
 
     </style>
+    {% load cache %}
     <div class="page_content_wrap" id="Top">
         <div class="content_wrap_fullscreen">
             <div class="content">
@@ -3894,4 +3898,6 @@
     <script>
 
     </script>
+{% endcache %}
 {% endblock %}
+

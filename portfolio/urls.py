@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.cache import cache_page
 
 from portfolio import views
 
@@ -36,6 +37,7 @@ urlpatterns = [
     path('careers/intern', views.intern_page, name="intern"),
     path('careers/apply-form/<id>', views.apply_form, name="apply-form"),
     path('submit-form', views.submit_form, name="submit-form"),
+    # path(r'^$', cache_page(60 * 60)(views.index_page), name="index"),
 
     # urls for admin actions
 

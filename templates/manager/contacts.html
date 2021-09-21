@@ -1,5 +1,7 @@
 {% extends 'manager/base.html' %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -773,5 +775,6 @@ $(document).ready(function(){
 
 
     </script>
+    {% endcache %}
 {% endblock %}
 

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <br><br><br><br>
     <html lang="en-US" class="js
 									 scheme_light										"
@@ -3168,5 +3170,5 @@
     <div class="trx_demo_panels_mask"></div>
     </body>
     </html>
-
+{% endcache %}
 {% endblock %}

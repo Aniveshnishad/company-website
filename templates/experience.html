@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+     {% load cache %}
+     {% cache 1000 content %}
     <br>
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
@@ -2044,4 +2046,5 @@ var sbiajaxurl = "https://qwery.ancorathemes.com/wp-admin/admin-ajax.php";
 
     </body>
     </html>
+    {% endcache %}
 {% endblock %}

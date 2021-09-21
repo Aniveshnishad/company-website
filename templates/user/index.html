@@ -1,6 +1,7 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block content %}
+     {% cache 1000 content %}
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
@@ -3894,4 +3895,5 @@
     <script>
 
     </script>
+    {% endcache %}
 {% endblock %}

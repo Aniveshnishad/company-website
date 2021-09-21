@@ -31,6 +31,6 @@ urlpatterns = [
     path('manager-logout', views.manager_logout, name="manager-logout"),
     path('post-blog-form', views.post_blog_form, name="post-blog-form"),
     path('post-event-form', views.post_event_form, name="post-event-form"),
-    path('search-page', views.search, name="search-page"),
+
     path('test-page', views.test, name="test-page"),
 ]
