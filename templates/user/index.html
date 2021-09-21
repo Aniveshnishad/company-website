@@ -1,6 +1,7 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block content %}
+    {% load cache %}
      {% cache 1000 content %}
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
@@ -1396,7 +1397,7 @@
                                                                         <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag">
                                                             <span class="sc_item_title_text">An  <span
                                                                     style="color: #0f8c77">original team </span>of creators <br>designers &<span
-                                                                    style="color: #0f8c77"> dreamers</span> .</span>
+                                                                    style="color: #0f8c77"> dreamers</span>.</span>
                                                                         </h1></div>
                                                                 </div>
                                                             </div>
