@@ -23,8 +23,9 @@ def login(request):
         try:
             if User.objects.get(user_name=user_name, user_password=user_password) is not None:
                 request.session['user_name'] = user_name
+                obj = Blogs.objects.all().order_by('id')
                 messages.success(request, "Login Successfully")
-                return render(request, "user/index.html")
+                return render(request, "user/index.html",{'data':obj})
         except:
             messages.error(request, "Invalid login details")
             return render(request, "user/user-login.html")
