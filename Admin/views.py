@@ -28,8 +28,9 @@ def manager(request):
 
 def manager_home(request):
     try:
-        if request.session['manager_name'] is not None:
-            obj=Blogs.objects.all().order_by('-id')
+        if 'manager_name' in request.session:
+            obj= Blogs.objects.all().order_by('id')
+
             return render(request, "manager/manager-home.html",{"data":obj})
     except:
         return render(request, "manager/manager.html")
@@ -278,8 +279,10 @@ def manager_login(request):
         try:
             if Manager.objects.get(manager_name=manager_name, manager_password=manager_password) is not None:
                 request.session['manager_name'] = manager_name
+
                 messages.success(request, "Login Successful")
-                return render(request, "manager/manager-home.html")
+                obj = Blogs.objects.all().order_by('id')
+                return render(request, "manager/manager-home.html",{'data':obj})
         except:
             messages.error(request, "Invalid login details")
         return render(request, "manager/manager.html")
