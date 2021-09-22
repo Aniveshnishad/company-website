@@ -109,8 +109,8 @@ def contact_page(request):
 
 # for admin views
 
-def apply_form(request, id):
-    obj = JobPostDetail.objects.get(id=id)
+def apply_form(request, slug):
+    obj = JobPostDetail.objects.get(slug=slug)
     return render(request, "apply-form.html", {"data": obj})
 
 

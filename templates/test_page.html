@@ -1,4 +1,12 @@
 <form>
-    <input type="date">
-    <input type="datetime-local">
+    <input type="text" onfocusout="t()" id="i">
+    <div id="p"></div>
+
+    <script>
+        function t(){
+        var r=document.getElementById("i")
+        console.log(i)
+        document.getElementById("p").innerText="hii"
+        }
+    </script>
 </form>

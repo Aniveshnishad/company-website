@@ -128,6 +128,7 @@ file.onchange = function(e) {
   switch (ext) {
     case 'jpg':
     case 'bmp':
+    case 'jpeg':
     case 'png':
     case 'tif':
 
@@ -144,6 +145,7 @@ file.onchange = function(e) {
 
             if (size > 4 || size < 2) {
                 alert("File must be between the size of 2-4 MB");
+                this.value='';
             } else {
                 $("#output").html('<b>' +
                    'This file size is: ' + size + " MB" + '</b>');

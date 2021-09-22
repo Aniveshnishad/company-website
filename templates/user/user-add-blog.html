@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block content %}
-     {% load cache %}
-     {% cache 1000 content %}
+
 
     <!DOCTYPE html>
     <html lang="en">
@@ -121,6 +120,7 @@ file.onchange = function(e) {
   var ext = this.value.match(/\.([^\.]+)$/)[1];
   switch (ext) {
     case 'jpg':
+    case 'jpeg':
     case 'bmp':
     case 'png':
     case 'tif':
@@ -138,6 +138,7 @@ file.onchange = function(e) {
 
             if (size > 4 || size < 2) {
                 alert("File must be between the size of 2-4 MB");
+                this.value='';
             } else {
                 $("#output").html('<b>' +
                    'This file size is: ' + size + " MB" + '</b>');
@@ -217,5 +218,5 @@ file.onchange = function(e) {
     {##}
     {#    #}
     {#    </script>#}
-{% endcache %}
+
 {% endblock %}

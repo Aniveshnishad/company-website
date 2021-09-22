@@ -9,6 +9,15 @@
 .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
 }
+.main-div{
+    width:100%;height:100%;
+}
+
+    @media (max-width:300px){
+        .main-div{
+    width:100%;height:100%;
+}
+    }
     </style>
  <div class="sc_layouts_item elementor-element elementor-element-2d9f453 sc_height_huge animation_type_block sc_fly_static elementor-widget elementor-widget-spacer"
          data-id="2d9f453" data-element_type="widget"
@@ -29,7 +38,8 @@
         </div>
     </div>
 <div class="container">
-<div class="centainer-fluid"> {{ obj.event_body|safe}}
+<div class="main-div">
+ {{ obj.event_body|safe}}
 </div>
 </div>
 {% endcache %}

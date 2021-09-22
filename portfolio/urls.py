@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.views.decorators.cache import cache_page
 
+import company_website
+import portfolio
 from portfolio import views
 
 urlpatterns = [
@@ -35,7 +37,7 @@ urlpatterns = [
     path('careers/graduate', views.graduate_page, name="graduate"),
     path('careers/experience', views.experience_page, name="experience"),
     path('careers/intern', views.intern_page, name="intern"),
-    path('careers/apply-form/<id>', views.apply_form, name="apply-form"),
+    path('careers/apply-form/<slug>', views.apply_form, name="apply-form"),
     path('submit-form', views.submit_form, name="submit-form"),
     path('test_page', views.test_page, name="test_page"),
     # path(r'^$', cache_page(60 * 60)(views.index_page), name="index"),
@@ -43,3 +45,4 @@ urlpatterns = [
     # urls for admin actions
 
 ]
+

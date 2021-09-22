@@ -2,8 +2,7 @@
 
 {% load static %}
 {% block content %}
-     {% load cache %}
-     {% cache 1000 content %}
+
     <style>
     .sticky_socials_wrap.sticky_socials_modern .social_item:hover {
     color: #0f8c77;
@@ -94,6 +93,7 @@
                                                                                                          data-cfsrc="{{ data.event_cover_image }}"
                                                                                                          class="attachment-qwery-thumb-square size-qwery-thumb-square wp-post-image"
                                                                                                          alt="image"
+                                                                                                         style="min-height: 300px;max-height: 300px;"
                                                                                                          loading="lazy"
                                                                                                          src="{{ data.event_cover_image }}">
                                                                                                     <div class="mask"></div>
@@ -145,5 +145,5 @@
                 </div>
             </div>
         </div></div></div></div></div>
-    {% endcache %}
+
 {% endblock %}
