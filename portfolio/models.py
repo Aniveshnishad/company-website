@@ -1,4 +1,6 @@
 import ckeditor.fields
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Checkbox
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
@@ -24,6 +26,7 @@ class ContactForm(models.Model):
     message = models.CharField(max_length=900, blank=True)
     email_subject = models.CharField(max_length=200, blank=True)
     reply = models.TextField(max_length=2000, blank=True)
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
     def __str__(self):
         return self.email

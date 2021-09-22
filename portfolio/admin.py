@@ -8,7 +8,7 @@ class ContactFormAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email','number')
     list_per_page = 10
     list_filter = ('name',)
-    ordering = ('email',)
+    ordering = ('-id',)
 
 
 
@@ -28,7 +28,7 @@ class ApplyDetailsAdmin(admin.ModelAdmin):
     list_display = ('name','number','subject','email','cover_leter','file_cv')
     list_per_page = 10
     list_filter = ('name',)
-    ordering = ('email',)
+    ordering = ('-id',)
 
 class EventAdmin(admin.ModelAdmin):
     list_display = ('event_name','event_cover_image','event_date')

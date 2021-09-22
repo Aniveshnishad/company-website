@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'company_user.apps.CompanyUserConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'captcha',
 
 ]
 SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
@@ -165,6 +166,9 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warring',
     messages.ERROR: 'alert-danger',
 }
+
+RECAPTCHA_PUBLIC_KEY = '6Le0oIIcAAAAAC1fQbcl9jfGEky_Bws1reRjwTCG'
+RECAPTCHA_PRIVATE_KEY = '6Le0oIIcAAAAADSosmU7oiv32_hpPRbFtImiIbjH'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"

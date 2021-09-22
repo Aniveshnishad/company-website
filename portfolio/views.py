@@ -1,11 +1,18 @@
+import json
+import urllib
+from urllib import response
+
+import requests
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
 
-# Create your views here.
 
+# Create your views here.
+from company_website import settings
 from portfolio.models import ContactForm, Blogs, JobPostDetail, ApplyDetails, Event
 
 
@@ -73,10 +80,27 @@ def contact_page(request):
         number = request.POST['number']
         subject = request.POST['subject']
         message = request.POST['message']
-        obj = ContactForm(name=name, email=email, number=number, subject=subject, message=message)
-        messages.success(request, 'Hey! you submitted Successfully')
-        obj.save()
-        return render(request, "contact.html")
+        captcha_rs = request.POST.get('g-recaptcha-response')
+        url = "https://www.google.com/recaptcha/api/siteverify"
+        params = {
+            'secret': settings.RECAPTCHA_PRIVATE_KEY,
+            'response': captcha_rs,
+
+        }
+        data = urllib.parse.urlencode(params).encode("utf-8")
+        response = urllib.request.urlopen(url, data)
+
+        result = json.load(response)
+        ''' End reCAPTCHA validation '''
+
+        if result['success']:
+            obj = ContactForm(name=name, email=email, number=number, subject=subject, message=message)
+            messages.success(request, 'Hey! you submitted Successfully')
+            obj.save()
+            return render(request, "contact.html")
+        else:
+            messages.error(request,"Invalid Recaptcha")
+            return render(request, "contact.html")
     else:
         pass
 
@@ -99,18 +123,33 @@ def submit_form(request):
         city = request.POST['city']
         cover_leter = request.POST['cover_leter']
         file_cv = request.FILES['file_cv']
+        captcha_rs = request.POST.get('g-recaptcha-response')
+        url = "https://www.google.com/recaptcha/api/siteverify"
+        params = {
+            'secret': settings.RECAPTCHA_PRIVATE_KEY,
+            'response': captcha_rs,
 
-        obj = ApplyDetails.objects.create(name=name, email=email, number=number, subject=subject, city=city,
+        }
+        data = urllib.parse.urlencode(params).encode("utf-8")
+        response = urllib.request.urlopen(url, data)
+
+        result = json.load(response)
+        ''' End reCAPTCHA validation '''
+        if result['success']:
+            obj = ApplyDetails.objects.create(name=name, email=email, number=number, subject=subject, city=city,
                                cover_leter=cover_leter,
                                file_cv=file_cv)
 
-        obj.save()
+            obj.save()
 
-        messages.success(request, "Submitted Successfully")
-        return render(request, "careers.html")
+            messages.success(request, "Submitted Successfully")
+            return render(request, "careers.html")
+        else:
+            messages.error(request,"Invalid Recaptcha")
+            return render(request, "careers.html")
     else:
         messages.error(request, "Somthing went Wrong!")
-        return render(request, "careers.html")
+    return render(request, "careers.html")
 
 
 def events_page(request):
