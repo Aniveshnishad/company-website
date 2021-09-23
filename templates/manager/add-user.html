@@ -1,0 +1,799 @@
+{% extends 'manager/base.html' %}
+{% block content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <style>
+            #reply-btn {
+                background-color: #0f8c77;
+                font-size: 20px;
+                color: whitesmoke;
+                height: 50px;
+                width: 100px
+            }
+
+            #reply-btn:hover {
+                background-color: #0f8c66;
+                color: whitesmoke;
+                height: 50px;
+                width: 100px
+            }
+
+            #exampleInputEmail1 {
+                border: none;
+
+                box-shadow: none;
+            }
+
+            #exampleInputEmail1:hover {
+                border: none;
+                border-top: 1px solid #0f8c77;
+                box-shadow: none;
+            }
+
+            #InputEmail1 {
+
+
+                box-shadow: none;
+            }
+
+            #InputEmail1:hover {
+                border: none;
+                border-top: 1px solid #0f8c77;
+                box-shadow: none;
+            }
+
+            #ReplyInputEmail1 {
+
+
+                box-shadow: none;
+            }
+
+            #ReplyInputEmail1:hover {
+
+                border: 1px solid #0f8c77;
+                box-shadow: none;
+            }
+
+
+            .main-div {
+                padding-top: 30px;
+                overflow: auto;
+                width: 100%;
+            }
+
+            .main-div1 {
+                padding-top: 130px;
+                overflow: auto;
+                width: 100%;
+            }
+
+            * {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+
+            body {
+                font-family: Helvetica;
+                -webkit-font-smoothing: antialiased;
+                background: rgba(71, 147, 227, 1);
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: white;
+                padding: 30px 0;
+            }
+
+            /* Table Styles */
+
+            .table-wrapper {
+                margin: 0px 0px 70px;
+                box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+            }
+
+            .fl-table {
+                border-radius: 5px;
+                font-size: 12px;
+                font-weight: normal;
+                border: none;
+                border-collapse: collapse;
+                width: 100%;
+                max-width: 100%;
+                white-space: nowrap;
+                background-color: white;
+            }
+
+            .fl-table td, .fl-table th {
+                text-align: center;
+                padding: 8px;
+            }
+
+            .fl-table td {
+                border-right: 1px solid #f8f8f8;
+                font-size: 15px;
+            }
+
+            .fl-table thead th {
+                color: #ffffff;
+                background: #4FC3A1;
+            }
+
+
+            .fl-table thead th:nth-child(odd) {
+                color: #ffffff;
+                background: #324960;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+
+            /* Responsive */
+
+            @media (max-width: 767px) {
+                .fl-table {
+                    display: block;
+                    width: 100%;
+                }
+
+                .table-wrapper:before {
+                    content: "Scroll horizontally >";
+                    display: block;
+                    text-align: right;
+                    font-size: 11px;
+                    color: white;
+                    padding: 0 0 10px;
+                }
+
+                .fl-table thead, .fl-table tbody, .fl-table thead th {
+                    display: block;
+                }
+
+                .fl-table thead th:last-child {
+                    border-bottom: none;
+                }
+
+                .fl-table thead {
+                    float: left;
+                }
+
+                .fl-table tbody {
+                    width: auto;
+                    position: relative;
+                    overflow-x: auto;
+                }
+
+                .fl-table td, .fl-table th {
+                    padding: 20px .625em .625em .625em;
+                    height: 60px;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    width: 120px;
+                    font-size: 13px;
+                    text-overflow: ellipsis;
+                }
+
+                .fl-table thead th {
+                    text-align: left;
+                    border-bottom: 1px solid #f7f7f9;
+                }
+
+                .fl-table tbody tr {
+                    display: table-cell;
+                }
+
+                .fl-table tbody tr:nth-child(odd) {
+                    background: none;
+                }
+
+                .fl-table tr:nth-child(even) {
+                    background: transparent;
+                }
+
+                .fl-table tr td:nth-child(odd) {
+                    background: #F8F8F8;
+                    border-right: 1px solid #E6E4E4;
+                }
+
+                .fl-table tr td:nth-child(even) {
+                    border-right: 1px solid #E6E4E4;
+                }
+
+                .fl-table tbody td {
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            .text {
+                display: block;
+                width: 260px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+
+            @media (max-width: 767px) {
+                .text {
+                    display: block;
+                    width: 100px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+            }
+
+            .btn-add {
+                background-color: #0f8c77;
+                float: right;
+                margin-right: 10px;
+                color: whitesmoke;
+                width: 100px;
+                height: 35px;
+            }
+
+            .btn-add:hover {
+                background-color: whitesmoke;
+                float: right;
+                color: black;
+                width: 100px;
+                height: 35px;
+                border: 2px solid #0f8c77;
+            }
+
+            @media (max-width: 567px) {
+                .btn-add {
+                    background-color: #0f8c77;
+                    float: right;
+                    margin-right: 10px;
+                    color: whitesmoke;
+                    width: 100px;
+                    height: 35px;
+                }
+
+                .btn-add:hover {
+                    background-color: whitesmoke;
+                    float: right;
+                    color: black;
+                    width: 100px;
+                    height: 35px;
+                    border: 2px solid #0f8c77;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .btn-add {
+                    background-color: #0f8c77;
+                    float: right;
+                    margin-right: 3px;
+                    color: whitesmoke;
+                    width: 93px;
+                    height: 35px;
+                }
+
+                .btn-add:hover {
+                    background-color: whitesmoke;
+                    float: right;
+                    color: black;
+                    width: 93px;
+                    height: 35px;
+                    border: 2px solid #0f8c77;
+                }
+            }
+
+
+        </style>
+        <script src="jquery-3.5.1.min.js"></script>
+        <title>CubexO Manager</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+                        $(document).ready(function(){
+
+                                $("tbody").on("click",".delete",(function(){
+       let id=$(this).attr("data-sid");
+       let cs=$("input[name=csrfmiddlewaretoken]").val();
+        console.log('a');
+
+        const my_data={id:id,csrfmiddlewaretoken:cs};
+        mythis=this;
+        console.log("ju")
+
+        $.ajax({
+            url:"{% url 'delete-added-user' %}",
+            method:"POST",
+            data:my_data,
+            dataType:'JSON',
+            success:function(data){
+
+                if (data.status == "delete"){
+
+                console.log('hi')
+                    $(mythis).closest("tr").fadeOut(1000);
+
+                }
+                else{
+                    console.log('Error ');
+
+                }
+
+
+                             },
+        });
+
+    }));
+
+                        });
+
+
+
+
+
+        </script>
+    </head>
+    <body class="body">
+
+
+    <div class="container main-div1">
+
+        <h2 style="color: #0f8c77;font-size:30px;"><i class="fas fa-user"></i> Users
+
+            <a href="#" data-toggle="modal"
+               data-target="#myModal" class="btn btn-add"
+            ><i class="fas fa-plus-square"></i><span> User</span></a>
+
+        </h2>
+
+
+    </div>
+    {% if data %}
+
+        <div class="container main-div" id="main-div">
+
+        <div class="table-wrapper">
+        <table class="fl-table">
+        <thead>
+        <tr>
+            <th><i class="fas fa-user"></i> Username</th>
+            <th><i class="fas fa-envelope"></i> Email</th>
+            <th><i class="fas fa-phone-square"></i> Password</th>
+            <th>Delete</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for data in data %}
+            <tr>
+                <td><span class="text">{{ data.user_name }}</span></td>
+                <td><span class="text">{{ data.user_email }}</span></td>
+                <td><span class="text">{{ data.user_password }}</span></td>
+
+                <td><a data-sid="{{ data.id }}" class="btn delete"><span
+                        class="text"><i class="fas fa-trash"></i></span></a></td>
+
+            </tr>
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+
+                <div class="modal-dialog modal-lg" style="z-index:2">
+                    <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
+                        <div class="modal-header">
+                            <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-user"></i>
+                                ADD USER</h3>
+
+                        </div>
+
+
+                        <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
+                            <form action="{% url 'add-user-data' %}" method="post"
+                                  enctype="multipart/form-data">
+                                {% csrf_token %}
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4" style="color:black"><i
+                                                class="fas fa-user"></i>
+                                            Username</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               placeholder="Username"
+                                               name="user_name"  required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                               placeholder=".example.com"
+                                               name="user_email" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1" style="color:black"><i
+                                            class="fas fa-eye"></i>
+                                        Password</label>
+                                    <input type="password" class="form-control" id="exampleInputEmail1"
+                                           name="user_password" aria-describedby="emailHelp"
+                                           placeholder="...."
+
+                                           required>
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn" id="reply-btn">Submit</button>
+                                    <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <center>
+            <div class="container">No data found!</div>
+        </center>
+    {% endif %}
+
+    <tbody>
+    </table>
+    </div>
+    <div class="col-lg-12">
+        <div class="pagination-main text-center">
+            <ul class="pagination">
+                {% if data.has_previous %}
+                    <li>
+                        <a href="?page={{ data.previous_page_number }}"
+                           style="color: #0f8c77"><i
+                                class="fa fa-angle-double-left"
+                                aria-hidden="true"></i></a>
+                    </li>
+                {% endif %}
+                <li class="active"><a
+                        href="#"
+                        style="background-color: #0f8c77">{{ data.number }}</a>
+                </li>
+
+                {% if data.has_next %}
+                    <li>
+                        <a href="?page={{ data.next_page_number }}"
+                           style="color: #0f8c77"><i
+                                class="fa fa-angle-double-right"
+                                aria-hidden="true"></i></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+    {#  repliedfilter  #}
+
+    <div class="container main-div" id="replied-div">
+        {% if data1 %}
+            <div class="table-wrapper">
+            <table class="fl-table">
+            <thead>
+            <tr>
+                <th><i class="fas fa-user"></i> Name</th>
+                <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-phone-square"></i> Number</th>
+                <th><i class="fas fa-layer-group"></i> Subject</th>
+                <th><i class="fas fa-comment-alt"></i> Message</th>
+                <th>Reply</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for data in data1 %}
+                <tr>
+                    <td><span class="text">{{ data.name }}</span></td>
+                    <td><span class="text">{{ data.email }}</span></td>
+                    <td><span class="text">{{ data.number }}</span></td>
+                    <td><span class="text">{{ data.subject }}</span></td>
+                    <td><span class="text">{{ data.message }}</span></td>
+                    <td><a href="#" data-toggle="modal" data-target="#myModal2{{ data.id }}"><span
+                            class="text"><i class="fas fa-reply-all"></i></span></a></td>
+                    {% if data.reply %}
+                        <td><span class="text"><i class="far fa-check-circle" style="color:green"></i></span>
+                        </td>
+                    {% else %}
+                        <td><span class="text"><i class="far fa-times-circle" style="color: red"></i></span>
+                        </td>
+                    {% endif %}
+                </tr>
+
+
+                <div class="modal fade" id="myModal2{{ data.id }}" role="dialog">
+
+                    <div class="modal-dialog modal-lg" style="z-index:2">
+                        <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
+                            <div class="modal-header">
+                                <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-reply-all"></i>
+                                    Reply Contacts</h3>
+
+                            </div>
+
+
+                            <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
+                                <form action="{% url 'reply-contact-form' id=data.id %}" method="post"
+                                      enctype="multipart/form-data">
+                                    {% csrf_token %}
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4" style="color:black"><i
+                                                    class="fas fa-envelope-open"></i>
+                                                Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                   name="email" value="{{ data.email }}" readonly>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4" style="color:black"><i
+                                                    class="fas fa-book"></i>
+                                                Subject</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                                   name="subject" value="{{ data.subject }}" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Message</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="message" aria-describedby="emailHelp"
+                                               value="{{ data.message }}"
+                                               readonly>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Email Subject</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="email_subject" aria-describedby="emailHelp"
+                                               value="{{ data.email_subject }}"
+                                               required>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-reply"></i>
+                                            Reply</label>
+                                        <textarea type="text" class="form-control" id="ReplyInputEmail1"
+                                                  name="reply" aria-describedby="emailHelp"
+                                                  value="{{ data.reply }}"
+                                        >{{ data.reply }}</textarea>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn" id="reply-btn">Reply</button>
+                                        <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <center>
+                <div class="container">No data found!</div>
+            </center>
+        {% endif %}
+
+        <tbody>
+        </table>
+        </div>
+
+
+    </div>
+
+    {# if data hsa in reply#}
+
+
+    <div class="container main-div" id="not-replied-div">
+        {% if data2 %}
+            <div class="table-wrapper">
+            <table class="fl-table">
+            <thead>
+            <tr>
+                <th><i class="fas fa-user"></i> Name</th>
+                <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-phone-square"></i> Number</th>
+                <th><i class="fas fa-layer-group"></i> Subject</th>
+                <th><i class="fas fa-comment-alt"></i> Message</th>
+                <th>Reply</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for data in data2 %}
+                <tr>
+                    <td><span class="text">{{ data.name }}</span></td>
+                    <td><span class="text">{{ data.email }}</span></td>
+                    <td><span class="text">{{ data.number }}</span></td>
+                    <td><span class="text">{{ data.subject }}</span></td>
+                    <td><span class="text">{{ data.message }}</span></td>
+                    <td><a href="#" data-toggle="modal" data-target="#myModal3{{ data.id }}"><span
+                            class="text"><i class="fas fa-reply-all"></i></span></a></td>
+                    {% if data.reply %}
+                        <td><span class="text"><i class="far fa-check-circle" style="color:green"></i></span>
+                        </td>
+                    {% else %}
+                        <td><span class="text"><i class="far fa-times-circle" style="color: red"></i></span>
+                        </td>
+                    {% endif %}
+                </tr>
+
+
+                <div class="modal fade" id="myModal3{{ data.id }}" role="dialog">
+
+                    <div class="modal-dialog modal-lg" style="z-index:2">
+                        <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
+                            <div class="modal-header">
+                                <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-reply-all"></i>
+                                    Reply Contacts</h3>
+
+                            </div>
+
+
+                            <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
+                                <form action="{% url 'reply-contact-form' id=data.id %}" method="post"
+                                      enctype="multipart/form-data">
+                                    {% csrf_token %}
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4" style="color:black"><i
+                                                    class="fas fa-envelope-open"></i>
+                                                Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                   name="email" value="{{ data.email }}" readonly>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4" style="color:black"><i
+                                                    class="fas fa-book"></i>
+                                                Subject</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                                   name="subject" value="{{ data.subject }}" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Message</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="message" aria-describedby="emailHelp"
+                                               value="{{ data.message }}"
+                                               readonly>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-envelope"></i>
+                                            Email Subject</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               name="email_subject" aria-describedby="emailHelp"
+                                               value="{{ data.email_subject }}"
+                                               required>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleInputEmail1" style="color:black"><i
+                                                class="fas fa-reply"></i>
+                                            Reply</label>
+                                        <textarea type="text" class="form-control" id="ReplyInputEmail1"
+                                                  name="reply" aria-describedby="emailHelp"
+                                                  value="{{ data.reply }}"
+                                        >{{ data.reply }}</textarea>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn" id="reply-btn">Reply</button>
+                                        <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <center>
+                <div class="container">No data found!</div>
+            </center>
+        {% endif %}
+
+        <tbody>
+        </table>
+        </div>
+
+    </div>
+
+    <div style="height: 300px;"></div>
+    </body>
+    </html>
+    <script type="text/javascript">
+     $('#replied-div').hide();
+     $('#not-replied-div').hide();
+
+$(document).ready(function(){
+
+    $('#not-replied-button').click(function(){
+    $('#main-div').hide();
+    $('#not-replied-div').hide();
+    $('#replied-div').show();
+    });
+    $('#all-button').click(function(){
+    $('#replied-div').hide();
+    $('#not-replied-div').hide();
+    $('#main-div').show();
+
+    });
+    $('#replied-button').click(function(){
+    $('#main-div').hide();
+    $('#replied-div').hide();
+    $('#not-replied-div').show();
+
+    });
+});
+
+
+
+    </script>
+    <script>
+   setTimeout(function (){
+       if ($('#msg').length>0){
+           $('#msg').remove();
+       }
+   }, 2000)
+
+
+
+    </script>
+
+{% endblock %}
+

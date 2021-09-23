@@ -39,6 +39,8 @@ parse==1.19.0
 passlib==1.7.4
 Pillow==8.3.1
 protobuf==3.17.3
+psycopg2==2.9.1
+psycopg2-binary==2.9.1
 publicsuffix2==2.20191221
 pyasn1==0.4.8
 pycparser==2.20
@@ -46,6 +48,7 @@ pymemcache==3.5.0
 pyOpenSSL==20.0.1
 pyparsing==2.4.7
 pyperclip==1.8.2
+pypi==2.1
 pyquery==1.4.3
 python-memcached==1.59
 pytz==2021.1

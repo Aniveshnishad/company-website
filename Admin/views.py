@@ -14,6 +14,7 @@ from django.http import JsonResponse
 from django.template.loader import get_template
 
 from Admin.models import Manager
+from company_user.models import User
 from company_website import settings
 from portfolio.models import ContactForm, ApplyDetails, JobPostDetail, Blogs, Event
 
@@ -79,6 +80,19 @@ def add_blogs(request):
             return render(request, "manager/add-blogs.html", {"data": page_obj})
     except:
         return render(request, "manager/manager.html")
+
+
+def add_user(request):
+    try:
+        if 'manager_name' in request.session:
+            obj = User.objects.all().order_by('id')
+            paginator = Paginator(obj, 10)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(request, "manager/add-user.html", {"data": page_obj})
+    except:
+        return render(request, "manager/manager.html")
+
 
 
 def add_event(request):
@@ -322,6 +336,54 @@ def delete_blog(request):
     except:
         return render(request, "manager/manager.html")
 
+
+def delete_added_user(request):
+    try:
+        if request.session['manager_name'] is not None:
+            if request.method == "POST":
+                id = request.POST.get('id')
+                obj = User.objects.get(id=id)
+                obj.delete()
+                return JsonResponse({'status': 'delete'})
+            else:
+                return JsonResponse({"status": 'error'})
+    except:
+        return render(request, "manager/manager.html")
+
+def add_user_data(request):
+    if "manager_name" in request.session:
+        if request.method=="POST":
+            username=request.POST['user_name']
+            useremail=request.POST['user_email']
+            password=request.POST['user_password']
+            if User.objects.filter(user_email=useremail).exists():
+                messages.error(request,"Email already exists")
+                return redirect('add-user')
+            elif User.objects.filter(user_name=username).exists():
+                messages.error(request,"username already exists")
+                return redirect('add-user')
+            else:
+                obj=User.objects.create(user_name=username,user_email=useremail,user_password=password)
+                ctx = {
+                    'name': username,
+
+                }
+                message = get_template('manager/email-tamplate2.html').render(ctx)
+                msg = EmailMessage(
+                    "CubexO Software",
+                    message,
+                    "CubexO Software Solution LLP",
+                    [useremail],
+
+                )
+                msg.content_subtype = "html"
+                msg.send()
+
+                obj.save()
+                messages.success(request,"User added successfully")
+                return redirect('add-user')
+    else:
+        return render(request,"manager/manager.html")
 
 def delete_event(request):
     try:
