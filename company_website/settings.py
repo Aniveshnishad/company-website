@@ -105,8 +105,8 @@ DATABASES = {
         'NAME': 'cubexo',
         'USER': 'admin',
         'PASSWORD': '1111',
-        'HOST': 'localhost',
-        'POST': '',
+        'HOST': 'herokuapp.com',
+        'POST': '5432',
     }
 }
 
