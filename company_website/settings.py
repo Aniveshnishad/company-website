@@ -102,12 +102,12 @@ WSGI_APPLICATION = 'company_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cubexo',
-        'USER': 'admin',
-        'PASSWORD': '1111',
-        'HOST': 'cubexo-software-solution',
+        'NAME': 'd2lb8ltej0n41k',
+        'USER': 'ewinvdjoelncbk',
+        'PASSWORD': '6bced4b612670e4df0774b538919fe8e315011accb86a6ceb2cbc7e006d38940',
+        'HOST': 'ec2-44-197-94-126.compute-1.amazonaws.com',
         'POST': '5432',
-    }
+         }
 }
 
 
