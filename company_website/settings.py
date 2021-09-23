@@ -105,7 +105,7 @@ DATABASES = {
         'NAME': 'cubexo',
         'USER': 'admin',
         'PASSWORD': '1111',
-        'HOST': 'herokuapp.com',
+        'HOST': 'cubexo-software-solution',
         'POST': '5432',
     }
 }
