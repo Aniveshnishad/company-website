@@ -8,17 +8,13 @@
         <style>
             #reply-btn {
                 background-color: #0f8c77;
-                font-size: 20px;
-                color: whitesmoke;
-                height: 50px;
-                width: 100px
+
+
             }
 
             #reply-btn:hover {
                 background-color: #0f8c66;
-                color: whitesmoke;
-                height: 50px;
-                width: 100px
+
             }
 
             #exampleInputEmail1 {
@@ -352,42 +348,16 @@
 
             <a href="#" data-toggle="modal"
                data-target="#myModal" class="btn btn-add"
-            ><i class="fas fa-plus-square"></i><span> User</span></a>
+            ><i class="fas fa-plus-square"></i><span> User</span>
+            </a>
+
 
         </h2>
 
 
+
     </div>
-    {% if data %}
-
-        <div class="container main-div" id="main-div">
-
-        <div class="table-wrapper">
-        <table class="fl-table">
-        <thead>
-        <tr>
-            <th><i class="fas fa-user"></i> Username</th>
-            <th><i class="fas fa-envelope"></i> Email</th>
-            <th><i class="fas fa-phone-square"></i> Password</th>
-            <th>Delete</th>
-
-        </tr>
-        </thead>
-        <tbody>
-
-        {% for data in data %}
-            <tr>
-                <td><span class="text">{{ data.user_name }}</span></td>
-                <td><span class="text">{{ data.user_email }}</span></td>
-                <td><span class="text">{{ data.user_password }}</span></td>
-
-                <td><a data-sid="{{ data.id }}" class="btn delete"><span
-                        class="text"><i class="fas fa-trash"></i></span></a></td>
-
-            </tr>
-
-
-            <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal fade" id="myModal" role="dialog">
 
                 <div class="modal-dialog modal-lg" style="z-index:2">
                     <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
@@ -450,13 +420,39 @@
 
                 </div>
             </div>
+    {% if data %}
+
+        <div class="container main-div" id="main-div">
+
+        <div class="table-wrapper">
+        <table class="fl-table">
+        <thead>
+        <tr>
+            <th><i class="fas fa-user"></i> Username</th>
+            <th><i class="fas fa-envelope"></i> Email</th>
+            <th><i class="fas fa-phone-square"></i> Password</th>
+            <th>Delete</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for data in data %}
+            <tr>
+                <td><span class="text">{{ data.user_name }}</span></td>
+                <td><span class="text">{{ data.user_email }}</span></td>
+                <td><span class="text">{{ data.user_password }}</span></td>
+
+                <td><a data-sid="{{ data.id }}" class="btn delete"><span
+                        class="text"><i class="fas fa-trash"></i></span></a></td>
+
+            </tr>
+
+
+
 
         {% endfor %}
-    {% else %}
-        <center>
-            <div class="container">No data found!</div>
-        </center>
-    {% endif %}
+
 
     <tbody>
     </table>
@@ -489,297 +485,21 @@
         </div>
     </div>
     </div>
+    {% else %}
+        <center>
+            <div class="container">No data found!</div>
+        </center>
+    {% endif %}
 
 
-    {#  repliedfilter  #}
-
-    <div class="container main-div" id="replied-div">
-        {% if data1 %}
-            <div class="table-wrapper">
-            <table class="fl-table">
-            <thead>
-            <tr>
-                <th><i class="fas fa-user"></i> Name</th>
-                <th><i class="fas fa-envelope"></i> Email</th>
-                <th><i class="fas fa-phone-square"></i> Number</th>
-                <th><i class="fas fa-layer-group"></i> Subject</th>
-                <th><i class="fas fa-comment-alt"></i> Message</th>
-                <th>Reply</th>
-                <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            {% for data in data1 %}
-                <tr>
-                    <td><span class="text">{{ data.name }}</span></td>
-                    <td><span class="text">{{ data.email }}</span></td>
-                    <td><span class="text">{{ data.number }}</span></td>
-                    <td><span class="text">{{ data.subject }}</span></td>
-                    <td><span class="text">{{ data.message }}</span></td>
-                    <td><a href="#" data-toggle="modal" data-target="#myModal2{{ data.id }}"><span
-                            class="text"><i class="fas fa-reply-all"></i></span></a></td>
-                    {% if data.reply %}
-                        <td><span class="text"><i class="far fa-check-circle" style="color:green"></i></span>
-                        </td>
-                    {% else %}
-                        <td><span class="text"><i class="far fa-times-circle" style="color: red"></i></span>
-                        </td>
-                    {% endif %}
-                </tr>
 
 
-                <div class="modal fade" id="myModal2{{ data.id }}" role="dialog">
 
-                    <div class="modal-dialog modal-lg" style="z-index:2">
-                        <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
-                            <div class="modal-header">
-                                <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-reply-all"></i>
-                                    Reply Contacts</h3>
-
-                            </div>
-
-
-                            <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
-                                <form action="{% url 'reply-contact-form' id=data.id %}" method="post"
-                                      enctype="multipart/form-data">
-                                    {% csrf_token %}
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail4" style="color:black"><i
-                                                    class="fas fa-envelope-open"></i>
-                                                Email</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                   name="email" value="{{ data.email }}" readonly>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4" style="color:black"><i
-                                                    class="fas fa-book"></i>
-                                                Subject</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1"
-                                                   name="subject" value="{{ data.subject }}" readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-envelope"></i>
-                                            Message</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                               name="message" aria-describedby="emailHelp"
-                                               value="{{ data.message }}"
-                                               readonly>
-
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-envelope"></i>
-                                            Email Subject</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                               name="email_subject" aria-describedby="emailHelp"
-                                               value="{{ data.email_subject }}"
-                                               required>
-
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-reply"></i>
-                                            Reply</label>
-                                        <textarea type="text" class="form-control" id="ReplyInputEmail1"
-                                                  name="reply" aria-describedby="emailHelp"
-                                                  value="{{ data.reply }}"
-                                        >{{ data.reply }}</textarea>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn" id="reply-btn">Reply</button>
-                                        <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
-                                            Close
-                                        </button>
-                                    </div>
-                                </form>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-            {% endfor %}
-        {% else %}
-            <center>
-                <div class="container">No data found!</div>
-            </center>
-        {% endif %}
-
-        <tbody>
-        </table>
-        </div>
-
-
-    </div>
-
-    {# if data hsa in reply#}
-
-
-    <div class="container main-div" id="not-replied-div">
-        {% if data2 %}
-            <div class="table-wrapper">
-            <table class="fl-table">
-            <thead>
-            <tr>
-                <th><i class="fas fa-user"></i> Name</th>
-                <th><i class="fas fa-envelope"></i> Email</th>
-                <th><i class="fas fa-phone-square"></i> Number</th>
-                <th><i class="fas fa-layer-group"></i> Subject</th>
-                <th><i class="fas fa-comment-alt"></i> Message</th>
-                <th>Reply</th>
-                <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            {% for data in data2 %}
-                <tr>
-                    <td><span class="text">{{ data.name }}</span></td>
-                    <td><span class="text">{{ data.email }}</span></td>
-                    <td><span class="text">{{ data.number }}</span></td>
-                    <td><span class="text">{{ data.subject }}</span></td>
-                    <td><span class="text">{{ data.message }}</span></td>
-                    <td><a href="#" data-toggle="modal" data-target="#myModal3{{ data.id }}"><span
-                            class="text"><i class="fas fa-reply-all"></i></span></a></td>
-                    {% if data.reply %}
-                        <td><span class="text"><i class="far fa-check-circle" style="color:green"></i></span>
-                        </td>
-                    {% else %}
-                        <td><span class="text"><i class="far fa-times-circle" style="color: red"></i></span>
-                        </td>
-                    {% endif %}
-                </tr>
-
-
-                <div class="modal fade" id="myModal3{{ data.id }}" role="dialog">
-
-                    <div class="modal-dialog modal-lg" style="z-index:2">
-                        <div class="modal-content" style="box-shadow: 2px 2px 3px 2px black">
-                            <div class="modal-header">
-                                <h3 class="modal-title" style="color:#0f8c77"><i class="fas fa-reply-all"></i>
-                                    Reply Contacts</h3>
-
-                            </div>
-
-
-                            <div class="modal-body" style="box-shadow: 4px 2px 3px 2px #0f8c77">
-                                <form action="{% url 'reply-contact-form' id=data.id %}" method="post"
-                                      enctype="multipart/form-data">
-                                    {% csrf_token %}
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail4" style="color:black"><i
-                                                    class="fas fa-envelope-open"></i>
-                                                Email</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                   name="email" value="{{ data.email }}" readonly>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4" style="color:black"><i
-                                                    class="fas fa-book"></i>
-                                                Subject</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1"
-                                                   name="subject" value="{{ data.subject }}" readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-envelope"></i>
-                                            Message</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                               name="message" aria-describedby="emailHelp"
-                                               value="{{ data.message }}"
-                                               readonly>
-
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-envelope"></i>
-                                            Email Subject</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                               name="email_subject" aria-describedby="emailHelp"
-                                               value="{{ data.email_subject }}"
-                                               required>
-
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="exampleInputEmail1" style="color:black"><i
-                                                class="fas fa-reply"></i>
-                                            Reply</label>
-                                        <textarea type="text" class="form-control" id="ReplyInputEmail1"
-                                                  name="reply" aria-describedby="emailHelp"
-                                                  value="{{ data.reply }}"
-                                        >{{ data.reply }}</textarea>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn" id="reply-btn">Reply</button>
-                                        <button type="button" class="btn" id="reply-btn" data-dismiss="modal">
-                                            Close
-                                        </button>
-                                    </div>
-                                </form>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-            {% endfor %}
-        {% else %}
-            <center>
-                <div class="container">No data found!</div>
-            </center>
-        {% endif %}
-
-        <tbody>
-        </table>
-        </div>
-
-    </div>
 
     <div style="height: 300px;"></div>
     </body>
     </html>
     <script type="text/javascript">
-     $('#replied-div').hide();
-     $('#not-replied-div').hide();
-
-$(document).ready(function(){
-
-    $('#not-replied-button').click(function(){
-    $('#main-div').hide();
-    $('#not-replied-div').hide();
-    $('#replied-div').show();
-    });
-    $('#all-button').click(function(){
-    $('#replied-div').hide();
-    $('#not-replied-div').hide();
-    $('#main-div').show();
-
-    });
-    $('#replied-button').click(function(){
-    $('#main-div').hide();
-    $('#replied-div').hide();
-    $('#not-replied-div').show();
-
-    });
-});
 
 
 
